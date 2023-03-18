@@ -50,7 +50,7 @@ export default [
       title: 'Jiji Swivel',
       imgUrl: '/assets/portfolio_images/jiji-swivel-1.jpg',
       stack: ['SolidWorks'],
-      link: 'https://santiagoquinteroquiroga.com/',
+      link: 'https://github.com/QuinteroSantiago/jiji-swivel',
       details: 'A portable cell phone holder developed in a team of 5 people. Created using SolidWorks CAD software. Used a Design Evaluation Matrix to test against other designs. Made during Engineering Product Design Class.',
       date: '2018',
    },
