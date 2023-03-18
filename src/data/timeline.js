@@ -1,8 +1,8 @@
 export default [
     {
-        year: 'Today',
+        year: '2021 Today',
         title: 'Software Engineer',
-        duration: '3 years',
+        duration: '2 years',
         details: 
             [
                 'Continuously learning and mastering various technologies',
@@ -10,7 +10,7 @@ export default [
             ],
     },
     {
-        year: '2022 - 2023',
+        year: '2022 - Today',
         title: 'Software Engineer (Silicon Valley Bank)',
         duration: '1 years',
         details: 
