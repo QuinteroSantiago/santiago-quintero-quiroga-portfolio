@@ -4,7 +4,8 @@ function Intro() {
    return (
       <div className="flex items-center justify-center flex-col text-center pt-20 pb-6">
          <img
-            src="/assets/mcard_picture.jpg"
+            // src="/assets/mcard_picture.jpg"
+            src="/assets/IMG_2077.jpg"
             alt="portfolio" 
             className="rounded-full w-48 h-48 object-cover cursor-pointer border border-black dark:border-white"
          />

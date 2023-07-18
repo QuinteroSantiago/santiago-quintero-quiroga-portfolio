@@ -1,6 +1,6 @@
 export default [
     {
-        year: '2021 Today',
+        year: '2021 - Today',
         title: 'Software Engineer',
         duration: '2 years',
         details: 
