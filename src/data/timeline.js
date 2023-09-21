@@ -1,8 +1,22 @@
 export default [
     {
+        year: '2023 - Today',
+        imgUrl: '/assets/experiences_images/core.jpeg',
+        title: 'Software Engineer (Corellium)',
+        duration: 'Months',
+        details: 
+            [
+                'Worked on migrating Jenkins pipelines to GitLab runners, ensuring seamless software integrity throughout the transition', 
+                'Worked on software solutions for streamlined organization and presentation of release notes',
+                'Pioneered the creation of multi-node version builds tailored for clusters, catering to cloud and onsite legacy customers',
+                'Migrated native internal systems from Node 12 to Node 16, enhancing system performance and stability',
+            ]
+    },
+    {
         year: '2021 - Today',
+        imgUrl: '/assets/experiences_images/gomu.png',
         title: 'Software Engineer',
-        duration: '2 years',
+        duration: '3 years',
         details: 
             [
                 'Continuously learning and mastering various technologies',
@@ -10,7 +24,8 @@ export default [
             ],
     },
     {
-        year: '2022 - Today',
+        year: '2022 - 2023',
+        imgUrl: '/assets/experiences_images/svb.jpeg',
         title: 'Software Engineer (Silicon Valley Bank)',
         duration: '1 years',
         details: 
@@ -23,6 +38,7 @@ export default [
     },
     {
         year: '2020 - 2022',
+        imgUrl: '/assets/experiences_images/uf.jpeg',
         title: "Bachelor's Degree in Computer Science",
         duration: '2 years',
         details:
@@ -33,6 +49,7 @@ export default [
     },
     {
         year: '2022',
+        imgUrl: '/assets/experiences_images/uf.jpeg',
         title: "Software Developer (PKT Borum Lab)",
         duration: '5 months',
         details:
@@ -44,6 +61,7 @@ export default [
     },
     {
         year: '2021',
+        imgUrl: '/assets/experiences_images/jpmc.jpeg',
         title: 'Software Engineering Intern (JPMorgan Chase)',
         duration: '3 months',
         details:
@@ -55,6 +73,7 @@ export default [
     },
     {
         year: '2019',
+        imgUrl: '/assets/experiences_images/santafe.jpeg',
         title: "Associate's Degree in Computer Science",
         duration: '1 years',
         details:
@@ -63,5 +82,5 @@ export default [
                 'Tutored in mathematics and physics',
                 'Began coding journey by learning and doing side projects in C++'
             ],
-    },
+    }
 ]
