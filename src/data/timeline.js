@@ -1,9 +1,10 @@
 export default [
     {
         year: '2023 - Today',
+        startDate: '2023-05-05',
+        endDate: 'Today',
         imgUrl: '/assets/experiences_images/core.jpeg',
         title: 'Software Engineer (Corellium)',
-        duration: 'Months',
         details: 
             [
                 'Worked on migrating Jenkins pipelines to GitLab runners, ensuring seamless software integrity throughout the transition', 
@@ -13,10 +14,11 @@ export default [
             ]
     },
     {
-        year: '2021 - Today',
+        year: '2019 - Today',
+        startDate: '2019-08-30',
+        endDate: 'Today',
         imgUrl: '/assets/experiences_images/gomu.png',
         title: 'Software Engineer',
-        duration: '3 years',
         details: 
             [
                 'Continuously learning and mastering various technologies',
@@ -25,9 +27,10 @@ export default [
     },
     {
         year: '2022 - 2023',
+        startDate: '2022-07-01',
+        endDate: '2023-05-05',
         imgUrl: '/assets/experiences_images/svb.jpeg',
         title: 'Software Engineer (Silicon Valley Bank)',
-        duration: '1 years',
         details: 
             [
                 'Worked as a Software Engineer in the Early Career Development Program at Silicon Valley Bank', 
@@ -38,9 +41,10 @@ export default [
     },
     {
         year: '2020 - 2022',
+        startDate: '2020-01-01',
+        endDate: '2022-05-01',
         imgUrl: '/assets/experiences_images/uf.jpeg',
         title: "Bachelor's Degree in Computer Science",
-        duration: '2 years',
         details:
             [
                 'Completed a Bachelor\'s degree in Computer Science from the University of Florida', 
@@ -48,10 +52,11 @@ export default [
             ]
     },
     {
-        year: '2022',
+        year: '2021 - 2022',
+        startDate: '2021-10-01',
+        endDate: '2022-07-01',
         imgUrl: '/assets/experiences_images/uf.jpeg',
         title: "Software Developer (PKT Borum Lab)",
-        duration: '5 months',
         details:
             [
                 'Collaborated with a team of four engineers to restructure a containerized Flask Web Application on UF\'s private cloud platform', 
@@ -61,6 +66,8 @@ export default [
     },
     {
         year: '2021',
+        startDate: '2021-06-01',
+        endDate: '2021-08-15',
         imgUrl: '/assets/experiences_images/jpmc.jpeg',
         title: 'Software Engineering Intern (JPMorgan Chase)',
         duration: '3 months',
@@ -73,9 +80,10 @@ export default [
     },
     {
         year: '2019',
+        startDate: '2019-05-05',
+        endDate: '2019-12-15',
         imgUrl: '/assets/experiences_images/santafe.jpeg',
         title: "Associate's Degree in Computer Science",
-        duration: '1 years',
         details:
             [
                 'Completed an Associate\'s degree in Computer Science from Santa Fe College',
