@@ -1,5 +1,12 @@
 export default [
    {
+      title: 'Mucho Sport AI',
+      imgUrl: '/assets/portfolio_images/mucho-sport-logo.png',
+      stack: ['Vercel'],
+      link: 'http://muchosport.ai/',
+      date: '2023'
+   },
+   {
       title: 'Good News ML Aggregator',
       imgUrl: '/assets/portfolio_images/idea-gn.jpeg',
       stack: ['ReactJS', 'Tailwind', 'AWS', 'Python'],
