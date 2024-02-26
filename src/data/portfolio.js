@@ -1,9 +1,16 @@
 export default [
+   // {
+   //    title: 'Mucho Sport AI',
+   //    imgUrl: '/assets/portfolio_images/mucho-sport-logo.png',
+   //    stack: ['Vercel'],
+   //    link: 'http://muchosport.ai/',
+   //    date: '2023'
+   // },
    {
-      title: 'Mucho Sport AI',
-      imgUrl: '/assets/portfolio_images/mucho-sport-logo.png',
-      stack: ['Vercel'],
-      link: 'http://muchosport.ai/',
+      title: 'Gomu Cloud',
+      imgUrl: 'assets/portfolio_images/gomu_cloud_logo.png',
+      stack: ['NextJS', 'Vercel'],
+      link: 'http://www.gomu.cloud/',
       date: '2023'
    },
    {
