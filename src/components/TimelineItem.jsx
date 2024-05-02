@@ -18,7 +18,7 @@ function TimelineItem({ year, imgUrl, title, duration, responsibilities, achieve
           <img
             src={imgUrl}
             alt={title}
-            className="h-16 w-16 object-cover cursor-pointer rounded-lg"
+            className="h-16 w-16 object-cover cursor-pointer rounded-lg dark:bg-white"
           />
           <span className="inline-block px-2 py-1 font-semibold text-white dark:text-stone-900 bg-stone-900 dark:bg-white rounded-md">
             {year}
@@ -33,10 +33,10 @@ function TimelineItem({ year, imgUrl, title, duration, responsibilities, achieve
         <div>
           {responsibilities && responsibilities.length > 0 && (
             <><br />
-              <h4 className="text-md font-semibold text-stone-600 dark:text-stone-300">Responsibilities:</h4>
+              <h4 className="text-md font-semibold text-stone-700 dark:text-stone-200">Responsibilities:</h4>
               <ul>
                 {responsibilities.map((item, index) => (
-                  <li key={index} className="my-2 text-base font-normal text-stone-500 dark:text-stone-400">
+                  <li key={index} className="my-2 text-base font-normal text-stone-500 dark:text-stone-300">
                     &#x2022; {parseDetail(item)}
                   </li>
                 ))}
@@ -45,10 +45,10 @@ function TimelineItem({ year, imgUrl, title, duration, responsibilities, achieve
           )}
           {achievements && achievements.length > 0 && (
             <><br />
-              <h4 className="text-md font-semibold text-stone-600 dark:text-stone-300">Achievements:</h4>
+              <h4 className="text-md font-semibold text-stone-700 dark:text-stone-200">Achievements:</h4>
               <ul>
                 {achievements.map((item, index) => (
-                  <li key={index} className="my-2 text-base font-normal text-stone-500 dark:text-stone-400">
+                  <li key={index} className="my-2 text-base font-normal text-stone-500 dark:text-stone-300">
                     &#x2022; {parseDetail(item)}
                   </li>
                 ))}
@@ -57,10 +57,10 @@ function TimelineItem({ year, imgUrl, title, duration, responsibilities, achieve
           )}
           {details && details.length > 0 && (
             <><br />
-              <h4 className="text-md font-semibold text-stone-600 dark:text-stone-300">Details:</h4>
+              <h4 className="text-md font-semibold text-stone-700 dark:text-stone-200">Details:</h4>
               <ul>
                 {details.map((item, index) => (
-                  <li key={index} className="my-2 text-base font-normal text-stone-500 dark:text-stone-400">
+                  <li key={index} className="my-2 text-base font-normal text-stone-500 dark:text-stone-300">
                     &#x2022; {parseDetail(item)}
                   </li>
                 ))}
