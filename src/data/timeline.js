@@ -6,13 +6,13 @@ export default [
         imgUrl: "/assets/experiences_images/core.jpeg",
         title: "Software Engineer (Corellium)",
         responsibilities: [
-            "**Multi-Cloud Systems Management**: Spearheaded the migration of Jenkins pipelines to GitLab runners, significantly enhancing the robustness and efficiency of multi-cloud systems",
-            "**Software Development**: Led the development of sophisticated software solutions to improve release notes organization and presentation, ensuring clear and concise communication across teams",
-            "**System Upgrades**: Managed and executed the upgrade of internal systems from Node 12 to Node 16, resulting in marked improvements in system performance and stability"
+            "**Multi-Cloud Systems Management**: Spearheaded the migration of Jenkins pipelines to GitLab runners, enhancing the robustness and efficiency of multi-cloud systems operations.",
+            "**Software Development**: Directed the development of advanced software solutions to optimize release notes organization, ensuring effective communication across teams.",
+            "**System Upgrades**: Oversaw and implemented the upgrade of internal systems from Node 12 to Node 16, achieving significant improvements in system performance and stability."
         ],
         achievements: [
-            "Developed multi-node version builds that supported both cloud-based and onsite legacy systems, improving system versatility and reliability",
-            "Pioneered the integration of GitLab CI/CD pipelines into existing workflows, reducing deployment times by 30%"
+            "Engineered multi-node version builds, supporting both cloud-based and onsite legacy systems, enhancing system versatility and reliability.",
+            "Pioneered the integration of GitLab CI/CD pipelines into existing workflows, achieving a 30% reduction in deployment times."
         ]
     },
     {
@@ -22,14 +22,13 @@ export default [
         imgUrl: "/assets/experiences_images/gomu.png",
         title: "Software Engineer",
         responsibilities: [
-            "**Gomu Cloud**: Developed a comprehensive cloud-based solution utilizing NextJS and Vercel, focusing on scalability and performance",
-            "**Good News ML Aggregator**: Created a machine learning-driven news aggregator platform that intelligently curates content, utilizing ReactJS, Tailwind, AWS, and Python",
+            "**Gomu Cloud**: Developed a scalable, high-performance cloud-based solution using NextJS and Vercel.",
+            "**Good News ML Aggregator**: Engineered a machine learning-driven news aggregator, leveraging ReactJS, Tailwind, AWS, and Python to intelligently curate content."
         ],
         achievements: [
-            "Developed and maintained high-performance web applications that consistently met and exceeded planned outcomes",
-            "Achieved exceptional levels of system reliability and user satisfaction through diligent work and a focus on continuous improvement"
+            "Consistently developed and maintained high-performance web applications that exceeded planned outcomes and user expectations.",
+            "Achieved high levels of system reliability and user satisfaction through continuous improvements and diligent work."
         ]
-
     },
     {
         year: "2022 - 2023",
@@ -38,12 +37,12 @@ export default [
         imgUrl: "/assets/experiences_images/svb.jpeg",
         title: "Software Engineer (Silicon Valley Bank)",
         responsibilities: [
-            "**CI/CD Pipeline Design and Implementation**: Designed and implemented CI/CD pipelines for internal software projects, boosting deployment speeds and operational efficiency",
-            "**Microservices Development**: Developed multiple microservices to enhance system modularity and resilience, focusing on scalability and fault tolerance",
+            "**CI/CD Pipeline Design and Implementation**: Designed and implemented CI/CD pipelines to enhance internal software deployment speeds and operational efficiency.",
+            "**Microservices Development**: Developed robust microservices to improve system modularity and resilience, with a focus on scalability and fault tolerance."
         ],
         achievements: [
-            "Utilized Terraform for Infrastructure-as-Code (IaC) solutions, leading to a 25% reduction in infrastructure provisioning time",
-            "Contributed to several cross-departmental projects that increased system integration and operational efficiency across banking services"
+            "Employed Terraform for Infrastructure-as-Code solutions, cutting infrastructure provisioning time by 25%.",
+            "Participated in several cross-departmental projects that improved system integration and operational efficiency across banking services."
         ]
     },
     {
@@ -53,8 +52,8 @@ export default [
         imgUrl: "/assets/experiences_images/jpmc.jpeg",
         title: "Software Engineering Intern (JPMorgan Chase)",
         details: [
-            "Delivered an API-driven microservice initializer on a private cloud.",
-            "Developed auto-documentation for service containers."
+            "Developed an API-driven microservice initializer on a private cloud, focusing on modular, scalable service deployment.",
+            "Engineered auto-documentation tools for service containers to streamline development processes."
         ]
     },
     {
@@ -64,8 +63,8 @@ export default [
         imgUrl: "/assets/experiences_images/pkt-borum-lab1.png",
         title: "Software Developer (PKT Borum Lab)",
         details: [
-            "Restructured a Flask Web Application for UF's private cloud platform.",
-            "Improved CI/CD pipeline efficiency using Docker."
+            "Re-engineered a Flask Web Application for increased efficiency and performance on UF's private cloud platform.",
+            "Enhanced CI/CD pipeline efficiency by integrating Docker, which streamlined development workflows."
         ]
     },
     {
@@ -75,8 +74,7 @@ export default [
         imgUrl: "/assets/experiences_images/uf.jpeg",
         title: "Bachelor's Degree in Computer Science",
         details: [
-            "Studied Operating Systems, Data Structures, Software Engineering.",
-            "Gained skills in AI for games, Penetration Testing, Reverse Malware Engineering."
+            "Studied Operating Systems, Data Structures, Software Engineering, specializing in AI for games, Penetration Testing, Reverse Malware Engineering."
         ]
     },
     {
@@ -86,8 +84,7 @@ export default [
         imgUrl: "/assets/experiences_images/santafe.jpeg",
         title: "Associate's Degree in Computer Science",
         details: [
-            "Completed Associate's degree, focused on C++ development.",
-            "Tutored in mathematics and physics."
+            "Completed Associate's degree with a focus on C++ development; provided tutoring in mathematics and physics."
         ]
     }
 ]
