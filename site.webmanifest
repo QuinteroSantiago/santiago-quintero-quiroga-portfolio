@@ -1,0 +1,29 @@
+{
+    "name": "Santiago Quintero Portfolio",
+    "short_name": "SQ Portfolio",
+    "icons": [
+        {
+            "src": "/assets/favicon_io/apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "180x180",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/assets/favicon_io/favicon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "/assets/favicon_io/favicon-16x16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3F51B5",
+    "description": "This is Santiago Quintero's Software Engineering portfolio with Projects developed during work and spare time.",
+    "orientation": "portrait"
+}

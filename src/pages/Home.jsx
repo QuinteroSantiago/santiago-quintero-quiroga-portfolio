@@ -62,26 +62,26 @@ function Home() {
 		</svg>
 	);
 
-  return (
-	<>
-		<button
-			type="button"
-			onClick={handleThemeSwitch}
-			className="fixed p-2 z-10 right-20 top-4 bg-black dark:bg-yellow-500 text-lg p-1 rounded-md"
-		>
-			{theme === 'dark' ? sun : moon}
-		</button>
-		<div className=" dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
-			<div className="max-w-5xl w-11/12 mx-auto">
-				<Intro />
-				<Portfolio />
-				<Timeline />
-				<Contact />
-				<Footer />
+	return (
+		<>
+			<button
+				type="button"
+				onClick={handleThemeSwitch}
+				className="fixed p-2 z-10 right-20 top-4 bg-black dark:bg-yellow-500 text-lg p-1 rounded-md"
+			>
+				{theme === 'dark' ? sun : moon}
+			</button>
+			<div className=" dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
+				<div className="max-w-5xl w-11/12 mx-auto">
+					<Intro />
+					<Portfolio />
+					<Timeline />
+					<Contact />
+					<Footer />
+				</div>
 			</div>
-		</div>
-	 </>
-  )
+		</>
+	)
 }
 
 export default Home
