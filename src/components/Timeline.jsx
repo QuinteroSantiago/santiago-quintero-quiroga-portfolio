@@ -41,7 +41,9 @@ function Timeline() {
                   imgUrl={item.imgUrl}
                   title={item.title}
                   duration={calculateDurationString(new Date(item.startDate), item.endDate)}
+                  achievements={item.achievements}
                   details={item.details}
+                  responsibilities={item.responsibilities}
                />
             ))}
          </div>
