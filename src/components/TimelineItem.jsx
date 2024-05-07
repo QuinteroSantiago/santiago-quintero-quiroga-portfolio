@@ -12,27 +12,17 @@ function parseDetail(detail) {
 
 function TimelineItem({ year, imgUrl, title, duration, responsibilities, achievements, details, place }) {
   return (
-    <ol className="flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-700">
-      <li className="mb-10 ml-4">
-        <div className="flex flex-wrap gap-4 flex-row items-center justify-between text-xs md:text-sm">
-          <div className="flex flex-wrap gap-4 items-center">
-            <img
-              src={imgUrl}
-              alt={title}
-              className="h-16 w-16 object-cover cursor-pointer rounded-lg dark:bg-white"
-            />
-            <span className="inline-block px-2 py-1 font-semibold text-white dark:text-stone-900 bg-stone-900 dark:bg-white rounded-md">
-              {year}
-            </span>
-            <h3 className="text-lg font-semibold text-stone-900 dark:text-white">
-              {title}
-            </h3>
-            <p className="my-1 text-sm font-normal leading-none text-stone-400 dark:text-stone-500">
-              {duration}
-            </p>
+    <ol className="flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-700 w-full">
+      <li className="mb-10 ml-4 w-full">
+        <div className="flex flex-wrap gap-4 flex-row items-center justify-between text-xs md:text-sm w-full">
+          <div className="flex gap-4 items-center">
+            <img src={imgUrl} alt={title} className="h-16 w-16 object-cover rounded-lg cursor-pointer border dark:border-white" />
+            <span className="px-2 py-1 font-semibold text-white dark:text-black bg-black rounded-md">{year}</span>
+            <h3 className="text-lg font-semibold dark:text-white">{title}</h3>
+            <p className="text-sm leading-none dark:text-gray-400">{duration}</p>
           </div>
           {place && (
-            <p className="text-lg font-semibold text-stone-900 dark:text-white whitespace-nowrap">
+            <p className="text-lg font-semibold dark:text-white whitespace-nowrap mr-4">
               <i>{place}</i>
             </p>
           )}
