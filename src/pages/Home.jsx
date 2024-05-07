@@ -71,7 +71,7 @@ function Home() {
 			>
 				{theme === 'dark' ? sun : moon}
 			</button>
-			<div className=" dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
+			<div className=" dark:bg-zinc-900 text-zinc-900 dark:text-zinc-300 min-h-screen font-inter">
 				<div className="max-w-5xl w-11/12 mx-auto">
 					<Intro />
 					<Timeline />

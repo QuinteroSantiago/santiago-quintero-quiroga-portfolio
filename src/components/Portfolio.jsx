@@ -7,7 +7,7 @@ function Portfolio() {
    return (
       <div>
          <Title>Portfolio</Title>
-         <div className="flex flex-col md:flex-row items-center justify-center pr-10 pl-10 border-l border-stone-200 dark:border-stone-700">
+         <div className="flex flex-col md:flex-row items-center justify-center pr-10 pl-10 border-l border-zinc-200 dark:border-zinc-700">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                {portfolio.map((project, index) => (
                   <PortfolioItem
