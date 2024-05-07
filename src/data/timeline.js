@@ -78,6 +78,7 @@ export default [
         endDate: "2022-05-01",
         imgUrl: "/assets/experiences_images/uf.jpeg",
         title: "Bachelor's Degree in Computer Science",
+        place: "University of Florida",
         details: [
             "Studied Operating Systems, Data Structures, Software Engineering, specializing in AI for games, Penetration Testing, Reverse Malware Engineering."
         ]
@@ -90,6 +91,7 @@ export default [
         title: "Associate's Degree in Computer Science",
         details: [
             "Completed Associate's degree with a focus on C++ development; provided tutoring in mathematics and physics."
-        ]
+        ],
+        place: "Santa Fe College"
     }
 ]
