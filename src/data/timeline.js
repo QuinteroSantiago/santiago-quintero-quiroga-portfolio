@@ -4,7 +4,8 @@ export default [
         startDate: "2023-05-05",
         endDate: "Today",
         imgUrl: "/assets/experiences_images/core.jpeg",
-        title: "Software Engineer (Corellium)",
+        title: "Software Engineer - Platform",
+        place: "Corellium",
         responsibilities: [
             "**Multi-Cloud Systems Management**: Spearheaded the migration of Jenkins pipelines to GitLab runners, enhancing the robustness and efficiency of multi-cloud systems operations.",
             "**Software Development**: Directed the development of advanced software solutions to optimize release notes organization, ensuring effective communication across teams.",
@@ -16,26 +17,12 @@ export default [
         ]
     },
     {
-        year: "2019 - Present",
-        startDate: "2019-08-30",
-        endDate: "Today",
-        imgUrl: "/assets/experiences_images/gomu.png",
-        title: "Software Engineer",
-        responsibilities: [
-            "**Gomu Cloud**: Developed a scalable, high-performance cloud-based solution using NextJS and Vercel.",
-            "**Good News ML Aggregator**: Engineered a machine learning-driven news aggregator, leveraging ReactJS, Tailwind, AWS, and Python to intelligently curate content."
-        ],
-        achievements: [
-            "Consistently developed and maintained high-performance web applications that exceeded planned outcomes and user expectations.",
-            "Achieved high levels of system reliability and user satisfaction through continuous improvements and diligent work."
-        ]
-    },
-    {
         year: "2022 - 2023",
         startDate: "2022-07-01",
         endDate: "2023-05-05",
         imgUrl: "/assets/experiences_images/svb.jpeg",
-        title: "Software Engineer (Silicon Valley Bank)",
+        title: "Software Engineer",
+        place: "Silicon Valley Bank",
         responsibilities: [
             "**CI/CD Pipeline Design and Implementation**: Designed and implemented CI/CD pipelines to enhance internal software deployment speeds and operational efficiency.",
             "**Microservices Development**: Developed robust microservices to improve system modularity and resilience, with a focus on scalability and fault tolerance."
@@ -50,7 +37,8 @@ export default [
         startDate: "2021-06-01",
         endDate: "2021-08-15",
         imgUrl: "/assets/experiences_images/jpmc.jpeg",
-        title: "Software Engineering Intern (JPMorgan Chase)",
+        title: "Software Engineering Intern",
+        place: "JPMorgan Chase",
         details: [
             "Developed an API-driven microservice initializer on a private cloud, focusing on modular, scalable service deployment.",
             "Engineered auto-documentation tools for service containers to streamline development processes."
@@ -61,10 +49,27 @@ export default [
         startDate: "2021-10-01",
         endDate: "2022-07-01",
         imgUrl: "/assets/experiences_images/pkt-borum-lab1.png",
-        title: "Software Developer (PKT Borum Lab)",
+        title: "Software Developer",
+        place: "PKT Borum Lab",
         details: [
             "Re-engineered a Flask Web Application for increased efficiency and performance on UF's private cloud platform.",
             "Enhanced CI/CD pipeline efficiency by integrating Docker, which streamlined development workflows."
+        ]
+    },
+    {
+        year: "2019 - Present",
+        startDate: "2019-08-30",
+        endDate: "Today",
+        imgUrl: "/assets/experiences_images/gomu.png",
+        title: "Software Engineer",
+        place: "Gomu Cloud",
+        responsibilities: [
+            "**Gomu Cloud**: Developed a scalable, high-performance cloud-based solution using NextJS and Vercel.",
+            "**Good News ML Aggregator**: Engineered a machine learning-driven news aggregator, leveraging ReactJS, Tailwind, AWS, and Python to intelligently curate content."
+        ],
+        achievements: [
+            "Consistently developed and maintained high-performance web applications that exceeded planned outcomes and user expectations.",
+            "Achieved high levels of system reliability and user satisfaction through continuous improvements and diligent work."
         ]
     },
     {

@@ -45,6 +45,7 @@ function Timeline() {
                   achievements={item.achievements}
                   details={item.details}
                   responsibilities={item.responsibilities}
+                  place={item.place}
                />
             ))}
          </div>
