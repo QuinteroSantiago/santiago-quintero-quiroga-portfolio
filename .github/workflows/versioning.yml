@@ -1,0 +1,45 @@
+name: Version Management
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Necessary to fetch all history for versioning
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Determine version increment
+        id: set_version
+        run: |
+          echo "Fetching commit messages..."
+          git fetch --prune --unshallow
+          LATEST_TAG=$(git describe --tags --abbrev=0)
+          echo "Latest tag: $LATEST_TAG"
+          COMMIT_MESSAGES=$(git log $LATEST_TAG..HEAD --oneline)
+          echo "Commit messages: $COMMIT_MESSAGES"
+          if [[ "$COMMIT_MESSAGES" == *"[major]"* ]]; then
+            echo "::set-output name=type::major"
+          elif [[ "$COMMIT_MESSAGES" == *"[minor]"* ]]; then
+            echo "::set-output name=type::minor"
+          else
+            echo "::set-output name=type::patch"
+          fi
+
+      - name: Bump version and tag
+        uses: phips28/gh-action-bump-version@v7.x
+        with:
+          tag-prefix: ""
+          default: ${{ steps.set_version.outputs.type }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
