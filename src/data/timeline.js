@@ -58,7 +58,7 @@ export default [
     },
     {
         year: "2019 - Present",
-        startDate: "2019-08-30",
+        startDate: "2021-06-01",
         endDate: "Today",
         imgUrl: "/assets/experiences_images/gomu.png",
         title: "Software Engineer",
