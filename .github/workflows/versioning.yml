@@ -51,20 +51,22 @@ jobs:
       - name: Generate release notes
         id: release_notes
         run: |
-          # Check if the repo is shallow and unshallow only if needed
+          # Check if the repo is shallow and fetch all history and tags if needed
           if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
             git fetch --prune --unshallow --tags
           else
             git fetch --prune --tags
           fi
 
-          # Retrieve the second to last tag to ensure we're capturing the correct range
-          # This assumes the latest tag might be pointing to the current commit
-          LAST_TAG=$(git describe --tags --abbrev=0 --match "v*" `git rev-list --tags --skip=1 --max-count=1`)
+          # Retrieve the second to last tag, now matching tags without 'v' prefix
+          LAST_TAG=$(git describe --tags --abbrev=0 `git rev-list --tags --skip=1 --max-count=1`)
           
-          # If no tags are found, fall back to the first commit
+          # If no tags are found, use the first commit
           if [ -z "$LAST_TAG" ]; then
             LAST_TAG=$(git rev-list --max-parents=0 HEAD)
+            echo "No tags found, using the first commit: $LAST_TAG"
+          else
+            echo "Found tag: $LAST_TAG"
           fi
 
           echo "Generating release notes from $LAST_TAG to HEAD"
