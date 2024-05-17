@@ -16,31 +16,7 @@ jobs:
 
       - name: Manual version bump
         id: bump_version
-        run: |
-          if [ ! -s VERSION.txt ]; then
-            echo "1.0.0" > VERSION.txt
-            echo "VERSION.txt was missing, initialized to 1.0.0"
-          fi
-
-          VERSION=$(cat VERSION.txt)
-          echo "Current version: $VERSION"
-
-          COMMIT_MESSAGE=$(git log -1 --pretty=%B)
-          if [[ "$COMMIT_MESSAGE" == *"[major]"* ]]; then
-            NEW_VERSION=$(echo $VERSION | awk -F. '{$1+=1; $2=0; $3=0; print $1"."$2"."$3}')
-          elif [[ "$COMMIT_MESSAGE" == *"[minor]"* ]]; then
-            NEW_VERSION=$(echo $VERSION | awk -F. '{$2+=1; $3=0; print $1"."$2"."$3}')
-          else
-            NEW_VERSION=$(echo $VERSION | awk -F. '{$3+=1; print $1"."$2"."$3}')
-          fi
-
-          echo "::set-output name=new_version::$NEW_VERSION"
-          echo $NEW_VERSION > VERSION.txt
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add VERSION.txt
-          git commit -m "Bump version to $NEW_VERSION"
-          git tag $NEW_VERSION
+        run: .github/scripts/bump_version.sh
 
       - name: Push changes
         run: |
@@ -50,28 +26,7 @@ jobs:
 
       - name: Generate release notes
         id: release_notes
-        run: |
-          # Check if the repo is shallow and fetch all history and tags if needed
-          if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
-            git fetch --prune --unshallow --tags
-          else
-            git fetch --prune --tags
-          fi
-
-          # Retrieve the second to last tag, now matching tags without 'v' prefix
-          LAST_TAG=$(git describe --tags --abbrev=0 `git rev-list --tags --skip=1 --max-count=1`)
-          
-          # If no tags are found, use the first commit
-          if [ -z "$LAST_TAG" ]; then
-            LAST_TAG=$(git rev-list --max-parents=0 HEAD)
-            echo "No tags found, using the first commit: $LAST_TAG"
-          else
-            echo "Found tag: $LAST_TAG"
-          fi
-
-          echo "Generating release notes from $LAST_TAG to HEAD"
-          RELEASE_NOTES=$(git log $LAST_TAG..HEAD --pretty=format:"%h - %s (%an)" --reverse)
-          echo "::set-output name=notes::$RELEASE_NOTES"
+        run: .github/scripts/generate_release_notes.sh
 
       - name: Create Release
         uses: actions/github-script@v6
