@@ -28,12 +28,18 @@ jobs:
         id: release_notes
         run: .github/scripts/generate_release_notes.sh
 
+      - name: Generate Release Description
+        id: release_description
+        run: .github/scripts/generate_release_description.sh
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
       - name: Create Release
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const releaseNotes = `${{ steps.release_notes.outputs.notes }}`;
+            const releaseNotes = `${{ steps.release_description.outputs.description }}`;
             const newVersion = '${{ steps.bump_version.outputs.new_version }}';
             github.rest.repos.createRelease({
               owner: context.repo.owner,
