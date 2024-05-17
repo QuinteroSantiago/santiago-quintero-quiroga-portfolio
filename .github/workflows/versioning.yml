@@ -51,8 +51,19 @@ jobs:
       - name: Generate release notes
         id: release_notes
         run: |
-          LAST_TAG=$(git describe --tags --abbrev=0)
-          RELEASE_NOTES=$(git log $LAST_TAG..HEAD --pretty=format:"%h - %s" --reverse)
+          # Fetch tags and make sure we're fully up to date
+          git fetch --prune --unshallow --tags
+
+          # Retrieve the latest tag from which we start our log
+          LAST_TAG=$(git describe --tags --abbrev=0 --match "v*" `git rev-list --tags --skip=1 --max-count=1`)
+
+          # If there's no prior tag, use the first commit of the repository
+          if [ -z "$LAST_TAG" ]; then
+            LAST_TAG=$(git rev-list --max-parents=0 HEAD)
+          fi
+
+          echo "Generating release notes from $LAST_TAG to HEAD"
+          RELEASE_NOTES=$(git log $LAST_TAG..HEAD --pretty=format:"%h - %s (%an)" --reverse)
           echo "::set-output name=notes::$RELEASE_NOTES"
 
       - name: Create Release
