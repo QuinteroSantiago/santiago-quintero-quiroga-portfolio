@@ -45,3 +45,44 @@ DESCRIPTION=$(echo $RESPONSE | jq -r '.choices[0].message.content')
 
 # Output the description for potential use
 echo "$DESCRIPTION"
+
+
+
+#!/bin/bash
+
+# Assuming GIT_DIFF contains the desired data to send
+GIT_DIFF="Summary of changes"
+API_KEY=$OPENAI_API_KEY  # Ensure this environment variable is exported
+
+# API payload
+PAYLOAD=$(cat <<EOF
+{
+  "model": "gpt-4",
+  "messages": [
+    {
+      "role": "system",
+      "content": "Please summarize these changes for release notes:"
+    },
+    {
+      "role": "user",
+      "content": "$GIT_DIFF"
+    }
+  ]
+}
+EOF
+)
+
+# Make the API call
+RESPONSE=$(curl -s -X POST https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $API_KEY" \
+  -d "$PAYLOAD")
+
+# Check if the response contains an error
+if echo $RESPONSE | grep -q "error"; then
+  echo "Failed to generate description: $RESPONSE"
+  exit 1
+fi
+
+DESCRIPTION=$(echo $RESPONSE | jq -r '.choices[0].message.content')
+echo "$DESCRIPTION"
