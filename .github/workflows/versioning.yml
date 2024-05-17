@@ -51,13 +51,18 @@ jobs:
       - name: Generate release notes
         id: release_notes
         run: |
-          # Fetch tags and make sure we're fully up to date
-          git fetch --prune --unshallow --tags
+          # Check if the repo is shallow and unshallow only if needed
+          if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
+            git fetch --prune --unshallow --tags
+          else
+            git fetch --prune --tags
+          fi
 
-          # Retrieve the latest tag from which we start our log
+          # Retrieve the second to last tag to ensure we're capturing the correct range
+          # This assumes the latest tag might be pointing to the current commit
           LAST_TAG=$(git describe --tags --abbrev=0 --match "v*" `git rev-list --tags --skip=1 --max-count=1`)
-
-          # If there's no prior tag, use the first commit of the repository
+          
+          # If no tags are found, fall back to the first commit
           if [ -z "$LAST_TAG" ]; then
             LAST_TAG=$(git rev-list --max-parents=0 HEAD)
           fi
