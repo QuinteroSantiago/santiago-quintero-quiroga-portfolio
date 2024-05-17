@@ -16,16 +16,14 @@ jobs:
 
       - name: Manual version bump
         run: |
-          # Check if VERSION.txt exists and has content
           if [ ! -s VERSION.txt ]; then
             echo "1.0.0" > VERSION.txt
-            echo "VERSION.txt was missing, initialized to 0.1.0"
+            echo "VERSION.txt was missing, initialized to 1.0.0"
           fi
 
           VERSION=$(cat VERSION.txt)
           echo "Current version: $VERSION"
 
-          # Decide new version based on commit message
           COMMIT_MESSAGE=$(git log -1 --pretty=%B)
           if [[ "$COMMIT_MESSAGE" == *"[major]"* ]]; then
             NEW_VERSION=$(echo $VERSION | awk -F. '{$1+=1; $2=0; $3=0; print $1"."$2"."$3}')
@@ -35,13 +33,39 @@ jobs:
             NEW_VERSION=$(echo $VERSION | awk -F. '{$3+=1; print $1"."$2"."$3}')
           fi
 
-          # Update the version file
           echo $NEW_VERSION > VERSION.txt
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add VERSION.txt
           git commit -m "Bump version to $NEW_VERSION"
           git tag $NEW_VERSION
+
+      - name: Generate release notes
+        id: release_notes
+        run: |
+          LAST_TAG=$(git describe --tags --abbrev=0)
+          RELEASE_NOTES=$(git log $LAST_TAG..HEAD --pretty=format:"%h - %s" --reverse)
+          echo "::set-output name=notes::$RELEASE_NOTES"
+
+      - name: Create Release
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const releaseNotes = `${{ steps.release_notes.outputs.notes }}`;
+            const newVersion = '${{ steps.bump_version.outputs.new_version }}';
+            github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: newVersion,
+              name: newVersion,
+              body: releaseNotes,
+              draft: false,
+              prerelease: false
+            });
+
+      - name: Push changes
+        run: |
           git push origin main --tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
