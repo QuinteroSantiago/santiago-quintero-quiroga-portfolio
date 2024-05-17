@@ -1,23 +1,30 @@
 #!/bin/bash
 
-# Fetch tags and history if the repository is shallow
+# Fetch tags and ensure the repository is not shallow
 if [ "$(git rev-parse --is-shallow-repository)" = "true" ]; then
   git fetch --prune --unshallow --tags
 else
   git fetch --prune --tags
 fi
 
-# Retrieve the second to last tag
-LAST_TAG=$(git describe --tags --abbrev=0 `git rev-list --tags --skip=1 --max-count=1`)
+# Retrieve all tags sorted by date
+TAGS=$(git tag --sort=-creatordate)
 
-# Use the first commit if no tags are found
-if [ -z "$LAST_TAG" ]; then
+# Get the number of tags
+TAG_COUNT=$(echo "$TAGS" | wc -l)
+
+# Determine the second to last tag, or handle when fewer than two tags exist
+if [ "$TAG_COUNT" -ge 2 ]; then
+  LAST_TAG=$(echo "$TAGS" | sed -n '2p')
+elif [ "$TAG_COUNT" -eq 1 ]; then
+  LAST_TAG=$(echo "$TAGS" | sed -n '1p')
+  echo "Only one tag found, using it: $LAST_TAG"
+else
   LAST_TAG=$(git rev-list --max-parents=0 HEAD)
   echo "No tags found, using the first commit: $LAST_TAG"
-else
-  echo "Found tag: $LAST_TAG"
 fi
 
 echo "Generating release notes from $LAST_TAG to HEAD"
+# Retrieve the commit log from LAST_TAG to HEAD
 RELEASE_NOTES=$(git log $LAST_TAG..HEAD --pretty=format:"%h - %s (%an)" --reverse)
 echo "::set-output name=notes::$RELEASE_NOTES"
