@@ -15,6 +15,7 @@ jobs:
           fetch-depth: 0
 
       - name: Manual version bump
+        id: bump_version
         run: |
           if [ ! -s VERSION.txt ]; then
             echo "1.0.0" > VERSION.txt
@@ -33,12 +34,19 @@ jobs:
             NEW_VERSION=$(echo $VERSION | awk -F. '{$3+=1; print $1"."$2"."$3}')
           fi
 
+          echo "::set-output name=new_version::$NEW_VERSION"
           echo $NEW_VERSION > VERSION.txt
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add VERSION.txt
           git commit -m "Bump version to $NEW_VERSION"
           git tag $NEW_VERSION
+
+      - name: Push changes
+        run: |
+          git push origin main --tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate release notes
         id: release_notes
@@ -63,9 +71,3 @@ jobs:
               draft: false,
               prerelease: false
             });
-
-      - name: Push changes
-        run: |
-          git push origin main --tags
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
