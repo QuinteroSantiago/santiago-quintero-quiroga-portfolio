@@ -35,8 +35,7 @@ PAYLOAD=$(cat <<EOF
       "role": "user",
       "content": "${CONTENT}"
     }
-  ],
-  "temperature": 0.2
+  ]
 }
 EOF
 )
