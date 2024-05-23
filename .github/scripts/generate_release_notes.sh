@@ -24,7 +24,7 @@ else
   echo "No tags found, using the first commit: $LAST_TAG"
 fi
 
-echo "Generating release notes from $LAST_TAG to HEAD"
+echo "Generating release notes from ${LAST_TAG} to HEAD"
 # Retrieve the commit log from LAST_TAG to HEAD
 RELEASE_NOTES=$(git log $LAST_TAG..HEAD --pretty=format:"%h - %s (%an)" --reverse)
-echo "::set-output name=notes::$RELEASE_NOTES"
+echo "notes=${RELEASE_NOTES}" >> $GITHUB_ENV

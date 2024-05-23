@@ -78,11 +78,17 @@ RESPONSE=$(curl -s -X POST https://api.openai.com/v1/chat/completions \
   -H "Authorization: Bearer $API_KEY" \
   -d "$PAYLOAD")
 
+echo "GPT Response: ${RESPONSE}"
+
+
 # Check if the response contains an error
-if echo $RESPONSE | grep -q "error"; then
-  echo "Failed to generate description: $RESPONSE"
+if echo ${RESPONSE} | grep -q "error"; then
+  echo "Failed to generate description: ${RESPONSE}"
   exit 1
 fi
 
 DESCRIPTION=$(echo $RESPONSE | jq -r '.choices[0].message.content')
-echo "$DESCRIPTION"
+echo "Extracted Description: ${DESCRIPTION}"
+
+# Output the description for potential use
+echo "description=${DESCRIPTION}" >> "${GITHUB_ENV}"

@@ -40,6 +40,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const releaseNotes = `${{ steps.release_description.outputs.description }}`;
+            console.log("Release Notes: ", releaseNotes);
             const newVersion = '${{ steps.bump_version.outputs.new_version }}';
             github.rest.repos.createRelease({
               owner: context.repo.owner,
