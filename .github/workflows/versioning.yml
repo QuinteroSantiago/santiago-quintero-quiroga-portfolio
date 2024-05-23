@@ -17,9 +17,6 @@ jobs:
       - name: Generate release notes
         run: .github/scripts/generate_release_notes.sh
 
-      - name: Decode Release Notes
-        run: echo "RELEASE_NOTES=$(echo ${{ env.RELEASE_NOTES_ENCODED }} | base64 --decode)" >> $GITHUB_ENV
-
       - name: Generate Release Description
         run: .github/scripts/generate_release_description.sh
         env:
