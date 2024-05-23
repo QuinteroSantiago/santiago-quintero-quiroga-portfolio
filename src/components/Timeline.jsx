@@ -1,5 +1,4 @@
 import React from 'react';
-import timeline from '../data/timeline';
 import TimelineItem from './TimelineItem';
 import Title from './Title';
 
@@ -30,11 +29,15 @@ function calculateDurationString(startDate, endDateString) {
    return durationString;
 }
 
-function Timeline() {
+function Timeline({title, timeline}) {
+   if (!timeline) {
+       return <div>Loading timeline...</div>;
+   }
+
    return (
       <div className="flex flex-col md:flex-row justify-center my-20">
          <div className="w-full md:w-7/12 flex-grow">
-            <Title>Timeline</Title>
+            <Title>{title}</Title>
             {timeline.map((item, index) => (
                <TimelineItem
                   key={index}
