@@ -38,7 +38,7 @@ jobs:
           script: |
             const releaseNotes = process.env.RELEASE_NOTES;
             console.log("Release Notes: ", releaseNotes);
-            const newVersion = process.env.NEW_VERSION;
+            const newVersion = '${{ steps.bump_version.outputs.new_version }}';
             github.rest.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
