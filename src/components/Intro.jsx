@@ -18,7 +18,7 @@ function Intro() {
          <h1 className="text-4xl dark:text-white mb-1 md:mb-3">Santiago Quintero</h1>
          <p className="text-base md:text-xl mb-3 font-medium">Software Engineer</p>
          <p className="text-md max-w-xl mb-6">
-            Software Engineer with {roundedYears} years of experience specializing in agile full-stack development across diverse technology stacks. Currently focused on advancing in the field of Cloud Computing, with a particular interest in multi-cloud environments. Proven ability to enhance system performance and scalability through innovative solutions, leveraging expertise in NextJS, Vercel, and CI/CD pipeline integration.
+            Software Engineer with {roundedYears} years of experience in agile full-stack development, specializing in process automation and optimization across hybrid, onsite, and cloud environments. Skilled in ReactJS, NodeJS, and CI/CD pipelines, I enhance system efficiency and performance. With additional expertise in NextJS and Vercel, I am dedicated to boosting engineering velocity and developing platforms that empower engineers and streamline workflows.
          </p>
       </div>
    )
