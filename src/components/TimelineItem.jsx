@@ -17,7 +17,7 @@ function TimelineItem({ year, imgUrl, title, duration, responsibilities, achieve
         <div className="flex flex-wrap gap-4 flex-row items-center justify-between text-xs md:text-sm w-full">
           <div className="flex gap-4 items-center">
             <img src={imgUrl} alt={title} className="h-16 w-16 object-cover rounded-lg cursor-pointer border dark:bg-white" />
-            <span className="px-2 py-1 font-semibold text-white bg-black rounded-md">{year}</span>
+            <span className="px-2 py-1 font-semibold text-white bg-black rounded-md dark:bg-zinc-300 dark:text-black">{year}</span>
             <h3 className="text-lg font-semibold dark:text-white">{title}</h3>
             <p className="text-sm leading-none dark:text-gray-400">{duration}</p>
           </div>
