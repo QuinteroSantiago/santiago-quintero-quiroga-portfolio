@@ -15,17 +15,14 @@ jobs:
           fetch-depth: 0
 
       - name: Generate release notes
-        id: release_notes
         run: .github/scripts/generate_release_notes.sh
 
       - name: Generate Release Description
-        id: release_description
         run: .github/scripts/generate_release_description.sh
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
       - name: Manual version bump
-        id: bump_version
         run: .github/scripts/bump_version.sh
 
       - name: Push changes
@@ -39,9 +36,9 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const releaseNotes = `${{ steps.release_description.outputs.description }}`;
+            const releaseNotes = process.env.DESCRIPTION;  // Assuming the environment variable is named DESCRIPTION
             console.log("Release Notes: ", releaseNotes);
-            const newVersion = '${{ steps.bump_version.outputs.new_version }}';
+            const newVersion = process.env.NEW_VERSION;
             github.rest.repos.createRelease({
               owner: context.repo.owner,
               repo: context.repo.repo,
