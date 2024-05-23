@@ -40,6 +40,8 @@ PAYLOAD=$(cat <<EOF
 EOF
 )
 
+echo "Payload: ${PAYLOAD};"
+
 # Make the API call
 RESPONSE=$(curl -s -X POST https://api.openai.com/v1/chat/completions \
   -H "Content-Type: application/json" \
