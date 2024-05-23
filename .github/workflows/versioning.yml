@@ -14,16 +14,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Manual version bump
-        id: bump_version
-        run: .github/scripts/bump_version.sh
-
-      - name: Push changes
-        run: |
-          git push origin main --tags
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Generate release notes
         id: release_notes
         run: .github/scripts/generate_release_notes.sh
@@ -33,6 +23,16 @@ jobs:
         run: .github/scripts/generate_release_description.sh
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Manual version bump
+        id: bump_version
+        run: .github/scripts/bump_version.sh
+
+      - name: Push changes
+        run: |
+          git push origin main --tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release
         uses: actions/github-script@v6
