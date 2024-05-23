@@ -17,6 +17,9 @@ jobs:
       - name: Generate release notes
         run: .github/scripts/generate_release_notes.sh
 
+      - name: Decode Release Notes
+        run: echo "RELEASE_NOTES=$(echo ${{ env.RELEASE_NOTES_ENCODED }} | base64 --decode)" >> $GITHUB_ENV
+
       - name: Generate Release Description
         run: .github/scripts/generate_release_description.sh
         env:
@@ -36,7 +39,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const releaseNotes = process.env.DESCRIPTION;  // Assuming the environment variable is named DESCRIPTION
+            const releaseNotes = process.env.RELEASE_NOTES;
             console.log("Release Notes: ", releaseNotes);
             const newVersion = process.env.NEW_VERSION;
             github.rest.repos.createRelease({
