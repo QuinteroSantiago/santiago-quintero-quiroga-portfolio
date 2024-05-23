@@ -57,7 +57,7 @@ API_KEY=$OPENAI_API_KEY  # Ensure this environment variable is exported
 # API payload
 PAYLOAD=$(cat <<EOF
 {
-  "model": "gpt-4o",
+  "model": "gpt-3.5-turbo",
   "messages": [
     {
       "role": "system",
