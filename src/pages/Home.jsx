@@ -4,6 +4,8 @@ import Footer from '../components/Footer';
 import Intro from '../components/Intro';
 import Portfolio from '../components/Portfolio';
 import Timeline from '../components/Timeline';
+import work from '../data/work';
+import education from '../data/education';
 
 function Home() {
 	const [theme, setTheme] = useState(null);
@@ -74,7 +76,8 @@ function Home() {
 			<div className=" dark:bg-zinc-900 text-zinc-900 dark:text-zinc-300 min-h-screen font-inter">
 				<div className="max-w-5xl w-11/12 mx-auto">
 					<Intro />
-					<Timeline />
+					<Timeline title="Work" timeline={work}/>
+					<Timeline title="Education" timeline={education}/>
 					<Portfolio />
 					<Contact />
 					<Footer />
