@@ -26,6 +26,9 @@ fi
 
 echo "Generating release notes from ${LAST_TAG} to HEAD"
 # Retrieve the commit log from LAST_TAG to HEAD and directly output to the GitHub environment
-echo "RELEASE_NOTES<<EOF" >> $GITHUB_ENV
-git log $LAST_TAG..HEAD --pretty=format:"%h - %s (%an)" --reverse
-echo "EOF" >> $GITHUB_ENV
+echo "RELEASE_NOTES<<EOF" >> ${GITHUB_ENV}
+git log ${LAST_TAG}..HEAD --pretty=format:"%h - %s (%an)" --reverse
+echo "EOF" >> ${GITHUB_ENV}
+
+echo "Release Notes Content: ${RELEASE_NOTES}"
+
