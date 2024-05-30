@@ -18,11 +18,11 @@ jobs:
         id: release_notes
         run: .github/scripts/generate_release_notes.sh
 
-      # - name: Generate Release Description
-      #   id: release_description
-      #   run: .github/scripts/generate_release_description.sh
-      #   env:
-      #     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Generate Release Description
+        id: release_description
+        run: .github/scripts/generate_release_description.sh
+        # env:
+        #   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
 
       - name: Manual version bump

@@ -18,10 +18,10 @@ else
   NEW_VERSION=$(echo $VERSION | awk -F. '{$3+=1; print $1"."$2"."$3}')
 fi
 
-echo "::set-output name=new_version::$NEW_VERSION"
+echo "::set-output name=new_version::${NEW_VERSION}"
 echo ${NEW_VERSION} > VERSION.txt
 git config --local user.email "action@github.com"
 git config --local user.name "GitHub Action"
 git add VERSION.txt
-git commit -m "Bump version to $NEW_VERSION"
+git commit -m "Bump version to ${NEW_VERSION}"
 git tag ${NEW_VERSION}
