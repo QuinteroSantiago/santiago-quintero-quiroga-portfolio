@@ -40,7 +40,7 @@ PAYLOAD=$(cat <<EOF
 EOF
 )
 
-echo "Payload: ${PAYLOAD};"
+# echo "Payload: ${PAYLOAD};"
 
 # Make the API call
 # RESPONSE=$(curl -s -X POST https://api.openai.com/v1/chat/completions \
@@ -57,8 +57,8 @@ echo "Payload: ${PAYLOAD};"
 #   exit 1
 # fi
 
-DESCRIPTION=$(echo ${COMMIT_LOG} | jq -r '.choices[0].message.content')
+# DESCRIPTION=$(echo ${COMMIT_LOG} | jq -r '.choices[0].message.content')
 echo "Extracted Description: ${COMMIT_LOG}"
 
 # Output the description for potential use
-echo "description=${DESCRIPTION}" >> "${GITHUB_ENV}"
+echo "description=${COMMIT_LOG}" >> "${GITHUB_ENV}"
