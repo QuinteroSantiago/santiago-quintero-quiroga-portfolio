@@ -43,22 +43,22 @@ EOF
 echo "Payload: ${PAYLOAD};"
 
 # Make the API call
-RESPONSE=$(curl -s -X POST https://api.openai.com/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer ${API_KEY}" \
-  -d "${PAYLOAD}")
+# RESPONSE=$(curl -s -X POST https://api.openai.com/v1/chat/completions \
+#   -H "Content-Type: application/json" \
+#   -H "Authorization: Bearer ${API_KEY}" \
+#   -d "${PAYLOAD}")
 
-echo "GPT Response: ${RESPONSE}"
+# echo "GPT Response: ${RESPONSE}"
 
 
 # Check if the response contains an error
-if echo ${RESPONSE} | grep -q "error"; then
-  echo "Failed to generate description: ${RESPONSE}"
-  exit 1
-fi
+# if echo ${RESPONSE} | grep -q "error"; then
+#   echo "Failed to generate description: ${RESPONSE}"
+#   exit 1
+# fi
 
-DESCRIPTION=$(echo $RESPONSE | jq -r '.choices[0].message.content')
-echo "Extracted Description: ${DESCRIPTION}"
+DESCRIPTION=$(echo ${COMMIT_LOG} | jq -r '.choices[0].message.content')
+echo "Extracted Description: ${COMMIT_LOG}"
 
 # Output the description for potential use
 echo "description=${DESCRIPTION}" >> "${GITHUB_ENV}"
