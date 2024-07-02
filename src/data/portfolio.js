@@ -1,11 +1,4 @@
 export default [
-   // {
-   //    title: 'Mucho Sport AI',
-   //    imgUrl: '/assets/portfolio_images/mucho-sport-logo.png',
-   //    stack: ['Vercel'],
-   //    link: 'http://muchosport.ai/',
-   //    date: '2023'
-   // },
    {
       title: 'Gomu Guides',
       imgUrl: 'assets/portfolio_images/gomu-guides.webp',
@@ -43,14 +36,6 @@ export default [
       details: 'A project that shows a support vector classification model that predicts the end of the year awards in the NBA. We started making a web scraper to gather all player statistics using beautiful soup to extract the HTML code from basketball-reference.com. Once we gathered the data, we used the sklearn library to create a correlation metric to analyze the most statistics correlated to MVP. Once we determined the statistics most correlated to MVP, we used a Support Vector Classifier that predicted MVP with 99% accuracy.',
       date: '2021',
    },
-   // {
-   //    title: 'DayDreamer Shop',
-   //    imgUrl: '/assets/portfolio_images/daydreamer.png',
-   //    stack: ['MongoDB', 'Express', 'ReactJS', 'NodeJS'],
-   //    link: 'https://github.com/bdepascale/Daydreamer',
-   //    details: 'Developed eCommerce Web application developed with MongoDB, Express, React JS, and Node JS for a local business. Finalized application with owner portal to keep track of sales, inventory, and UAM.',
-   //    date: '2021',
-   // },
    {
       title: 'San Francisco Crime Dashboard',
       imgUrl: '/assets/portfolio_images/crime-dashboard.jpeg',
