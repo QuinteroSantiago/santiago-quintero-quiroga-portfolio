@@ -14,31 +14,31 @@ GIT_DIFF=$(git diff $LAST_TAG HEAD)
 COMMIT_LOG=$(git log $LAST_TAG..HEAD --oneline)
 
 # Combine the diff and commit messages
-CONTENT="Commit Log:\n$COMMIT_LOG"
+CONTENT="Commit Log:`\n`
+$COMMIT_LOG"
 
 # Output the description for potential use
-echo "CONTENT: ${CONTENT}"
 
-# Assuming GIT_DIFF contains the desired data to send
-API_KEY=$OPENAI_API_KEY  # Ensure this environment variable is exported
+# # Assuming GIT_DIFF contains the desired data to send
+# API_KEY=$OPENAI_API_KEY  # Ensure this environment variable is exported
 
-# API payload
-PAYLOAD=$(cat <<EOF
-{
-  "model": "gpt-3.5-turbo",
-  "messages": [
-    {
-      "role": "system",
-      "content": "Please summarize these changes for release notes:"
-    },
-    {
-      "role": "user",
-      "content": "${CONTENT}"
-    }
-  ]
-}
-EOF
-)
+# # API payload
+# PAYLOAD=$(cat <<EOF
+# {
+#   "model": "gpt-3.5-turbo",
+#   "messages": [
+#     {
+#       "role": "system",
+#       "content": "Please summarize these changes for release notes:"
+#     },
+#     {
+#       "role": "user",
+#       "content": "${CONTENT}"
+#     }
+#   ]
+# }
+# EOF
+# )
 
 # echo "Payload: ${PAYLOAD};"
 
@@ -58,7 +58,11 @@ EOF
 # fi
 
 # DESCRIPTION=$(echo ${COMMIT_LOG} | jq -r '.choices[0].message.content')
-echo "Extracted Description: ${COMMIT_LOG}"
+# echo "Extracted Description: ${COMMIT_LOG}"
 
 # Output the description for potential use
-echo "description=${COMMIT_LOG}" >> "${GITHUB_ENV}"
+{
+  echo 'description<<EOF'
+  $COMMIT_LOG
+  echo EOF
+} >> "${GITHUB_ENV}"
