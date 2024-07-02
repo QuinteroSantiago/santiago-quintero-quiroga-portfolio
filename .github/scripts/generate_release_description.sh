@@ -14,7 +14,7 @@ GIT_DIFF=$(git diff $LAST_TAG HEAD)
 COMMIT_LOG=$(git log $LAST_TAG..HEAD --oneline)
 
 # Combine the diff and commit messages
-CONTENT="Commit Log:\n$COMMIT_LOG\n\nChanges:\n$GIT_DIFF"
+CONTENT="Commit Log:\n$COMMIT_LOG"
 
 # Output the description for potential use
 echo "CONTENT: ${CONTENT}"
