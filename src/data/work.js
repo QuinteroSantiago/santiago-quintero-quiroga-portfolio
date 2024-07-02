@@ -7,13 +7,16 @@ export default [
         title: "Software Engineer - Platform",
         place: "Corellium",
         responsibilities: [
-            "**Multi-Cloud Systems Management**: Spearheaded the migration of Jenkins pipelines to GitLab runners, enhancing the robustness and efficiency of multi-cloud systems operations.",
-            "**Software Development**: Directed the development of advanced software solutions to optimize release notes organization, ensuring effective communication across teams.",
-            "**System Upgrades**: Oversaw and implemented the upgrade of internal systems from Node 12 to Node 16, achieving significant improvements in system performance and stability."
+            "**Client Liaison**: Acted as a liaison with clients, translating their software model requirements into stories for platform integration in subsequent releases.",
+            "**Middleware Development**: Contributed to middleware development, implementing innovative cloud solutions tailored to client needs.",
+            "**Docker Image Maintenance**: Designed and maintained Docker images, streamlining application deployment across cloud-based platforms.",
+            "**Node.js Optimization**: Managed and optimized Node.js application migrations on Ubuntu systems, ensuring high system stability and performance in a hybrid environment.",
+            "**CI/CD Enhancement**: Led the migration from Jenkins to GitLab runners, enhancing CI/CD processes, reducing deployment times.",
+            "**Release Engineering**: Operated as a Release Engineer, overseeing software release cycles, addressing and resolving bugs, and ensuring smooth rollouts of new features."
         ],
         achievements: [
             "Engineered multi-node version builds, supporting both cloud-based and onsite legacy systems, enhancing system versatility and reliability.",
-            "Pioneered the integration of GitLab CI/CD pipelines into existing workflows, achieving a 30% reduction in deployment times."
+            "Pioneered the integration of GitLab CI/CD pipelines into existing workflows, achieving a 20% reduction in deployment times."
         ]
     },
     {
@@ -24,8 +27,11 @@ export default [
         title: "Software Engineer",
         place: "Silicon Valley Bank",
         responsibilities: [
-            "**CI/CD Pipeline Design and Implementation**: Designed and implemented CI/CD pipelines to enhance internal software deployment speeds and operational efficiency.",
-            "**Microservices Development**: Developed robust microservices to improve system modularity and resilience, with a focus on scalability and fault tolerance."
+            "**Greenfield Project Direction**: Directed a greenfield project for a client-specific solution to monitor account credit limits, establishing comprehensive cloud infrastructure tailored to financial services needs.",
+            "**Data Analytics**: Leveraged data analytics to enhance system performance using SQL and Python.",
+            "**Microservices Architecture**: Developed a scalable microservices architecture using Terraform for Infrastructure as Code that integrated enterprise technology.",
+            "**CI/CD Automation**: Led full automation of CI/CD pipeline, shortening release cycles and boosting deployment efficiency.",
+            "**Java Spring Development**: Developed and maintained Java Spring microservices, enhancing system performance and reliability."
         ],
         achievements: [
             "Employed Terraform for Infrastructure-as-Code solutions, cutting infrastructure provisioning time by 25%.",
@@ -40,8 +46,9 @@ export default [
         title: "Software Engineering Intern",
         place: "JPMorgan Chase",
         details: [
-            "Developed an API-driven microservice initializer on a private cloud, focusing on modular, scalable service deployment.",
-            "Engineered auto-documentation tools for service containers to streamline development processes."
+            "Developed a microservice initializer, enhancing project setup efficiency.",
+            "Implemented auto-documentation to improve code maintainability and understanding.",
+            "Streamlined intern onboarding, reducing process time from one week to one hour."
         ]
     },
     {
@@ -52,8 +59,9 @@ export default [
         title: "Software Developer",
         place: "PKT Borum Lab",
         details: [
-            "Re-engineered a Flask Web Application for increased efficiency and performance on UF's private cloud platform.",
-            "Enhanced CI/CD pipeline efficiency by integrating Docker, which streamlined development workflows."
+            "Re-structured a Flask app on UF's private cloud, streamlined CI/CD with Docker, enhancing clinical workflows.",
+            "Ensured HIPAA compliance in collaboration with the clinic for the internal lab solution.",
+            "Containerized application, improving deployment and release process efficiency."
         ]
     },
     {
