@@ -65,7 +65,7 @@ export default [
         ]
     },
     {
-        year: "2019 - Present",
+        year: "2021 - Present",
         startDate: "2021-06-01",
         endDate: "Today",
         imgUrl: "/assets/experiences_images/gomu.png",
