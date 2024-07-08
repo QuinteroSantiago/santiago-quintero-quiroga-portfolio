@@ -7,12 +7,12 @@ export default [
         title: "Software Engineer - Platform",
         place: "Corellium",
         responsibilities: [
-            "**Client Liaison**: Acted as a liaison with clients, translating their software model requirements into stories for platform integration in subsequent releases.",
             "**Middleware Development**: Contributed to middleware development, implementing innovative cloud solutions tailored to client needs.",
             "**Docker Image Maintenance**: Designed and maintained Docker images, streamlining application deployment across cloud-based platforms.",
             "**Node.js Optimization**: Managed and optimized Node.js application migrations on Ubuntu systems, ensuring high system stability and performance in a hybrid environment.",
             "**CI/CD Enhancement**: Led the migration from Jenkins to GitLab runners, enhancing CI/CD processes, reducing deployment times.",
-            "**Release Engineering**: Operated as a Release Engineer, overseeing software release cycles, addressing and resolving bugs, and ensuring smooth rollouts of new features."
+            "**Release Engineering**: Operated as a Release Engineer, overseeing software release cycles, addressing and resolving bugs, and ensuring smooth rollouts of new features.",
+            "**Client Liaison**: Acted as a liaison with clients, translating their software model requirements into stories for platform integration in subsequent releases."
         ],
         achievements: [
             "Engineered multi-node version builds, supporting both cloud-based and onsite legacy systems, enhancing system versatility and reliability.",
