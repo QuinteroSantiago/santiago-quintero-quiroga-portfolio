@@ -5,12 +5,11 @@ function Blog() {
     const blogPosts = [
         { 
             id: 1, 
-            title: 'A New Beginning',
+            title: 'Need to rest...',
             date: '23:40, Monday, 07-08-2024',
-            content: `This will be my first blog post, just want to post my thoughts here.\n\n
-            It's late at night, need to rest for the day, but I decided to start this blog as a place to share my thoughts and reflections. I would like to journal daily, we will see how that goes.\n\n
-            I feel a sense of anticipation for tomorrow. Blah blah blah blah, at least this isn't AI generated :)\n\n\
-            I will leave you with a poem I wrote a bit ago:
+            content: `It's late night now, need to rest for tomorrow.
+            This will be my first blog post, just want to post my thoughts here.
+            I would like to journal daily, we will see how that goes. Blah blah blah blah, need to fill this up a bit, I will leave you with a poem I wrote a bit ago:
             >>poem
             Da Grey Beneath
             Blue black infinity,\n
@@ -18,7 +17,7 @@ function Blog() {
             humanity's greatest fear,\n
             a trove of friendship
             Chub Cay, BS (06.22.24)<<`
-        },
+        }
     ];
 	const [theme, setTheme] = useState(null);
 
@@ -107,6 +106,10 @@ function Blog() {
         );
     };
 
+    const countWords = (text) => {
+        return text.split(/\s+/).filter(Boolean).length;
+    };
+
     return (
         <>
             <div className="fixed top-4 z-10 flex justify-between w-full px-20">
@@ -133,10 +136,13 @@ function Blog() {
                         <h1 className="text-5xl font-bold mb-6">Posts</h1>
                         <div className="space-y-6">
                             {sortedPosts.map(post => (
-                                <div key={post.id} className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
+                                <div key={post.id} className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 relative">
                                     <h2 className="text-3xl font-semibold mb-2 text-justify">{post.title}</h2>
                                     <p className="text-sm text-gray-500 mb-4 text-justify">{post.date}</p>
                                     {renderFormattedText(post.content)}
+                                    <span className="text-xs text-gray-400 absolute bottom-2 right-2">
+                                        wc: {countWords(post.content)}
+                                    </span>
                                 </div>
                             ))}
                         </div>
