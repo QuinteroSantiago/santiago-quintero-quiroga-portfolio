@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Blog() {
     const blogPosts = [
-        { 
+        {
             id: 1, 
             title: 'Need to rest...',
             date: '23:40, Monday, 07-08-2024',
@@ -17,7 +17,24 @@ function Blog() {
             humanity's greatest fear,\n
             a trove of friendship
             Chub Cay, BS (06.22.24)<<`
-        }
+        },
+        {
+            id: 2, 
+            title: 'Plan plan plan',
+            date: '08:10, Tuesday, 07-09-2024',
+            content: `
+            Today will be cloudy all day.\n
+            Will try to watch the Spain vs France game, work willing. Odds are slightly in favor of Spain (+170 vs +200), I predict a 1-0 win for them.\n
+            Want to use my Gomu Planner app a bit more today to plan. I will have to review the logs at night to get the full benefits as well. I am writing this down so I will work out today, at least at my home gym. We'll see what happens where when the time comes.\n
+            I have another poem I wrote on that trip to the Bahamas; it will be hard to understand if you weren't there though.
+            >>poem
+            Da River
+            Side to side we sway,
+            the antithesis of Drake,
+            quenching his thirst for revenge,
+            to the privy without delay
+            Bimini Bay, BS (06.23.24)<<`
+        },
     ];
 	const [theme, setTheme] = useState(null);
 
@@ -45,14 +62,12 @@ function Blog() {
         <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 64 64"
+            viewBox="0 0 24 24"
             strokeWidth={1.5}
 			stroke="currentColor"
             className="w-6 h-6"
         >
-            <path fill="#231F20" d="M62.79,29.172l-28-28C34.009,0.391,32.985,0,31.962,0s-2.047,0.391-2.828,1.172l-28,28
-                c-1.562,1.566-1.484,4.016,0.078,5.578c1.566,1.57,3.855,1.801,5.422,0.234L8,33.617V60c0,2.211,1.789,4,4,4h16V48h8v16h16
-                c2.211,0,4-1.789,4-4V33.695l1.195,1.195c1.562,1.562,3.949,1.422,5.516-0.141C64.274,33.188,64.356,30.734,62.79,29.172z"/>
+            <path d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z"/>
         </svg>
     );
 
@@ -133,7 +148,7 @@ function Blog() {
             <div className="dark:bg-zinc-900 text-zinc-900 dark:text-zinc-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                     <div className="text-center py-12">
-                        <h1 className="text-5xl font-bold mb-6">Posts</h1>
+                        <h1 className="text-5xl font-bold mb-6">Valar Morghulis</h1>
                         <div className="space-y-6">
                             {sortedPosts.map(post => (
                                 <div key={post.id} className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 relative">
@@ -146,6 +161,7 @@ function Blog() {
                                 </div>
                             ))}
                         </div>
+                        <h1 className="text-5xl font-bold mb-6 pt-12">Valar Dohaeris</h1>
                     </div>
                 </div>
             </div>
