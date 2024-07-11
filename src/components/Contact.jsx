@@ -14,7 +14,7 @@ function Contact() {
                   method="POST"
                   className="flex flex-col w-full md:w-7/12"
                >
-                  <Title>Contact</Title>
+                  <Title className="text-zinc-500">Contact</Title>
                   <input
                      type="text"
                      name="name"
