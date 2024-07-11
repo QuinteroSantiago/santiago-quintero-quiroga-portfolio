@@ -1,62 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import blogPosts from '../data/blog';
 
 function Blog() {
-    const blogPosts = [
-        {
-            id: 1, 
-            title: 'Need to rest...',
-            date: '23:40, Monday, 07-08-2024',
-            content: `It's late night now, need to rest for tomorrow.
-            This will be my first blog post, just want to post my thoughts here.
-            I would like to journal daily, we will see how that goes. Blah blah blah blah, need to fill this up a bit, I will leave you with a poem I wrote a bit ago:
-            >>poem
-            Da Grey Beneath
-            Blue black infinity,\n
-            Shadows in your trenches,\n
-            humanity's greatest fear,\n
-            a trove of friendship
-            Chub Cay, BS (06.22.24)<<`
-        },
-        {
-            id: 2, 
-            title: 'Plan plan plan',
-            date: '08:10, Tuesday, 07-09-2024',
-            content: `
-            Today will be cloudy all day.\n
-            Will try to watch the Spain vs France game, work willing. Odds are slightly in favor of Spain (+170 vs +200), I predict a 1-0 win for them.\n
-            Want to use my Gomu Planner app a bit more today to plan. I will have to review the logs at night to get the full benefits as well. I am writing this down so I will work out today, at least at my home gym. We'll see what happens where when the time comes.\n
-            I have another poem I wrote on that trip to the Bahamas; it will be hard to understand if you weren't there though.
-            >>poem
-            Da River
-            Side to side we sway,
-            the antithesis of Drake,
-            quenching his thirst for revenge,
-            to the privy without delay
-            Bimini Bay, BS (06.23.24)<<`
-        },
-    ];
-	const [theme, setTheme] = useState(null);
+    const [theme, setTheme] = useState(null);
+    useEffect(() => {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }, []);
 
-	useEffect(() => {
-		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('dark');
-		} else {
-			setTheme('light');
-		}
-	}, []);
+    const handleThemeSwitch = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    };
 
-	const handleThemeSwitch = () => {
-		setTheme(theme === 'dark' ? 'light' : 'dark');
-	};
-
-	useEffect(() => {
-		if (theme === 'dark') {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
-	}, [theme]);
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [theme]);
 
     const homeIcon = (
         <svg
@@ -64,10 +30,10 @@ function Blog() {
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-			stroke="currentColor"
+            stroke="currentColor"
             className="w-6 h-6"
         >
-            <path d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z"/>
+            <path d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z" />
         </svg>
     );
 
