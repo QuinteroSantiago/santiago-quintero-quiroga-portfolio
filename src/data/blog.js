@@ -1,18 +1,19 @@
 export default [
     {
-        id: 1,
-        title: 'Need to rest...',
-        date: '23:40, Monday, 07-08-2024',
-        content: `It's late night now, need to rest for tomorrow.
-            This will be my first blog post, just want to post my thoughts here.
-            I would like to journal daily, we will see how that goes. Blah blah blah blah, need to fill this up a bit, I will leave you with a poem I wrote a bit ago:
+        id: 3,
+        title: 'Lethargic kind of day',
+        date: '22:32, Wednesday, 07-10-2024',
+        content: `
+            Woke up at 0500 to charge the car for the lady. A lot of moving parts, lots of releases, lots of lines of code to look at, it was more of a merging and fixing day than building unfortunately. Not too bad though, fixed most things, some things are still broken. We finally saw the bastard Joffrey die, he finally had won as well, nice.
+            As for yesterday, Spain won and I watched the game at juliet and henry's, or at least the second half. Twas fun, should do again. And I did end up working out, at least the jog to the place and back killed me. Didn't reaallyy watch either semifinal, these are both the losing teams for Sunday either way. Need to workout tomorrow, can't miss that since I didn't today.
+            Also, writing this late at night is no good for me, have too many thoughts scrambled here and there. Finished a deployment now so I can rest.
+            My poems are also now clearly deteriorating as I'm running out of old material, will leave you with this 'masterpiece' I tried to write from my vast knowledge of japanese.
             >>poem
-            Da Grey Beneath
-            Blue black infinity,\n
-            Shadows in your trenches,\n
-            humanity's greatest fear,\n
-            a trove of friendship
-            Chub Cay, BS (06.22.24)<<`
+            Haiku #1
+            Kage nezumi
+            Konnichiwa shinobi
+            Sayonara ki
+            Middle of the ocean, BS (06.21.24)<<`
     },
     {
         id: 2,
@@ -30,5 +31,20 @@ export default [
             quenching his thirst for revenge,
             to the privy without delay
             Bimini Bay, BS (06.23.24)<<`
+    },
+    {
+        id: 1,
+        title: 'Need to rest...',
+        date: '23:40, Monday, 07-08-2024',
+        content: `It's late night now, need to rest for tomorrow.
+            This will be my first blog post, just want to post my thoughts here.
+            I would like to journal daily, we will see how that goes. Blah blah blah blah, need to fill this up a bit, I will leave you with a poem I wrote a bit ago:
+            >>poem
+            Da Grey Beneath
+            Blue black infinity,\n
+            Shadows in your trenches,\n
+            humanity's greatest fear,\n
+            a trove of friendship
+            Chub Cay, BS (06.22.24)<<`
     },
 ];
