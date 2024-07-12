@@ -10,7 +10,7 @@ import Workout from './pages/Workout';
 function App() {
     return (
         <BrowserRouter>
-            <div className='dark:bg-zinc-900 text-zinc-900 dark:text-zinc-300'>
+            <div className="font-inter min-h-screen w-full m-0 p-0 text-zinc-900 dark:text-zinc-300 dark:bg-zinc-900">
                 <Navigation />
                 <Routes>
                     <Route path="/" element={<Home />} />

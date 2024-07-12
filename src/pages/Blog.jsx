@@ -59,7 +59,7 @@ function Blog() {
 
     return (
         <>
-            <div className=" text-zinc-900 dark:text-zinc-300 min-h-screen font-inter">
+            <div className="text-zinc-900 dark:text-zinc-300 min-h-screen font-inter">
                 <div className="max-w-5xl w-11/12 mx-auto">
                     <div className="text-center py-12">
                         <h1 className="text-5xl font-bold mb-6">Valar Morghulis</h1>
