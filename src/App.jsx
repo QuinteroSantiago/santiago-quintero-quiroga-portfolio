@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Home from './pages/Home'
 import Blog from './pages/Blog';
 import NotFound from './pages/404'
+import Workout from './pages/Workout';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/blog" element={<Blog />} />
+                    <Route path="/workout" element={<Workout />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />

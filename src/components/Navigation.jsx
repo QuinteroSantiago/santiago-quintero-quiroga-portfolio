@@ -3,32 +3,32 @@ import { Link, useLocation } from 'react-router-dom'
 
 function Navigation() {
 	const location = useLocation();
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
-    useEffect(() => {
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-            setTheme(currentTheme);
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
-        document.documentElement.className = theme;
-    }, []);
+	useEffect(() => {
+		const currentTheme = localStorage.getItem('theme');
+		if (currentTheme) {
+			setTheme(currentTheme);
+		} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			setTheme('dark');
+		} else {
+			setTheme('light');
+		}
+		document.documentElement.className = theme;
+	}, []);
 
-    useEffect(() => {
-        localStorage.setItem('theme', theme);
+	useEffect(() => {
+		localStorage.setItem('theme', theme);
 		if (theme === 'dark') {
 			document.documentElement.classList.add('dark');
 		} else {
 			document.documentElement.classList.remove('dark');
 		}
-    }, [theme]);
+	}, [theme]);
 
-    const handleThemeSwitch = () => {
+	const handleThemeSwitch = () => {
 		setTheme(theme === 'dark' ? 'light' : 'dark');
-    };
+	};
 
 	const sun = (
 		<svg
@@ -112,18 +112,24 @@ function Navigation() {
 			</g>
 		</svg>
 	);
-    const homeIcon = (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-        >
-            <path d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z" />
-        </svg>
-    );
+	const homeIcon = (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			strokeWidth={1.5}
+			stroke="currentColor"
+			className="w-6 h-6"
+		>
+			<path d="M 12 2 A 1 1 0 0 0 11.289062 2.296875 L 1.203125 11.097656 A 0.5 0.5 0 0 0 1 11.5 A 0.5 0.5 0 0 0 1.5 12 L 4 12 L 4 20 C 4 20.552 4.448 21 5 21 L 9 21 C 9.552 21 10 20.552 10 20 L 10 14 L 14 14 L 14 20 C 14 20.552 14.448 21 15 21 L 19 21 C 19.552 21 20 20.552 20 20 L 20 12 L 22.5 12 A 0.5 0.5 0 0 0 23 11.5 A 0.5 0.5 0 0 0 22.796875 11.097656 L 12.716797 2.3027344 A 1 1 0 0 0 12.710938 2.296875 A 1 1 0 0 0 12 2 z" />
+		</svg>
+	);
+
+	const workoutIcon = (
+		<svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M6 7.5H7.5V11.25V12.75V16.5H6V7.5ZM9 12.75V18H4.5V16.5H1.5V7.5H4.5V6H9V11.25L15 11.25V6H19.5V7.5L22.5 7.5V16.5H19.5V18H15V12.75L9 12.75ZM16.5 12.75L16.5 16.5H18L18 7.5L16.5 7.5L16.5 11.25V12.75ZM4.5 9H3V15H4.5V9ZM19.5 15H21V9H19.5V15Z" fill="#080341" />
+		</svg>
+	);
 
 	return (
 		<div className="fixed top-4 z-10 flex justify-between items-start w-full px-20">
@@ -134,6 +140,10 @@ function Navigation() {
 				{location.pathname !== '/blog' && (
 					<Link to="/blog" className="p-2 bg bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{blogIcon}</Link>
 				)}
+				{location.pathname !== '/workout' && (
+					<Link to="/workout" className="p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{workoutIcon}</Link>
+				)}
+
 			</div>
 			<button
 				type="button"

@@ -1,5 +1,14 @@
 export default [
     {
+        id: 5,
+        title: 'Stfu',
+        date: '18:06, Friday, 07-12-2024',
+        content: `
+        Went to the gym for a bit but more importantly, integrated the gym display function in the webpage. Think that might give me some motivation to start going.
+        Was productive as hell this week so going to take a break from the poems and journaling today.
+        `
+    },
+    {
         id: 4,
         title: 'Fawcous',
         date: '20:31, Thursday, 07-11-2024',
