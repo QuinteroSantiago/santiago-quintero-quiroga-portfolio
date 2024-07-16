@@ -1,5 +1,13 @@
 export default [
     {
+        id: 6,
+        title: 'NIAO',
+        date: '23:31, Saturday, 07-13-2024',
+        content: `
+        Rode the bike for 70 miles today at least. Meet Nati at her home in Plantation, small cute little thing. Looking forward to tomorrow, long sports day.
+        `
+    },
+    {
         id: 5,
         title: 'Stfu',
         date: '18:06, Friday, 07-12-2024',
