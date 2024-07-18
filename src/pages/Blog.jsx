@@ -1,7 +1,9 @@
 import React from 'react';
 import blogPosts from '../data/blog';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Blog() {
+    useDocumentTitle("Blog - Santiago Quintero");
 
     const sortedPosts = blogPosts.slice().sort((a, b) => b.id - a.id);
 
@@ -64,8 +66,9 @@ function Blog() {
                     <div className="text-center py-12">
                         <h1 className="text-5xl font-bold mb-6">Valar Morghulis</h1>
                         <div className="space-y-6">
+                            <h3 className="mb-4">Put a 15 minute timer and write down all your thoughts</h3>
                             {sortedPosts.map(post => (
-                                <div key={post.id} className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 relative">
+                                <div key={post.id} className="bg-stone-100 dark:bg-gray-800 shadow-lg rounded-tl-3xl rounded-br-3xl p-6 relative">
                                     <h2 className="text-3xl font-semibold mb-2 text-justify">{post.title}</h2>
                                     <p className="text-sm text-gray-500 mb-4 text-justify">{post.date}</p>
                                     {renderFormattedText(post.content)}

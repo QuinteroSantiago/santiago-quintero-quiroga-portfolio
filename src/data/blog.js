@@ -1,10 +1,33 @@
 export default [
     {
+        id: 7,
+        title: 'Look at this',
+        date: '21:45, Wednesday, 07-17-2024',
+        content: `
+        Well well, a lot has happened since the last time I journaled. Just wrapped up this new haiku, so let's start from the end.
+        Finally finished season 4 of GoT. It was magnificent, best season yet in my opinion. Can see the crack through the greatness though, as in Orson Lannister's story, no sense in it.
+        Day at work was not so fruitful, not because of lack of work or trying, just one of those days that is hard to put two and two together. Morrow is a new day, new life, no worries.
+        Both me and the lady tired, another sickness has preyed upon us. It is what it is.
+        As for yesterday, I haven't gotten a clue as to what happened unfortunately, should've journaled to recall.
+        The day before that one was soccer, I was extremely tired that day. Recalling all of these events now make me remember I have barely slept more than 4 hours each night. It is what is.
+        Sunday Spain game was good, very good, the rise of a superstar, I worry the Catalans will destroy his career as they have with so many others. Hopefully, like Leo, he can be the exception, not the norm.
+        And finally, how sad is the state of futbol on this side of the continent. Terrible game first of all, but the real issue is how terrible the US is becoming in terms of security. That stadium rush was a national embarrasament. How the hell are they going to host a WC in two years? And the assassination attempt makes it even worse.
+        All in all, should journal more and actually follow the routine I have laid out in the website. 
+        I am now going to add something.... Great, now I can't recall :)
+        OOOOOOOO I remember, titling each page, will get on that.
+        >>poem
+        Late late
+        Undergarment clothes,
+        Washed daily, hiding inside,
+        Inner chamber bare
+        Miami, FL, USA (07.17.24)<<`
+    },
+    {
         id: 6,
         title: 'NIAO',
         date: '23:31, Saturday, 07-13-2024',
         content: `
-        Rode the bike for 70 miles today at least. Meet Nati at her home in Plantation, small cute little thing. Looking forward to tomorrow, long sports day.
+        Rode that POS triumph bike for 70 miles today. Meet Nati at her home in Plantation, small cute little thing. Looking forward to tomorrow, long sports day.
         `
     },
     {

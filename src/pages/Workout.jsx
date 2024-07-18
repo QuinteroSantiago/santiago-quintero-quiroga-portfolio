@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import workouts from '../data/workouts';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 function Workout() {
+    useDocumentTitle("Workout - Santiago Quintero");
     const today = new Date();
     const dayName = today.toLocaleDateString('en-US', { weekday: 'long' });
     const [selectedDay, setSelectedDay] = useState(dayName);
