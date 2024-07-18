@@ -1,12 +1,36 @@
 export default {
     'Monday': {
-        title: 'Meetings day',
+        title: 'Push Day',
         exercises: [
             {
-                name: 'Incline Treadmill Walk',
-                sets: '20 minutes',
-                reps: '3 mph',
-                weight: '15% incline'
+                name: 'Bench Press',
+                sets: '4',
+                reps: '8-10 reps',
+                weight: ''
+            },
+            {
+                name: 'Overhead Press',
+                sets: '3',
+                reps: '8-10 reps',
+                weight: ''
+            },
+            {
+                name: 'Incline Dumbbell Press',
+                sets: '3',
+                reps: '10-12 reps',
+                weight: ''
+            },
+            {
+                name: 'Tricep Dips',
+                sets: '3',
+                reps: '10-12 reps',
+                weight: 'Body weight'
+            },
+            {
+                name: 'Lateral Raises',
+                sets: '3',
+                reps: '12-15 reps',
+                weight: ''
             }
         ]
     },
@@ -81,31 +105,43 @@ export default {
         ]
     },
     'Thursday': {
-        title: 'Midweek Slumber',
-        exercises: [
-            {
-                name: 'Rest & Recovery',
-                sets: '',
-                reps: '',
-                weight: ''
-            }
-        ]
-    },
-    'Friday': {
-        title: 'Hell Day',
+        title: 'Push Day',
         exercises: [
             {
                 name: 'Dumbbell Bench Press',
                 sets: '4',
                 reps: '8-10 reps',
-                weight: '60'
+                weight: ''
             },
             {
-                name: 'Machine Flyes',
+                name: 'Arnold Press',
+                sets: '3',
+                reps: '8-10 reps',
+                weight: ''
+            },
+            {
+                name: 'Cable Flyes',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: '100'
+                weight: ''
             },
+            {
+                name: 'Skull Crushers',
+                sets: '3',
+                reps: '10-12 reps',
+                weight: ''
+            },
+            {
+                name: 'Overhead Tricep Extension',
+                sets: '3',
+                reps: '12-15 reps',
+                weight: ''
+            }
+        ]
+    },
+    'Friday': {
+        title: 'Pull Day',
+        exercises: [
             {
                 name: 'Hexbar Deadlift',
                 sets: '4',
@@ -135,7 +171,12 @@ export default {
                 sets: '3',
                 reps: '12-15 reps',
                 weight: ''
-            },
+            }
+        ]
+    },
+    'Saturday': {
+        title: 'Legs Day',
+        exercises: [
             {
                 name: 'Front Squats',
                 sets: '4',
@@ -149,55 +190,32 @@ export default {
                 weight: ''
             },
             {
+                name: 'Hexbar Deadlifts',
+                sets: '3',
+                reps: '10 reps',
+                weight: ''
+            },
+            {
                 name: 'Standing Calf Raises',
                 sets: '4',
                 reps: '12-15 reps',
                 weight: ''
             },
-        ]
-    },
-    'Saturday': {
-        title: 'Fun Day',
-        exercises: [
             {
-                name: 'Rest & Recovery',
-                sets: '',
-                reps: '',
+                name: 'Leg Extensions',
+                sets: '3',
+                reps: '12-15 reps',
                 weight: ''
             }
         ]
     },
     'Sunday': {
-        title: 'Push Day',
+        title: 'The Lord\'s Day',
         exercises: [
             {
-                name: 'Bench Press',
-                sets: '4',
-                reps: '8-10 reps',
-                weight: ''
-            },
-            {
-                name: 'Overhead Press',
-                sets: '3',
-                reps: '8-10 reps',
-                weight: ''
-            },
-            {
-                name: 'Incline Dumbbell Press',
-                sets: '3',
-                reps: '10-12 reps',
-                weight: ''
-            },
-            {
-                name: 'Tricep Dips',
-                sets: '3',
-                reps: '10-12 reps',
-                weight: 'Body weight'
-            },
-            {
-                name: 'Lateral Raises',
-                sets: '3',
-                reps: '12-15 reps',
+                name: 'Rest & Recovery',
+                sets: '',
+                reps: '',
                 weight: ''
             }
         ]

@@ -22,7 +22,7 @@ function Workout() {
     }, []);
 
     const renderDaySelector = () => {
-        if (windowWidth < 768) { // Assuming 768px is the breakpoint for mobile screens
+        if (windowWidth < 1000) { // Assuming 768px is the breakpoint for mobile screens
             return (
                 <select
                     className="px-4 py-2 rounded bg-gray-200 text-black"
@@ -38,7 +38,7 @@ function Workout() {
             );
         } else {
             return (
-                <div className="flex justify-center space-x-2 mb-4">
+                <div className="flex justify-center space-x-2 mb-4 relative z-50">
                     {daysOfWeek.map(day => (
                         <button
                             key={day}
