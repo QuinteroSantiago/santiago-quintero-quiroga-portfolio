@@ -1,6 +1,6 @@
 import React from 'react';
 import TimelineItem from './TimelineItem';
-import Title from './Title';
+import Title from '../Title';
 
 function calculateDurationString(startDate, endDateString) {
    let endDate = endDateString === "Today" ? new Date() : new Date(endDateString);
@@ -29,9 +29,9 @@ function calculateDurationString(startDate, endDateString) {
    return durationString;
 }
 
-function Timeline({title, timeline}) {
+function Timeline({ title, timeline }) {
    if (!timeline) {
-       return <div>Loading timeline...</div>;
+      return <div>Loading timeline...</div>;
    }
 
    return (
