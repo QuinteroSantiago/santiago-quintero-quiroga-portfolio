@@ -78,7 +78,7 @@ function Blog() {
                                 </div>
                             ))}
                         </div>
-                        <h1 className="text-5xl font-bold mb-6 pt-12">Valar Dohaeris</h1>
+                        <h1 className="text-5xl font-bold pt-12">Valar Dohaeris</h1>
                     </div>
                 </div>
             </div>
