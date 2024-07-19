@@ -78,7 +78,9 @@ function RotatingImage() {
         animate();
 
         return () => {
-            mountRef.current.removeChild(renderer.domElement);
+            if (mountRef.current) { // Add null check here
+                mountRef.current.removeChild(renderer.domElement);
+            }
         };
     }, []);
 
