@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom'
 
 function Navigation() {
 	const location = useLocation();
 	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+    const buttonRef = useRef(null);
+    const [buttonPosition, setButtonPosition] = useState({ x: 80, y: 115 });
 
 	useEffect(() => {
 		const currentTheme = localStorage.getItem('theme');
@@ -29,6 +31,35 @@ function Navigation() {
 	const handleThemeSwitch = () => {
 		setTheme(theme === 'dark' ? 'light' : 'dark');
 	};
+
+    useEffect(() => {
+        const handleMouseMove = (event) => {
+            if (buttonRef.current) {
+                const buttonRect = buttonRef.current.getBoundingClientRect();
+                const centerX = buttonRect.left + buttonRect.width / 2;
+                const centerY = buttonRect.top + buttonRect.height / 2;
+                const dx = centerX - event.clientX;
+                const dy = centerY - event.clientY;
+
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                const minDistance = 30;
+                if (distance < minDistance) {
+                    let newX = buttonPosition.x + dx;
+                    let newY = buttonPosition.y + dy;
+
+                    newX = Math.max(0, Math.min(newX, window.innerWidth - buttonRect.width));
+                    newY = Math.max(0, Math.min(newY, window.innerHeight - buttonRect.height));
+
+                    setButtonPosition({ x: newX, y: newY });
+                }
+            }
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, [buttonPosition]);
 
 	const sun = (
 		<svg
@@ -131,6 +162,13 @@ function Navigation() {
 		</svg>
 	);
 
+	const questionMark = (
+		<svg className="w-6 h-6" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+			<path d="M142 125.853C155.049 97.8883 180.62 82.7645 200.381 78.4757C227.189 72.6575 249.859 84.0511 257.624 112.528C260.302 122.352 259.217 138.128 253.081 148.517C247.426 158.092 239.904 165.942 227.555 176.481C225.251 178.447 217.389 185.018 216.649 185.643C199.849 199.818 191.567 209.152 186.81 220.972C182.053 232.792 182.305 269.489 216.649 266.35" stroke="currentColor" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"/>
+			<path d="M198.744 315.68C198.744 317.274 198.744 319.614 198.744 322.7" stroke="currentColor" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round"/>
+		</svg>
+	);
+
 	return (
 		<div className="fixed top-4 z-10 flex justify-between items-start w-full px-20">
 			<div className="flex flex-col items-start space-y-4">
@@ -143,7 +181,22 @@ function Navigation() {
 				{location.pathname !== '/workout' && (
 					<Link to="/workout" className="p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{workoutIcon}</Link>
 				)}
-
+				<Link to="/404" >                
+					<button
+						ref={buttonRef}
+						className="p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md"
+						style={{
+							position: 'absolute',
+							left: `${buttonPosition.x}px`,
+							top: `${buttonPosition.y}px`,
+							zIndex: 2,
+							cursor: 'pointer',
+							transition: 'left 1s, top 1s'
+						}}
+					>
+						{questionMark}
+					</button>
+				</Link>
 			</div>
 			<button
 				type="button"
