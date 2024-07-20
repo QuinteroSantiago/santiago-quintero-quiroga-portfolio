@@ -3,7 +3,7 @@ export default [
         year: "2020 - 2022",
         startDate: "2020-01-01",
         endDate: "2022-05-01",
-        imgUrl: "/assets/experiences_images/uf.jpeg",
+        imgUrl: "/assets/experiences_images/uf.webp",
         title: "Bachelor's Degree in Computer Science",
         place: "University of Florida",
         details: [
@@ -14,7 +14,7 @@ export default [
         year: "2019",
         startDate: "2019-05-05",
         endDate: "2019-12-15",
-        imgUrl: "/assets/experiences_images/santafe.jpeg",
+        imgUrl: "/assets/experiences_images/santafe.webp",
         title: "Associate's Degree in Computer Science",
         details: [
             "Completed Associate's degree with a focus on C++ development; provided tutoring in mathematics and physics."

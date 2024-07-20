@@ -40,7 +40,7 @@ function RotatingImage() {
 
         // Texture loading
         const textureLoader = new THREE.TextureLoader();
-        const pictureTexture = textureLoader.load('/assets/IMG_2077.jpg', texture => {
+        const pictureTexture = textureLoader.load('/assets/profile-pic.webp', texture => {
             texture.flipY = false; // Flip the texture vertically
             texture.rotation = Math.PI * 1.5; // Rotate the texture by 90 degrees
             texture.center.set(0.5, 0.5); // Set the rotation center to the middle of the texture
