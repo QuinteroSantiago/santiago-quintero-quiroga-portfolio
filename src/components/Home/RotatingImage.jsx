@@ -1,8 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 function RotatingImage() {
     const mountRef = useRef(null);
+    const spinningSpeed = useRef(0); // Start with zero speed
+    const isUserInteracting = useRef(false); // Track if the user is interacting
 
     useEffect(() => {
         const width = mountRef.current.clientWidth;
@@ -12,8 +15,8 @@ function RotatingImage() {
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); // Enable alpha for transparency
         renderer.setSize(width, height);
         renderer.setClearColor(0x000000, 0); // Set background to transparent
-        renderer.shadowMap.enabled = true; // Enable shadow maps
-        renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Soft shadow map
+        // renderer.shadowMap.enabled = true; // Enable shadow maps
+        // renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Soft shadow map
         mountRef.current.appendChild(renderer.domElement);
 
         // Lighting
@@ -67,11 +70,31 @@ function RotatingImage() {
         scene.add(coin);
         camera.position.set(0, 0, 12);
 
+        // OrbitControls
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true; // Enable damping for smoother controls
+        controls.dampingFactor = 0.1;
+        controls.rotateSpeed = 0.5;
+
+        controls.addEventListener('start', () => isUserInteracting.current = true);
+        controls.addEventListener('end', () => {
+            isUserInteracting.current = false;
+            spinningSpeed.current = (controls.getAzimuthalAngle() - coin.rotation.z) / 20; // Adjust speed based on the control interaction
+        });
+
         // Animation
         const animate = function () {
             requestAnimationFrame(animate);
-            coin.rotation.z += 0.005; // Rotating around the Z-axis
-            border.rotation.z += 0.005; // Keep the border rotation in sync
+
+            if (!isUserInteracting.current) {
+                coin.rotation.z += spinningSpeed.current; // Rotating around the Z-axis
+                border.rotation.z += spinningSpeed.current; // Keep the border rotation in sync
+
+                // Apply damping effect
+                spinningSpeed.current *= 0.99; // Reduce speed over time to simulate friction
+            }
+
+            controls.update(); // Update controls
             renderer.render(scene, camera);
         };
 
