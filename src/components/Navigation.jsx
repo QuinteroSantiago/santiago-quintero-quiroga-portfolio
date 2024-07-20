@@ -5,7 +5,7 @@ function Navigation() {
 	const location = useLocation();
 	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const buttonRef = useRef(null);
-    const [buttonPosition, setButtonPosition] = useState({ x: 80, y: 115 });
+	const [buttonPosition, setButtonPosition] = useState({ x: 80, y: 112 });
 
 	useEffect(() => {
 		const currentTheme = localStorage.getItem('theme');
@@ -27,6 +27,22 @@ function Navigation() {
 			document.documentElement.classList.remove('dark');
 		}
 	}, [theme]);
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth < 640) {
+				setButtonPosition({ x: 16, y: 98 });
+			} else {
+				setButtonPosition({ x: 80, y: 112 });
+			}
+		};
+
+		handleResize(); // Set initial position on component mount
+		window.addEventListener('resize', handleResize); // Update position on resize
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
 
 	const handleThemeSwitch = () => {
 		setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -170,22 +186,22 @@ function Navigation() {
 	);
 
 	return (
-		<div className="fixed top-4 z-10 flex justify-between items-start w-full px-20">
-			<div className="flex flex-col items-start space-y-4">
+		<div className="fixed top-4 z-10 flex justify-between items-start w-full px-4 sm:px-20">
+			<div className="flex flex-col items-start space-y-4 sm:space-y-4">
 				{location.pathname !== '/' && (
-					<Link to="/" aria-label="Go to Homepage" className="p-2 bg bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{homeIcon}</Link>
+					<Link to="/" aria-label="Go to Homepage" className="p-1 sm:p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{homeIcon}</Link>
 				)}
 				{location.pathname !== '/blog' && (
-					<Link to="/blog" aria-label="Go to Santiago Quintero's blog" className="p-2 bg bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{blogIcon}</Link>
+					<Link to="/blog" aria-label="Go to Santiago Quintero's blog" className="p-1 sm:p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{blogIcon}</Link>
 				)}
 				{location.pathname !== '/workout' && (
-					<Link to="/workout" aria-label="Go to Workout Page" className="p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{workoutIcon}</Link>
+					<Link to="/workout" aria-label="Go to Workout Page" className="p-1 sm:p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{workoutIcon}</Link>
 				)}
 				<Link to="/404" >                
 					<button
 						aria-label="Mystery button, chase it if you can"
 						ref={buttonRef}
-						className="p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md"
+						className="p-1 sm:p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md"
 						style={{
 							position: 'absolute',
 							left: `${buttonPosition.x}px`,
@@ -203,7 +219,7 @@ function Navigation() {
 				aria-label="Switch theme button"
 				type="button"
 				onClick={handleThemeSwitch}
-				className="p-2 bg-black dark:bg-yellow-500 text-lg rounded-md dark:text-black"
+				className="p-1 sm:p-2 bg-black dark:bg-yellow-500 text-lg rounded-md dark:text-black"
 			>
 				{theme === 'dark' ? sun : moon}
 			</button>
