@@ -7,6 +7,7 @@ function Footer() {
 				<div>
 					<div className="flex flex-wrap justify-center gap-2">
 						<a
+							aria-label="Check out Santiago Quintero's Twitter"
 							href="https://twitter.com/Sqq18"
 							className="bg-zinc-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 							<svg
@@ -19,6 +20,7 @@ function Footer() {
 							</svg>
 						</a>
 						<a
+							aria-label="Check out Santiago Quintero's LinkedIin"
 							href="https://www.linkedin.com/in/santiago-quintero/"
 							className="bg-zinc-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 							<svg
@@ -33,6 +35,7 @@ function Footer() {
 							</svg>
 						</a>
 						<a
+							aria-label="Check out Santiago Quintero's Github"
 							href="https://github.com/QuinteroSantiago"
 							className="bg-zinc-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 							<svg

@@ -173,16 +173,17 @@ function Navigation() {
 		<div className="fixed top-4 z-10 flex justify-between items-start w-full px-20">
 			<div className="flex flex-col items-start space-y-4">
 				{location.pathname !== '/' && (
-					<Link to="/" className="p-2 bg bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{homeIcon}</Link>
+					<Link to="/" aria-label="Go to Homepage" className="p-2 bg bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{homeIcon}</Link>
 				)}
 				{location.pathname !== '/blog' && (
-					<Link to="/blog" className="p-2 bg bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{blogIcon}</Link>
+					<Link to="/blog" aria-label="Go to Santiago Quintero's blog" className="p-2 bg bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{blogIcon}</Link>
 				)}
 				{location.pathname !== '/workout' && (
-					<Link to="/workout" className="p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{workoutIcon}</Link>
+					<Link to="/workout" aria-label="Go to Workout Page" className="p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{workoutIcon}</Link>
 				)}
 				<Link to="/404" >                
 					<button
+						aria-label="Mystery button, chase it if you can"
 						ref={buttonRef}
 						className="p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md"
 						style={{
@@ -199,6 +200,7 @@ function Navigation() {
 				</Link>
 			</div>
 			<button
+				aria-label="Switch theme button"
 				type="button"
 				onClick={handleThemeSwitch}
 				className="p-2 bg-black dark:bg-yellow-500 text-lg rounded-md dark:text-black"

@@ -3,6 +3,7 @@ import React from 'react';
 function PortfolioItem({ title, imgUrl, stack, link, date }) {
    return (
       <a
+			aria-label={`Check out ${title}`}
          href={link}
          target="_blank"
          rel="noopener noreferrer"
