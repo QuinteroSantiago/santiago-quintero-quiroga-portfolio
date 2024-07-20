@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -6,6 +6,7 @@ function RotatingImage() {
     const mountRef = useRef(null);
     const spinningSpeed = useRef(0); // Start with zero speed
     const isUserInteracting = useRef(false); // Track if the user is interacting
+    const [speedDisplay, setSpeedDisplay] = useState(0); // State to display the spinning speed
 
     useEffect(() => {
         const width = mountRef.current.clientWidth;
@@ -93,6 +94,7 @@ function RotatingImage() {
                 // Apply damping effect
                 spinningSpeed.current *= 0.99; // Reduce speed over time to simulate friction
             }
+            setSpeedDisplay(Math.abs(spinningSpeed.current).toFixed(3)); // Update the displayed speed
 
             controls.update(); // Update controls
             renderer.render(scene, camera);
@@ -107,7 +109,12 @@ function RotatingImage() {
         };
     }, []);
 
-    return <div ref={mountRef} style={{ width: '300px', height: '300px' }} />;
+    return (
+        <div>
+            <p>Spinning Speed: {speedDisplay}</p>
+            <div ref={mountRef} style={{ width: '300px', height: '300px' }} />
+        </div>
+    );
 }
 
 export default RotatingImage;
