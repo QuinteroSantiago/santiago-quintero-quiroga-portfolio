@@ -3,7 +3,7 @@ export default [
         year: "2023 - Present",
         startDate: "2023-05-05",
         endDate: "Today",
-        imgUrl: "/assets/experiences_images/core.jpeg",
+        imgUrl: "/assets/experiences_images/core.webp",
         title: "Software Engineer - Platform",
         place: "Corellium",
         responsibilities: [
@@ -23,7 +23,7 @@ export default [
         year: "2022 - 2023",
         startDate: "2022-07-01",
         endDate: "2023-05-05",
-        imgUrl: "/assets/experiences_images/svb.jpeg",
+        imgUrl: "/assets/experiences_images/svb.webp",
         title: "Software Engineer",
         place: "Silicon Valley Bank",
         responsibilities: [
@@ -42,7 +42,7 @@ export default [
         year: "2021",
         startDate: "2021-06-01",
         endDate: "2021-08-15",
-        imgUrl: "/assets/experiences_images/jpmc.jpeg",
+        imgUrl: "/assets/experiences_images/jpmc.webp",
         title: "Software Engineering Intern",
         place: "JPMorgan Chase",
         details: [
@@ -55,7 +55,7 @@ export default [
         year: "2021 - 2022",
         startDate: "2021-10-01",
         endDate: "2022-07-01",
-        imgUrl: "/assets/experiences_images/pkt-borum-lab1.png",
+        imgUrl: "/assets/experiences_images/pkt-borum-lab1.webp",
         title: "Software Developer",
         place: "PKT Borum Lab",
         details: [
@@ -68,7 +68,7 @@ export default [
         year: "2021 - Present",
         startDate: "2021-06-01",
         endDate: "Today",
-        imgUrl: "/assets/experiences_images/gomu.png",
+        imgUrl: "/assets/experiences_images/gomu.webp",
         title: "Software Engineer",
         place: "Gomu Cloud",
         responsibilities: [
