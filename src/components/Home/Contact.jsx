@@ -37,6 +37,7 @@ function Contact() {
                      required
                   />
                   <button
+                     aria-label="Submit the form button"
                      type="submit"
                      className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-b from-yellow-500 via-blue-500 to-red-900 drop-shadow-md hover:text-black"
                   >
