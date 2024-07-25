@@ -1,5 +1,19 @@
 export default [
     {
+        id: 8,
+        title: 'Entry #8',
+        date: '15:30, Thursday, 07-25-2024',
+        content: `
+        I am tired... Very tired... Should never sleep less than 3 hours again. Not in a good mood :) BUT THINGS WERE FCKNG DONE. Now I can rest in peace.
+        >>poem
+        San Diego
+        Pest that doesn't rest,
+        screaming at my ear,
+        There's nothing I dread more,
+        Than that bitch I have to hear.
+        Brickell, FL, USA (07.25.24)<<`
+    },
+    {
         id: 7,
         title: 'Look at this',
         date: '21:45, Wednesday, 07-17-2024',
