@@ -10,8 +10,6 @@ function Contact() {
          <div className="flex flex-col mb-10 mx-auto">
             <div className="flex justify-center items-center">
                <form
-                  action="https://getform.io/f/75b38b2a-7416-4bf2-91d1-06d1c136f08f"
-                  method="POST"
                   className="flex flex-col w-full md:w-7/12"
                >
                   <Title className="text-zinc-500">Contact</Title>
