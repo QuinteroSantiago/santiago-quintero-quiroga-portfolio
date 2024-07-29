@@ -3,10 +3,10 @@ export default {
         title: 'Meetings day',
         exercises: [
             {
-                name: 'Incline Treadmill Walk',
-                sets: '20 minutes',
-                reps: '3 mph',
-                weight: '15% incline'
+                name: 'CARDIO',
+                sets: '45 minutes',
+                reps: '',
+                weight: ''
             }
         ]
     },
@@ -23,25 +23,25 @@ export default {
                 name: 'Barbell Rows',
                 sets: '4',
                 reps: '8-10 reps',
-                weight: ''
+                weight: '135'
             },
             {
                 name: 'Face Pulls',
                 sets: '3',
                 reps: '12-15 reps',
-                weight: ''
+                weight: '10'
             },
             {
                 name: 'Hammer Curls',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: ''
+                weight: '25'
             },
             {
                 name: 'Bicep Curls',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: ''
+                weight: '20'
             }
         ]
     },
@@ -52,19 +52,19 @@ export default {
                 name: 'Squats',
                 sets: '4',
                 reps: '8-10 reps',
-                weight: ''
+                weight: '225'
             },
             {
                 name: 'Leg Press',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: ''
+                weight: '250'
             },
             {
                 name: 'Romanian Deadlifts',
                 sets: '3',
                 reps: '8-10 reps',
-                weight: ''
+                weight: '135'
             },
             {
                 name: 'Calf Raises',
@@ -76,7 +76,7 @@ export default {
                 name: 'Leg Curls',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: ''
+                weight: '50'
             }
         ]
     },
@@ -95,7 +95,7 @@ export default {
         title: 'Hell Day',
         exercises: [
             {
-                name: 'Dumbbell Bench Press',
+                name: 'DB Bench Press',
                 sets: '4',
                 reps: '8-10 reps',
                 weight: '60'
@@ -110,43 +110,43 @@ export default {
                 name: 'Hexbar Deadlift',
                 sets: '4',
                 reps: '6-8 reps',
-                weight: ''
+                weight: '275'
             },
             {
                 name: 'Lat Pulldowns',
                 sets: '3',
                 reps: '8-10 reps',
-                weight: ''
+                weight: '100'
             },
             {
                 name: 'Seated Cable Rows',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: ''
+                weight: '100'
             },
             {
                 name: 'Preacher Curls',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: ''
+                weight: '40'
             },
             {
                 name: 'Reverse Curls',
                 sets: '3',
                 reps: '12-15 reps',
-                weight: ''
+                weight: '15'
             },
             {
                 name: 'Front Squats',
                 sets: '4',
                 reps: '8-10 reps',
-                weight: ''
+                weight: '135'
             },
             {
                 name: 'Walking Lunges',
                 sets: '3',
                 reps: '12-15 reps per leg',
-                weight: ''
+                weight: '25'
             },
             {
                 name: 'Standing Calf Raises',
@@ -174,19 +174,19 @@ export default {
                 name: 'Bench Press',
                 sets: '4',
                 reps: '8-10 reps',
-                weight: ''
+                weight: '135'
             },
             {
-                name: 'Overhead Press',
+                name: 'DB Overhead Press',
                 sets: '3',
                 reps: '8-10 reps',
-                weight: ''
+                weight: '25'
             },
             {
-                name: 'Incline Dumbbell Press',
+                name: 'Incline DB Press',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: ''
+                weight: '60'
             },
             {
                 name: 'Tricep Dips',
@@ -198,7 +198,7 @@ export default {
                 name: 'Lateral Raises',
                 sets: '3',
                 reps: '12-15 reps',
-                weight: ''
+                weight: '15'
             }
         ]
     }
