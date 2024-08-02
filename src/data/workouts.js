@@ -16,29 +16,29 @@ export default {
             {
                 name: 'Pull-Ups',
                 sets: '3',
-                reps: 'AMRAP',
+                reps: '6',
                 weight: 'Body weight'
             },
             {
                 name: 'Barbell Rows',
                 sets: '4',
                 reps: '8-10 reps',
-                weight: '135'
+                weight: '95'
             },
             {
                 name: 'Face Pulls',
                 sets: '3',
                 reps: '12-15 reps',
-                weight: '10'
+                weight: '15'
             },
             {
                 name: 'Hammer Curls',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: '25'
+                weight: '20'
             },
             {
-                name: 'Bicep Curls',
+                name: 'Bicep Cable',
                 sets: '3',
                 reps: '10-12 reps',
                 weight: '20'
@@ -98,37 +98,37 @@ export default {
                 name: 'DB Bench Press',
                 sets: '4',
                 reps: '8-10 reps',
-                weight: '60'
+                weight: '50'
             },
             {
                 name: 'Machine Flyes',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: '100'
+                weight: '50'
             },
             {
                 name: 'Hexbar Deadlift',
                 sets: '4',
                 reps: '6-8 reps',
-                weight: '275'
+                weight: '225'
             },
             {
                 name: 'Lat Pulldowns',
                 sets: '3',
                 reps: '8-10 reps',
-                weight: '100'
+                weight: '90'
             },
             {
                 name: 'Seated Cable Rows',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: '100'
+                weight: '90'
             },
             {
-                name: 'Preacher Curls',
+                name: 'Preacher Curls DB',
                 sets: '3',
                 reps: '10-12 reps',
-                weight: '40'
+                weight: '15'
             },
             {
                 name: 'Reverse Curls',
