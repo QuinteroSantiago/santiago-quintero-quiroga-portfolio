@@ -180,7 +180,7 @@ export default {
                 name: 'DB Overhead Press',
                 sets: '3',
                 reps: '8-10 reps',
-                weight: '25'
+                weight: '50'
             },
             {
                 name: 'Incline DB Press',
@@ -191,14 +191,14 @@ export default {
             {
                 name: 'Tricep Dips',
                 sets: '3',
-                reps: '10-12 reps',
+                reps: '8 reps',
                 weight: 'Body weight'
             },
             {
-                name: 'Lateral Raises',
+                name: 'Cable Lateral Raises',
                 sets: '3',
                 reps: '12-15 reps',
-                weight: '15'
+                weight: '5'
             }
         ]
     }
