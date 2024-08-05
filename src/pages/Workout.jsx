@@ -56,39 +56,37 @@ function Workout() {
     };
 
     return (
-        <>
-            <div className="text-zinc-900 dark:text-zinc-300 font-inter">
-                <div className="max-w-5xl w-11/12 mx-auto">
-                    <div className="text-center py-12">
-                        <h1 className="text-5xl font-bold mb-6">Workout</h1>
-                        <h2 className="text-xl mb-6">{workoutPlan.title}</h2>
-                        {renderDaySelector()}
-                        <div className="mt-4">
-                            <table className="mx-auto w-full mt-4 border-collapse">
-                                <thead>
-                                    <tr>
-                                        <th className="px-4 py-2 border-b-2 font-bold">Workout Name</th>
-                                        <th className="px-4 py-2 border-b-2 font-bold">Sets</th>
-                                        <th className="px-4 py-2 border-b-2 font-bold">Reps</th>
-                                        <th className="px-4 py-2 border-b-2 font-bold">Weight (lbs)</th>
+        <div className="text-gray-800 dark:text-gray-200 font-sans">
+            <div className="max-w-5xl w-full mx-auto">
+                <div className="text-center py-12">
+                    <h1 className="text-5xl font-light mb-6">Workout</h1>
+                    <h2 className="text-xl font-normal mb-6">{workoutPlan.title}</h2>
+                    {renderDaySelector()}
+                    <div className="mt-8">
+                        <table className="mx-auto w-full">
+                            <thead className="bg-gray-100 dark:bg-gray-800">
+                                <tr>
+                                    <th className="pb-4 pt-4 font-bold text-lg">Workout Name</th>
+                                    <th className="pb-4 pt-4 font-bold text-lg">Sets</th>
+                                    <th className="pb-4 pt-4 font-bold text-lg">Reps</th>
+                                    <th className="pb-4 pt-4 font-bold text-lg">Weight (lbs)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {workoutPlan.exercises.map((exercise, index) => (
+                                    <tr key={index} className={`hover:bg-gray-50 dark:hover:bg-gray-600 ${index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700' : 'bg-white dark:bg-gray-800'}`}>
+                                        <td className="pt-4 pb-4 font-light">{exercise.name}</td>
+                                        <td className="pt-4 pb-4 font-light">{exercise.sets}</td>
+                                        <td className="pt-4 pb-4 font-light">{exercise.reps}</td>
+                                        <td className="pt-4 pb-4 font-light">{exercise.weight}</td>
                                     </tr>
-                                </thead>
-                                <tbody>
-                                    {workoutPlan.exercises.map((exercise, index) => (
-                                        <tr key={index}>
-                                            <td className="px-4 py-2 border-b">{exercise.name}</td>
-                                            <td className="px-4 py-2 border-b">{exercise.sets}</td>
-                                            <td className="px-4 py-2 border-b">{exercise.reps}</td>
-                                            <td className="px-4 py-2 border-b">{exercise.weight}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
