@@ -1,17 +1,10 @@
 export default [
    {
-      title: 'Gomu Guides',
-      imgUrl: 'assets/portfolio_images/gomu-guides.webp',
-      stack: ['MongoDB', 'Express', 'ReactJS', 'NodeJS', 'Tailwind'],
-      link: 'http://www.gomuguides.com/',
+      title: 'Gomu Planner',
+      imgUrl: 'assets/portfolio_images/bamboo-logo.jpg',
+      stack: ['Python', 'MariaDB', 'VBS'],
+      link: 'https://youtu.be/1ZGrxvZ-2fk',
       date: '2024'
-   },
-   {
-      title: 'Gomu Cloud',
-      imgUrl: 'assets/portfolio_images/gomu_cloud_logo.webp',
-      stack: ['NextJS', 'Vercel'],
-      link: 'http://www.gomu.cloud/',
-      date: '2023'
    },
    {
       title: 'Good News ML Aggregator',
@@ -27,6 +20,20 @@ export default [
       link: 'https://www.youtube.com/watch?v=4CQmk2Av7ug',
       details: 'The Service Container Toolkit was an API-driven project worked on by a group of 3 interns at JPMorgan Chase. It provided an Interactive Guide, Project Generator (Code Initializer), and a Testing Suite for the existing Spring Boot Services Infrastructure that existed within JPMC. The project’s goal was to make service deployment easy and make it simple to add documentation. We made this project API-driven with the purpose of having the flexibility to easily integrate it into other frameworks. It also gave the option to completely overhaul the front-end for the engineers taking over the project.',
       date: '2021',
+   },
+   {
+      title: 'Gomu Guides',
+      imgUrl: 'assets/portfolio_images/gomu-guides.webp',
+      stack: ['SquareSpace'],
+      link: 'http://www.gomuguides.com/',
+      date: '2024'
+   },
+   {
+      title: 'Gomu Cloud',
+      imgUrl: 'assets/portfolio_images/gomu_cloud_logo.webp',
+      stack: ['NextJS', 'Vercel'],
+      link: 'http://www.gomu.cloud/',
+      date: '2023'
    },
    {
       title: 'NBA MVP Predictor',
