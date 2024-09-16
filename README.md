@@ -22,3 +22,5 @@ The project uses semantic versioning (`major.minor.patch`). Version numbers are 
 ### Automatic Versioning Workflow
 A separate GitHub Actions workflow handles version management. It checks commit messages to determine the appropriate version increment and updates the project version accordingly.
 
+### TODO
+- [ ] Add core exercises to lowest running time routine

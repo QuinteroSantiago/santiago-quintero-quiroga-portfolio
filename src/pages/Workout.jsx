@@ -24,7 +24,7 @@ function Workout() {
     }, []);
 
     const renderDaySelector = () => {
-        if (windowWidth < 1000) { // Assuming 768px is the breakpoint for mobile screens
+        if (windowWidth < 1000) { // Assuming 1000px is the breakpoint for mobile screens
             return (
                 <select
                     className="px-4 py-2 rounded bg-gray-200 text-black"
@@ -61,6 +61,9 @@ function Workout() {
                 <div className="text-center py-12">
                     <h1 className="text-5xl font-light mb-6">Workout</h1>
                     <h2 className="text-xl font-normal mb-6">{workoutPlan.title}</h2>
+                    {workoutPlan.time && (
+                        <h3 className="text-lg font-normal mb-6">Running Time: {workoutPlan.time}</h3>
+                    )}
                     {renderDaySelector()}
                     <div className="mt-8">
                         <table className="mx-auto w-full">
