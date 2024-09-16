@@ -1,17 +1,7 @@
 export default {
     'Monday': {
-        title: 'Meetings day',
-        exercises: [
-            {
-                name: 'CARDIO',
-                sets: '45 minutes',
-                reps: '',
-                weight: ''
-            }
-        ]
-    },
-    'Tuesday': {
         title: 'Pull Day',
+        time: '50.05',
         exercises: [
             {
                 name: 'Pull-Ups',
@@ -45,8 +35,45 @@ export default {
             }
         ]
     },
+    'Tuesday': {
+        title: 'Push Day',
+        time: '42.07',
+        exercises: [
+            {
+                name: 'Bench Press',
+                sets: '4',
+                reps: '8-10 reps',
+                weight: '135'
+            },
+            {
+                name: 'DB Overhead Press',
+                sets: '3',
+                reps: '8-10 reps',
+                weight: '50'
+            },
+            {
+                name: 'Incline DB Press',
+                sets: '3',
+                reps: '10-12 reps',
+                weight: '60'
+            },
+            {
+                name: 'Tricep Dips',
+                sets: '3',
+                reps: '8 reps',
+                weight: 'Body weight'
+            },
+            {
+                name: 'Cable Lateral Raises',
+                sets: '3',
+                reps: '12-15 reps',
+                weight: '5'
+            }
+        ]
+    },
     'Wednesday': {
         title: 'Legs Day',
+        time: '51.30',
         exercises: [
             {
                 name: 'Squats',
@@ -81,60 +108,56 @@ export default {
         ]
     },
     'Thursday': {
-        title: 'Midweek Slumber',
-        exercises: [
-            {
-                name: 'Rest & Recovery',
-                sets: '',
-                reps: '',
-                weight: ''
-            }
-        ]
-    },
-    'Friday': {
-        title: 'Hell Day',
+        title: 'Upper Body Focus',
+        time: '65.07',
         exercises: [
             {
                 name: 'DB Bench Press',
                 sets: '4',
-                reps: '8-10 reps',
+                reps: '8-10',
                 weight: '50'
             },
             {
                 name: 'Machine Flyes',
                 sets: '3',
-                reps: '10-12 reps',
+                reps: '10-12',
                 weight: '50'
-            },
-            {
-                name: 'Hexbar Deadlift',
-                sets: '4',
-                reps: '6-8 reps',
-                weight: '225'
             },
             {
                 name: 'Lat Pulldowns',
                 sets: '3',
-                reps: '8-10 reps',
+                reps: '8-10',
                 weight: '90'
             },
             {
                 name: 'Seated Cable Rows',
                 sets: '3',
-                reps: '10-12 reps',
+                reps: '10-12',
                 weight: '90'
             },
             {
                 name: 'Preacher Curls DB',
                 sets: '3',
-                reps: '10-12 reps',
-                weight: '15'
+                reps: '10-12',
+                weight: '90'
             },
             {
                 name: 'Reverse Curls',
                 sets: '3',
-                reps: '12-15 reps',
-                weight: '15'
+                reps: '12-15',
+                weight: '90'
+            }
+        ]
+    },
+    'Friday': {
+        title: 'Hell Day',
+        time: '----',
+        exercises: [
+            {
+                name: 'Hexbar Deadlift',
+                sets: '4',
+                reps: '6-8 reps',
+                weight: '225'
             },
             {
                 name: 'Front Squats',
@@ -168,38 +191,14 @@ export default {
         ]
     },
     'Sunday': {
-        title: 'Push Day',
+        title: 'Family day',
         exercises: [
             {
-                name: 'Bench Press',
-                sets: '4',
-                reps: '8-10 reps',
-                weight: '135'
-            },
-            {
-                name: 'DB Overhead Press',
-                sets: '3',
-                reps: '8-10 reps',
-                weight: '50'
-            },
-            {
-                name: 'Incline DB Press',
-                sets: '3',
-                reps: '10-12 reps',
-                weight: '60'
-            },
-            {
-                name: 'Tricep Dips',
-                sets: '3',
-                reps: '8 reps',
-                weight: 'Body weight'
-            },
-            {
-                name: 'Cable Lateral Raises',
-                sets: '3',
-                reps: '12-15 reps',
-                weight: '5'
+                name: 'CARDIO',
+                sets: '45 minutes',
+                reps: '',
+                weight: ''
             }
         ]
-    }
+    },
 };
