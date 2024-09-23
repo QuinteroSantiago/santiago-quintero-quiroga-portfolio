@@ -1,7 +1,7 @@
 export default {
     'Monday': {
         title: 'Pull Day',
-        time: '50.05',
+        time: ((45.13) / 1.00),
         exercises: [
             {
                 name: 'Pull-Ups',
@@ -16,28 +16,28 @@ export default {
                 weight: '95'
             },
             {
-                name: 'Face Pulls',
-                sets: '3',
-                reps: '12-15 reps',
-                weight: '15'
-            },
-            {
                 name: 'Hammer Curls',
                 sets: '3',
-                reps: '10-12 reps',
-                weight: '20'
+                reps: '8-6 reps',
+                weight: '25'
             },
             {
-                name: 'Bicep Cable',
+                name: 'Preacher Curl',
                 sets: '3',
-                reps: '10-12 reps',
-                weight: '20'
+                reps: '12 reps',
+                weight: '30'
+            },
+            {
+                name: 'Seated Row',
+                sets: '3',
+                reps: '8 reps',
+                weight: '105'
             }
         ]
     },
     'Tuesday': {
         title: 'Push Day',
-        time: '42.07',
+        time: '----',
         exercises: [
             {
                 name: 'Bench Press',
@@ -72,8 +72,8 @@ export default {
         ]
     },
     'Wednesday': {
-        title: 'Legs Day',
-        time: '51.30',
+        title: 'Leg Day',
+        time: '----',
         exercises: [
             {
                 name: 'Squats',
@@ -108,8 +108,8 @@ export default {
         ]
     },
     'Thursday': {
-        title: 'Upper Body Focus',
-        time: '65.07',
+        title: 'Upper Body Hell',
+        time: '----',
         exercises: [
             {
                 name: 'DB Bench Press',
@@ -150,7 +150,7 @@ export default {
         ]
     },
     'Friday': {
-        title: 'Hell Day',
+        title: 'Charley Horse Day',
         time: '----',
         exercises: [
             {
@@ -180,7 +180,7 @@ export default {
         ]
     },
     'Saturday': {
-        title: 'Fun Day',
+        title: 'Nill Day',
         exercises: [
             {
                 name: 'Rest & Recovery',
