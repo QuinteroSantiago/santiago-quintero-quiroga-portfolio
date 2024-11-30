@@ -1,41 +1,47 @@
 export default {
     'Monday': {
         title: 'Pull Day',
-        time: '45 mins',
+        time: ((45.13) / 1.00),
         exercises: [
             {
                 name: 'Pull-Ups',
                 sets: '3',
-                reps: '6-10 reps',
+                reps: '6',
                 weight: 'Body weight'
             },
             {
                 name: 'Barbell Rows',
-                sets: '3',
+                sets: '4',
                 reps: '8-10 reps',
                 weight: '95'
             },
             {
-                name: 'Seated Row',
-                sets: '3',
-                reps: '8-10 reps',
-                weight: '105'
-            },
-            {
                 name: 'Hammer Curls',
                 sets: '3',
-                reps: '8-10 reps',
+                reps: '8-6 reps',
                 weight: '25'
+            },
+            {
+                name: 'Preacher Curl',
+                sets: '3',
+                reps: '12 reps',
+                weight: '30'
+            },
+            {
+                name: 'Seated Row',
+                sets: '3',
+                reps: '8 reps',
+                weight: '105'
             }
         ]
     },
     'Tuesday': {
         title: 'Push Day',
-        time: '45 mins',
+        time: '----',
         exercises: [
             {
                 name: 'Bench Press',
-                sets: '3',
+                sets: '4',
                 reps: '8-10 reps',
                 weight: '135'
             },
@@ -52,6 +58,12 @@ export default {
                 weight: '60'
             },
             {
+                name: 'Tricep Dips',
+                sets: '3',
+                reps: '8 reps',
+                weight: 'Body weight'
+            },
+            {
                 name: 'Cable Lateral Raises',
                 sets: '3',
                 reps: '12-15 reps',
@@ -61,11 +73,11 @@ export default {
     },
     'Wednesday': {
         title: 'Leg Day',
-        time: '60 mins',
+        time: '----',
         exercises: [
             {
                 name: 'Squats',
-                sets: '3',
+                sets: '4',
                 reps: '8-10 reps',
                 weight: '225'
             },
@@ -83,55 +95,73 @@ export default {
             },
             {
                 name: 'Calf Raises',
-                sets: '3',
+                sets: '4',
                 reps: '12-15 reps',
                 weight: ''
+            },
+            {
+                name: 'Leg Curls',
+                sets: '3',
+                reps: '10-12 reps',
+                weight: '50'
             }
         ]
     },
     'Thursday': {
-        title: 'Upper Body Hypertrophy',
-        time: '60 mins',
+        title: 'Upper Body Hell',
+        time: '----',
         exercises: [
             {
                 name: 'DB Bench Press',
-                sets: '3',
-                reps: '8-10 reps',
+                sets: '4',
+                reps: '8-10',
                 weight: '50'
             },
             {
                 name: 'Machine Flyes',
                 sets: '3',
-                reps: '10-12 reps',
+                reps: '10-12',
                 weight: '50'
             },
             {
                 name: 'Lat Pulldowns',
                 sets: '3',
-                reps: '8-10 reps',
+                reps: '8-10',
                 weight: '90'
             },
             {
                 name: 'Seated Cable Rows',
                 sets: '3',
-                reps: '10-12 reps',
+                reps: '10-12',
+                weight: '90'
+            },
+            {
+                name: 'Preacher Curls DB',
+                sets: '3',
+                reps: '10-12',
+                weight: '90'
+            },
+            {
+                name: 'Reverse Curls',
+                sets: '3',
+                reps: '12-15',
                 weight: '90'
             }
         ]
     },
     'Friday': {
-        title: 'Leg & Core Strength',
-        time: '50 mins',
+        title: 'Charley Horse Day',
+        time: '----',
         exercises: [
             {
                 name: 'Hexbar Deadlift',
-                sets: '3',
+                sets: '4',
                 reps: '6-8 reps',
                 weight: '225'
             },
             {
                 name: 'Front Squats',
-                sets: '3',
+                sets: '4',
                 reps: '8-10 reps',
                 weight: '135'
             },
@@ -143,14 +173,14 @@ export default {
             },
             {
                 name: 'Standing Calf Raises',
-                sets: '3',
+                sets: '4',
                 reps: '12-15 reps',
                 weight: ''
-            }
+            },
         ]
     },
     'Saturday': {
-        title: 'Active Recovery',
+        title: 'Nill Day',
         exercises: [
             {
                 name: 'Rest & Recovery',
@@ -161,14 +191,14 @@ export default {
         ]
     },
     'Sunday': {
-        title: 'Cardio & Family Day',
+        title: 'Family day',
         exercises: [
             {
-                name: 'Incline Treadmill Walk',
-                sets: '20 minutes',
-                reps: '3 mph',
-                weight: '15% incline'
+                name: 'CARDIO',
+                sets: '45 minutes',
+                reps: '',
+                weight: ''
             }
         ]
-    }
+    },
 };
