@@ -36,6 +36,102 @@ export default {
         ]
     },
     'Tuesday': {
+        title: 'Leg Day',
+        time: '60 mins',
+        exercises: [
+            {
+                name: 'Back Squats',
+                sets: '4',
+                reps: '8 reps',
+                weight: '225'
+            },
+            {
+                name: 'Leg Press',
+                sets: '4',
+                reps: '10 reps',
+                weight: '300'
+            },
+            {
+                name: 'Calf Raises',
+                sets: '4',
+                reps: '15 reps',
+                weight: ''
+            },
+            {
+                name: 'Leg Curls',
+                sets: '4',
+                reps: '12 reps',
+                weight: '50'
+            },
+            {
+                name: 'Leg Curls',
+                sets: '4',
+                reps: '10-12 reps',
+                weight: '50'
+            }
+        ]
+    },
+    'Wednesday': {
+        title: 'Upper Body',
+        time: '60 mins',
+        exercises: [
+            {
+                name: 'DB Bench Press',
+                sets: '4',
+                reps: '10 reps',
+                weight: '50'
+            },
+            {
+                name: 'Machine Flyes',
+                sets: '4',
+                reps: '12 reps',
+                weight: '50'
+            },
+            {
+                name: 'Lat Pulldowns',
+                sets: '3',
+                reps: '10 reps',
+                weight: '90'
+            },
+            {
+                name: 'Preacher Curls DB',
+                sets: '3',
+                reps: '12 reps',
+                weight: '25'
+            },
+            {
+                name: 'Skullcrushers',
+                sets: '4',
+                reps: '12 reps',
+                weight: '25'
+            },
+        ]
+    },
+    'Thursday': {
+        title: 'Cardio',
+        time: '30 mins',
+        exercises: [
+            {
+                name: 'Hanging Leg Raises',
+                sets: '4',
+                reps: '12 reps',
+                weight: '0'
+            },
+            {
+                name: 'Weighted Crunches',
+                sets: '4',
+                reps: '12 reps',
+                weight: '20'
+            },
+            {
+                name: 'Incline Treadmill Walk',
+                sets: '20 minutes',
+                reps: '3 mph',
+                weight: '15% incline'
+            }
+        ]
+    },
+    'Friday': {
         title: 'Push Day',
         time: '60 mins',
         exercises: [
@@ -58,101 +154,23 @@ export default {
                 weight: '60'
             },
             {
-                name: 'Tricep Dips',
-                sets: '3',
-                reps: '8-10 reps',
-                weight: 'Body weight'
-            },
-            {
                 name: 'Cable Lateral Raises',
-                sets: '3',
-                reps: '12-15 reps',
+                sets: '4',
+                reps: '15 reps',
                 weight: '5'
-            }
-        ]
-    },
-    'Wednesday': {
-        title: 'Leg Day',
-        time: '60 mins',
-        exercises: [
-            {
-                name: 'Back Squats',
-                sets: '4',
-                reps: '8-10 reps',
-                weight: '225'
             },
             {
-                name: 'Leg Press',
-                sets: '4',
-                reps: '10-12 reps',
-                weight: '250'
-            },
-            {
-                name: 'Romanian Deadlifts',
-                sets: '4',
-                reps: '8-10 reps',
-                weight: '135'
-            },
-            {
-                name: 'Calf Raises',
-                sets: '4',
-                reps: '12-15 reps',
-                weight: ''
-            },
-            {
-                name: 'Leg Curls',
-                sets: '4',
-                reps: '10-12 reps',
-                weight: '50'
-            }
-        ]
-    },
-    'Thursday': {
-        title: 'Upper Body',
-        time: '60 mins',
-        exercises: [
-            {
-                name: 'DB Bench Press',
-                sets: '4',
-                reps: '8-10 reps',
-                weight: '50'
-            },
-            {
-                name: 'Machine Flyes',
-                sets: '4',
-                reps: '10-12 reps',
-                weight: '50'
-            },
-            {
-                name: 'Lat Pulldowns',
-                sets: '4',
-                reps: '8-10 reps',
-                weight: '90'
-            },
-            {
-                name: 'Seated Cable Rows',
-                sets: '4',
-                reps: '10-12 reps',
-                weight: '90'
-            },
-            {
-                name: 'Preacher Curls DB',
+                name: 'Tricep Kickback',
                 sets: '3',
-                reps: '10-12 reps',
-                weight: '25'
+                reps: '15 reps',
+                weight: '15'
             }
         ]
     },
-    'Friday': {
-        title: 'Leg & Abs',
+    'Saturday': {
+        title: 'Leg & Arms',
         time: '60 mins',
         exercises: [
-            {
-                name: 'Hexbar Deadlift',
-                sets: '4',
-                reps: '6-8 reps',
-                weight: '225'
-            },
             {
                 name: 'Front Squats',
                 sets: '4',
@@ -170,30 +188,6 @@ export default {
                 sets: '4',
                 reps: '12-15 reps',
                 weight: ''
-            }
-        ]
-    },
-    'Saturday': {
-        title: 'Pull',
-        time: '45 mins',
-        exercises: [
-            {
-                name: 'Pull-Ups',
-                sets: '3',
-                reps: '6-10 reps',
-                weight: 'Body weight'
-            },
-            {
-                name: 'Barbell Rows',
-                sets: '3',
-                reps: '8-10 reps',
-                weight: '95'
-            },
-            {
-                name: 'Face Pulls',
-                sets: '4',
-                reps: '10-12 reps',
-                weight: ''
             },
             {
                 name: 'Incline DB Curls',
@@ -202,10 +196,10 @@ export default {
                 weight: '20'
             },
             {
-                name: 'Cable Curls',
-                sets: '3',
-                reps: '10-12 reps',
-                weight: ''
+                name: 'Tricep Cable Extension',
+                sets: '4',
+                reps: '12 reps',
+                weight: '20'
             }
         ]
     },
@@ -217,6 +211,18 @@ export default {
                 sets: '20 minutes',
                 reps: '3 mph',
                 weight: '15% incline'
+            },
+            {
+                name: 'Hanging Leg Raises',
+                sets: '4',
+                reps: '12 reps',
+                weight: '0'
+            },
+            {
+                name: 'Weighted Crunches',
+                sets: '4',
+                reps: '12 reps',
+                weight: '20'
             }
         ]
     }
