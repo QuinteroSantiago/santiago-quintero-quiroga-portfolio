@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import workouts from '../data/workouts';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Table from '../components/util/Table';
 
 function Workout() {
     useDocumentTitle("Workout - Santiago Quintero");
@@ -54,6 +55,7 @@ function Workout() {
             );
         }
     };
+    const columns = ["Workout Name", "Sets", "Reps", "Weight (lbs)"];
 
     return (
         <div className="text-gray-800 dark:text-gray-200 font-sans">
@@ -66,26 +68,7 @@ function Workout() {
                     )}
                     {renderDaySelector()}
                     <div className="mt-8">
-                        <table className="mx-auto w-full">
-                            <thead className="bg-gray-100 dark:bg-gray-800">
-                                <tr>
-                                    <th className="pb-4 pt-4 font-bold text-lg">Workout Name</th>
-                                    <th className="pb-4 pt-4 font-bold text-lg">Sets</th>
-                                    <th className="pb-4 pt-4 font-bold text-lg">Reps</th>
-                                    <th className="pb-4 pt-4 font-bold text-lg">Weight (lbs)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {workoutPlan.exercises.map((exercise, index) => (
-                                    <tr key={index} className={`hover:bg-gray-50 dark:hover:bg-gray-600 ${index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700' : 'bg-white dark:bg-gray-800'}`}>
-                                        <td className="pt-4 pb-4 font-light">{exercise.name}</td>
-                                        <td className="pt-4 pb-4 font-light">{exercise.sets}</td>
-                                        <td className="pt-4 pb-4 font-light">{exercise.reps}</td>
-                                        <td className="pt-4 pb-4 font-light">{exercise.weight}</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                        <Table columns={columns} data={workoutPlan.exercises} />
                     </div>
                 </div>
             </div>

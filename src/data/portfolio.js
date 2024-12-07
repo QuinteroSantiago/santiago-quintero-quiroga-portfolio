@@ -59,12 +59,12 @@ export default [
       details: 'This is a Data Structure that stores a collection of nodes that point to each other. The program is written in C++.',
       date: '2020',
    },
-   {
-      title: 'Jiji Swivel',
-      imgUrl: '/assets/portfolio_images/jiji-swivel-1.webp',
-      stack: ['SolidWorks'],
-      link: 'https://github.com/QuinteroSantiago/CodeCapsules/tree/master/jiji-swivel',
-      details: 'A portable cell phone holder developed in a team of 5 people. Created using SolidWorks CAD software. Used a Design Evaluation Matrix to test against other designs. Made during Engineering Product Design Class.',
-      date: '2018',
-   },
+   // {
+   //    title: 'Jiji Swivel',
+   //    imgUrl: '/assets/portfolio_images/jiji-swivel-1.webp',
+   //    stack: ['SolidWorks'],
+   //    link: 'https://github.com/QuinteroSantiago/CodeCapsules/tree/master/jiji-swivel',
+   //    details: 'A portable cell phone holder developed in a team of 5 people. Created using SolidWorks CAD software. Used a Design Evaluation Matrix to test against other designs. Made during Engineering Product Design Class.',
+   //    date: '2018',
+   // },
 ]
