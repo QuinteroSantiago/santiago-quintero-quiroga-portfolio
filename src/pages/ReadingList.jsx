@@ -59,7 +59,7 @@ function ReadingList() {
     };
 
     return (
-        <div className="text-gray-800 dark:text-gray-200 font-sans min-h-screen bg-gray-50 dark:bg-gray-900 px-4">
+        <div className="text-gray-800 dark:text-gray-200 font-sans">
             <div className="max-w-5xl w-full mx-auto">
                 <div className="text-center py-12">
                     <h1 className="text-5xl font-light mb-6">Reading List</h1>
