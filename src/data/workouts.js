@@ -6,32 +6,32 @@ export default {
             {
                 name: 'Pull-Ups',
                 sets: '4',
-                reps: '6-10 reps',
+                reps: '7 reps',
                 weight: 'Body weight'
             },
             {
                 name: 'Barbell Rows',
                 sets: '4',
-                reps: '8-10 reps',
-                weight: '95'
+                reps: '10 reps',
+                weight: '115'
             },
             {
                 name: 'Seated Row',
                 sets: '3',
-                reps: '8-10 reps',
-                weight: '105'
+                reps: '10 reps',
+                weight: '80'
             },
             {
-                name: 'Hammer Curls',
+                name: 'EZ Bar Standing Curl',
                 sets: '3',
-                reps: '8-10 reps',
-                weight: '25'
+                reps: '12 reps',
+                weight: '40'
             },
             {
-                name: 'Preacher Curl',
+                name: 'Machine Bicep Curl',
                 sets: '3',
-                reps: '10-12 reps',
-                weight: '30'
+                reps: '11 reps',
+                weight: '20'
             }
         ]
     },
@@ -42,12 +42,12 @@ export default {
             {
                 name: 'Back Squats',
                 sets: '4',
-                reps: '8 reps',
+                reps: '6 reps',
                 weight: '225'
             },
             {
                 name: 'Leg Press',
-                sets: '4',
+                sets: '3',
                 reps: '10 reps',
                 weight: '300'
             },
@@ -61,13 +61,13 @@ export default {
                 name: 'Leg Curls',
                 sets: '4',
                 reps: '12 reps',
-                weight: '50'
+                weight: '80'
             },
             {
-                name: 'Leg Curls',
+                name: 'Leg Extension',
                 sets: '4',
-                reps: '10-12 reps',
-                weight: '50'
+                reps: '12 reps',
+                weight: '80'
             }
         ]
     },
@@ -76,13 +76,13 @@ export default {
         time: '60 mins',
         exercises: [
             {
-                name: 'DB Bench Press',
+                name: 'Pec Deck',
                 sets: '4',
                 reps: '10 reps',
-                weight: '50'
+                weight: '110'
             },
             {
-                name: 'Machine Flyes',
+                name: 'Cable Flyes',
                 sets: '4',
                 reps: '12 reps',
                 weight: '50'
@@ -94,13 +94,13 @@ export default {
                 weight: '90'
             },
             {
-                name: 'Preacher Curls DB',
+                name: 'Cable Curls',
                 sets: '3',
                 reps: '12 reps',
                 weight: '25'
             },
             {
-                name: 'Skullcrushers',
+                name: 'Cable Extension',
                 sets: '4',
                 reps: '12 reps',
                 weight: '25'
