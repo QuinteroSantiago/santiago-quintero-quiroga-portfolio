@@ -1,10 +1,9 @@
 export default {
     Current: [
-        { title: "The Unicorn Project", topic: "Software", score: 0 },
+        { title: "The Lean Startup: How Today’s Entrepreneurs Use Continuous Improvement to Create Radically Successful Businesses", topic: "Entrepreneurship", score: 0 }
     ],
     Wishlist: [
-        { title: "The Pragmatic Programmer", topic: "Software", score: 0 },
-        { title: "The Lean Startup: How Today’s Entrepreneurs Use Continuous Improvement to Create Radically Successful Businesses", topic: "Entrepreneurship", score: 0 }
+        { title: "The Pragmatic Programmer", topic: "Software", score: 0 }
     ],
     Suggestions: [
         { title: "The Phoenix Project", topic: "Software", score: 9 },
@@ -52,6 +51,7 @@ export default {
         { title: "The Real Estate Wholesaling Bible", topic: "Business", score: 6 },
         { title: "Romeo and Juliet", topic: "Novel", score: 5 },
         { title: "The Prince", topic: "Philosophy", score: 5 },
+        { title: "The Unicorn Project", topic: "Software", score: 5 },
         { title: "Othello", topic: "Novel", score: 4 },
         { title: "Fahrenheit 451", topic: "Novel", score: 4 },
         { title: "Think and Grow Rich", topic: "Self-Help", score: 4 },
