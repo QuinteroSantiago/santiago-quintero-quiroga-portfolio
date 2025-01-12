@@ -13,7 +13,7 @@ export default {
                 name: 'Barbell Rows',
                 sets: '4',
                 reps: '10 reps',
-                weight: '115'
+                weight: '135'
             },
             {
                 name: 'Seated Row',
@@ -25,13 +25,13 @@ export default {
                 name: 'EZ Bar Standing Curl',
                 sets: '3',
                 reps: '12 reps',
-                weight: '40'
+                weight: '50'
             },
             {
                 name: 'Machine Bicep Curl',
                 sets: '3',
-                reps: '11 reps',
-                weight: '20'
+                reps: '10 reps',
+                weight: '50'
             }
         ]
     },
@@ -42,32 +42,32 @@ export default {
             {
                 name: 'Back Squats',
                 sets: '4',
-                reps: '6 reps',
+                reps: '8 reps',
                 weight: '225'
             },
             {
                 name: 'Leg Press',
                 sets: '3',
                 reps: '10 reps',
-                weight: '300'
+                weight: '320'
+            },
+            {
+                name: 'Leg Curls',
+                sets: '4',
+                reps: '12 reps',
+                weight: '120'
+            },
+            {
+                name: 'Leg Extension',
+                sets: '4',
+                reps: '12 reps',
+                weight: '120'
             },
             {
                 name: 'Calf Raises',
                 sets: '4',
                 reps: '15 reps',
                 weight: ''
-            },
-            {
-                name: 'Leg Curls',
-                sets: '4',
-                reps: '12 reps',
-                weight: '80'
-            },
-            {
-                name: 'Leg Extension',
-                sets: '4',
-                reps: '12 reps',
-                weight: '80'
             }
         ]
     },
@@ -79,19 +79,19 @@ export default {
                 name: 'Pec Deck',
                 sets: '4',
                 reps: '10 reps',
-                weight: '110'
+                weight: '130'
+            },
+            {
+                name: 'Lat Pulldowns',
+                sets: '4',
+                reps: '10 reps',
+                weight: '150'
             },
             {
                 name: 'Cable Flyes',
                 sets: '4',
                 reps: '12 reps',
                 weight: '50'
-            },
-            {
-                name: 'Lat Pulldowns',
-                sets: '3',
-                reps: '10 reps',
-                weight: '90'
             },
             {
                 name: 'Cable Curls',
@@ -103,7 +103,7 @@ export default {
                 name: 'Cable Extension',
                 sets: '4',
                 reps: '12 reps',
-                weight: '25'
+                weight: '40'
             },
         ]
     },
@@ -138,32 +138,26 @@ export default {
             {
                 name: 'Bench Press',
                 sets: '4',
-                reps: '8-10 reps',
-                weight: '135'
-            },
-            {
-                name: 'DB Overhead Press',
-                sets: '4',
-                reps: '8-10 reps',
-                weight: '50'
+                reps: '8 reps',
+                weight: '185'
             },
             {
                 name: 'Incline DB Press',
                 sets: '4',
-                reps: '10-12 reps',
-                weight: '60'
+                reps: '10 reps',
+                weight: '90'
             },
             {
                 name: 'Cable Lateral Raises',
                 sets: '4',
-                reps: '15 reps',
+                reps: '12 reps',
                 weight: '5'
             },
             {
-                name: 'Tricep Kickback',
+                name: 'Tricep Cable Kickback',
                 sets: '3',
-                reps: '15 reps',
-                weight: '15'
+                reps: '12 reps',
+                weight: '5'
             }
         ]
     },
