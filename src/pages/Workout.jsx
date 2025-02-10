@@ -9,6 +9,7 @@ function Workout() {
     const dayName = today.toLocaleDateString('en-US', { weekday: 'long' });
     const [selectedDay, setSelectedDay] = useState(dayName);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [showAllDays, setShowAllDays] = useState(true);
     const workoutPlan = workouts[selectedDay];
 
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -57,23 +58,48 @@ function Workout() {
     };
     const columns = ["Workout Name", "Sets", "Reps", "Weight (lbs)"];
 
+    const renderWorkoutPlans = () => {
+        if (showAllDays) {
+            return daysOfWeek.map(day => (
+                <div key={day} className="mb-8">
+                    <h2 className="text-xl font-normal mb-6"><strong>{day}</strong> - {workouts[day].title}</h2>
+                    {workouts[day].time && (
+                        <h3 className="text-lg font-normal mb-6">Running Time: {workouts[day].time}</h3>
+                    )}
+                    <Table columns={columns} data={workouts[day].exercises} />
+                </div>
+            ));
+        } else {
+            return (
+                <div>
+                    <h2 className="text-xl font-normal mb-6">{workoutPlan.title}</h2>
+                    {workoutPlan.time && (
+                        <h3 className="text-lg font-normal mb-6">Running Time: {workoutPlan.time}</h3>
+                    )}
+                    <Table columns={columns} data={workoutPlan.exercises} />
+                </div>
+            );
+        }
+    };
+
     return (
         <div className="text-gray-800 dark:text-gray-200 font-sans">
             <div className="max-w-5xl w-full mx-auto">
                 <div className="text-center py-12">
                     <h1 className="text-5xl font-light mb-6">Workout</h1>
-                    <h2 className="text-xl font-normal mb-6">{workoutPlan.title}</h2>
-                    {workoutPlan.time && (
-                        <h3 className="text-lg font-normal mb-6">Running Time: {workoutPlan.time}</h3>
-                    )}
                     {renderDaySelector()}
+                    <button
+                        className="mt-4 px-4 py-2 rounded bg-blue-500 text-white"
+                        onClick={() => setShowAllDays(!showAllDays)}
+                    >
+                        {showAllDays ? "Show Single Day" : "Show All Days"}
+                    </button>
                     <div className="mt-8">
-                        <Table columns={columns} data={workoutPlan.exercises} />
+                        {renderWorkoutPlans()}
                     </div>
                 </div>
             </div>
         </div>
-    );
-}
+    );}
 
 export default Workout;
