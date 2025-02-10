@@ -12,7 +12,7 @@ function Workout() {
     const [showAllDays, setShowAllDays] = useState(true);
     const workoutPlan = workouts[selectedDay];
 
-    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
     useEffect(() => {
         const handleResize = () => {
