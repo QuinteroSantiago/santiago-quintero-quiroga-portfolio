@@ -12,8 +12,8 @@ export default {
             {
                 name: 'Lat Pulldowns',
                 sets: '4',
-                reps: '10 reps',
-                weight: '150'
+                reps: '12 reps',
+                weight: '170'
             },
             {
                 name: 'Seated Row',
@@ -31,7 +31,7 @@ export default {
                 name: 'DB Curls',
                 sets: '4',
                 reps: '12 reps',
-                weight: '25'
+                weight: '50'
             },
         ]
     },
@@ -43,7 +43,7 @@ export default {
                 name: 'Back Squats',
                 sets: '4',
                 reps: '8 reps',
-                weight: '225'
+                weight: '245'
             },
             {
                 name: 'Leg Press',
@@ -103,7 +103,7 @@ export default {
                 name: 'Pec Deck',
                 sets: '4',
                 reps: '10 reps',
-                weight: '130'
+                weight: '160'
             },
             {
                 name: 'Cable Flyes',
@@ -124,9 +124,9 @@ export default {
                 weight: '40'
             },
             {
-                name: 'Incline DB Curls',
+                name: 'Hammer Curls',
                 sets: '3',
-                reps: '10-12 reps',
+                reps: '10 reps',
                 weight: '20'
             }
         ]
