@@ -73,25 +73,25 @@ export default {
     },
     'Wednesday': {
         title: 'Cardio',
-        time: '30 mins',
+        time: '40 mins',
         exercises: [
             {
-                name: 'Hanging Leg Raises',
-                sets: '4',
-                reps: '12 reps',
-                weight: '0'
+                name: 'Incline Treadmill Walk',
+                sets: '15% incline',
+                reps: '20 minutes',
+                weight: '3 mph'
             },
             {
                 name: 'Weighted Crunches',
                 sets: '4',
                 reps: '12 reps',
-                weight: '20'
+                weight: '80'
             },
             {
-                name: 'Incline Treadmill Walk',
-                sets: '20 minutes',
-                reps: '3 mph',
-                weight: '15% incline'
+                name: 'Hanging Leg Raises',
+                sets: '4',
+                reps: '6 reps',
+                weight: '0'
             }
         ]
     },
@@ -137,21 +137,21 @@ export default {
         exercises: [
             {
                 name: 'Incline Treadmill Walk',
-                sets: '20 minutes',
-                reps: '3 mph',
-                weight: '15% incline'
-            },
-            {
-                name: 'Hanging Leg Raises',
-                sets: '4',
-                reps: '12 reps',
-                weight: '0'
+                sets: '15% incline',
+                reps: '20 minutes',
+                weight: '3 mph'
             },
             {
                 name: 'Weighted Crunches',
                 sets: '4',
                 reps: '12 reps',
-                weight: '20'
+                weight: '80'
+            },
+            {
+                name: 'Hanging Leg Raises',
+                sets: '4',
+                reps: '6 reps',
+                weight: '0'
             }
         ]
     },
@@ -197,21 +197,21 @@ export default {
         exercises: [
             {
                 name: 'Incline Treadmill Walk',
-                sets: '20 minutes',
-                reps: '3 mph',
-                weight: '15% incline'
-            },
-            {
-                name: 'Hanging Leg Raises',
-                sets: '4',
-                reps: '12 reps',
-                weight: '0'
+                sets: '15% incline',
+                reps: '20 minutes',
+                weight: '3 mph'
             },
             {
                 name: 'Weighted Crunches',
                 sets: '4',
                 reps: '12 reps',
-                weight: '20'
+                weight: '80'
+            },
+            {
+                name: 'Hanging Leg Raises',
+                sets: '4',
+                reps: '6 reps',
+                weight: '0'
             }
         ]
     }
