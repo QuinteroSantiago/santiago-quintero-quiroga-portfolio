@@ -9,7 +9,7 @@ function Workout() {
     const dayName = today.toLocaleDateString('en-US', { weekday: 'long' });
     const [selectedDay, setSelectedDay] = useState(dayName);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [showAllDays, setShowAllDays] = useState(true);
+    const [showAllDays, setShowAllDays] = useState(false);
     const workoutPlan = workouts[selectedDay];
 
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
