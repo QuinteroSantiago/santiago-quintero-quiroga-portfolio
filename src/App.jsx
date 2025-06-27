@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import NotFound from './pages/404'
 import Workout from './pages/Workout';
 import ReadingList from './pages/ReadingList';
+import CopyComponent from './pages/CopyComponent'
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     {/* <Route path="/blog" element={<Blog />} /> */}
                     <Route path="/workout" element={<Workout />} />
                     <Route path="/reading" element={<ReadingList />} />
+                    <Route path="/copy" element={<CopyComponent />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />
