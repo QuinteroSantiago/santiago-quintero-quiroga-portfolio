@@ -13,7 +13,7 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.1",
     "terser": "^5.43.1",
-    "three": "^0.168.0"
+    "three": "^0.177.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.0",
