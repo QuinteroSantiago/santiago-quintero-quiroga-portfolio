@@ -1,5 +1,12 @@
 export default [
    {
+      title: 'Chargeback Heaven',
+      imgUrl: 'assets/portfolio_images/cbh-logo.png',
+      stack: ['ReactJS', 'MongoDB', 'AWS', 'NodeJS', 'terraform'],
+      link: 'https://chargebackheaven.com/',
+      date: '2024'
+   },
+   {
       title: 'Gomu Planner',
       imgUrl: 'assets/portfolio_images/bamboo-logo.jpg',
       stack: ['Python', 'MariaDB', 'VBS'],
