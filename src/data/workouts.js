@@ -1,37 +1,43 @@
 export default {
     'Monday': {
         title: 'Pull Day',
-        time: '60 mins',
+        time: '75 mins',
         exercises: [
+            {
+                name: 'Warmup',
+                sets: '',
+                reps: '10 minutes',
+                weight: ''
+            },
             {
                 name: 'Pull-Ups',
                 sets: '4',
-                reps: '7 reps',
+                reps: '6 reps',
                 weight: 'Body weight'
+            },
+            {
+                name: 'DB Row (Individual Arm)',
+                sets: '4',
+                reps: '10 reps',
+                weight: '45'
+            },
+            {
+                name: 'BB Curls',
+                sets: '4',
+                reps: '10 reps',
+                weight: '50'
             },
             {
                 name: 'Lat Pulldowns',
                 sets: '4',
-                reps: '12 reps',
-                weight: '170'
-            },
-            {
-                name: 'Seated Row',
-                sets: '4',
                 reps: '10 reps',
-                weight: '80'
+                weight: '140'
             },
             {
                 name: 'Machine Bicep Curl',
                 sets: '4',
                 reps: '10 reps',
-                weight: '50'
-            },
-            {
-                name: 'DB Curls',
-                sets: '4',
-                reps: '12 reps',
-                weight: '50'
+                weight: '40'
             },
         ]
     },
@@ -40,10 +46,16 @@ export default {
         time: '90 mins',
         exercises: [
             {
+                name: 'Warmup',
+                sets: '',
+                reps: '10 minutes',
+                weight: ''
+            },
+            {
                 name: 'Back Squats',
                 sets: '4',
                 reps: '8 reps',
-                weight: '245'
+                weight: '225'
             },
             {
                 name: 'Leg Press',
@@ -55,7 +67,7 @@ export default {
                 name: 'Leg Curls',
                 sets: '4',
                 reps: '12 reps',
-                weight: '120'
+                weight: '110'
             },
             {
                 name: 'Leg Extension',
@@ -72,14 +84,14 @@ export default {
         ]
     },
     'Wednesday': {
-        title: 'Cardio',
+        title: 'Cardio (HIIT)',
         time: '40 mins',
         exercises: [
             {
-                name: 'Incline Treadmill Walk',
-                sets: '15% incline',
-                reps: '20 minutes',
-                weight: '3 mph'
+                name: 'Rowing Machine HIIT',
+                sets: '8 rounds',
+                reps: '30s sprint / 90s easy',
+                weight: ''
             },
             {
                 name: 'Weighted Crunches',
@@ -138,7 +150,7 @@ export default {
             {
                 name: 'Incline Treadmill Walk',
                 sets: '15% incline',
-                reps: '20 minutes',
+                reps: '40 minutes',
                 weight: '3 mph'
             },
             {
@@ -196,10 +208,10 @@ export default {
         time: '40 mins',
         exercises: [
             {
-                name: 'Incline Treadmill Walk',
-                sets: '15% incline',
-                reps: '20 minutes',
-                weight: '3 mph'
+                name: 'Bike HIIT',
+                sets: '6 rounds',
+                reps: '45s hard / 2 min easy',
+                weight: ''
             },
             {
                 name: 'Weighted Crunches',
