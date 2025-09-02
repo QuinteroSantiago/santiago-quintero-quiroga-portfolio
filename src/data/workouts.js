@@ -54,7 +54,7 @@ export default {
             {
                 name: 'Back Squats',
                 sets: '4',
-                reps: '8 reps',
+                reps: '6 reps',
                 weight: '225'
             },
             {
@@ -88,9 +88,9 @@ export default {
         time: '40 mins',
         exercises: [
             {
-                name: 'Rowing Machine HIIT',
-                sets: '8 rounds',
-                reps: '30s sprint / 90s easy',
+                name: 'Rowing Machine HIIT https://www.rowingmachineworkouts.com/rowing-workouts/hiit-rowing',
+                sets: '3 rounds',
+                reps: '(30s sprint / 30s easy) x 3 + 2 minute rest',
                 weight: ''
             },
             {
@@ -152,18 +152,6 @@ export default {
                 sets: '15% incline',
                 reps: '40 minutes',
                 weight: '3 mph'
-            },
-            {
-                name: 'Weighted Crunches',
-                sets: '4',
-                reps: '12 reps',
-                weight: '80'
-            },
-            {
-                name: 'Hanging Leg Raises',
-                sets: '4',
-                reps: '6 reps',
-                weight: '0'
             }
         ]
     },

@@ -1,4 +1,4 @@
-export default [
+    export default [
     {
         year: "2023 - Present",
         startDate: "2023-05-05",
@@ -7,16 +7,18 @@ export default [
         title: "Software Engineer - Platform",
         place: "Corellium",
         responsibilities: [
-            "**Middleware Development**: Contributed to middleware development, implementing innovative cloud solutions tailored to client needs.",
-            "**Docker Image Maintenance**: Designed and maintained Docker images, streamlining application deployment across cloud-based platforms.",
-            "**Node.js Optimization**: Managed and optimized Node.js application migrations on Ubuntu systems, ensuring high system stability and performance in a hybrid environment.",
-            "**CI/CD Enhancement**: Led the migration from Jenkins to GitLab runners, enhancing CI/CD processes, reducing deployment times.",
-            "**Release Engineering**: Operated as a Release Engineer, overseeing software release cycles, addressing and resolving bugs, and ensuring smooth rollouts of new features.",
-            "**Client Liaison**: Acted as a liaison with clients, translating their software model requirements into stories for platform integration in subsequent releases."
+            "**CI/CD Ownership**: Manage CI/CD pipelines for a 50+ engineer team, solving complex challenges like GPU compatibility through Nvidia driver integration.",
+            "**Middleware Development**: Contribute to middleware services, implementing scalable and secure cloud solutions tailored to client and product needs.",
+            "**Docker Image Maintenance**: Design and maintain Docker images, streamlining deployment of applications across hybrid cloud environments.",
+            "**Node.js Optimization**: Manage and optimize Node.js application migrations on Ubuntu systems, ensuring system stability and performance.",
+            "**Release Engineering**: Oversee software release cycles, automating rollouts, resolving bugs, and ensuring smooth delivery of new features.",
+            "**Greenfield Development**: Lead new platform projects from conception to execution, including an admin tool that enables customers to self-manage their deployments and transfer VM space across environments.",
+            "**Client Liaison**: Partner with clients to translate requirements into platform features and integration stories for upcoming releases."
         ],
         achievements: [
-            "Engineered multi-node version builds, supporting both cloud-based and onsite legacy systems, enhancing system versatility and reliability.",
-            "Pioneered the integration of GitLab CI/CD pipelines into existing workflows, achieving a 20% reduction in deployment times."
+            "Reduced deployment times by 20% by pioneering the integration of GitLab CI/CD pipelines into existing workflows.",
+            "Engineered multi-node version builds supporting both cloud-based and on-site legacy systems, improving versatility and reliability.",
+            "Delivered customer-facing tooling that improved self-service capabdilities and reduced support overhead for enterprise clients."
         ]
     },
     {
