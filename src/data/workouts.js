@@ -1,7 +1,7 @@
 export default {
     'Monday': {
-        title: 'Pull Day',
-        time: '75 mins',
+        title: 'Full Body Strength (Heavy)',
+        time: '60 mins',
         exercises: [
             {
                 name: 'Warmup',
@@ -10,208 +10,192 @@ export default {
                 weight: ''
             },
             {
-                name: 'Pull-Ups',
-                sets: '4',
-                reps: '6 reps',
-                weight: 'Body weight'
+                name: 'Squat',
+                sets: '2',
+                reps: '5 reps',
+                weight: '225 lbs'
             },
             {
-                name: 'DB Row (Individual Arm)',
-                sets: '4',
-                reps: '10 reps',
-                weight: '45'
+                name: 'Bench',
+                sets: '2',
+                reps: '5 reps',
+                weight: '185 lbs'
             },
             {
-                name: 'BB Curls',
-                sets: '4',
-                reps: '10 reps',
-                weight: '50'
+                name: 'Weighted Chin-Ups',
+                sets: '2',
+                reps: '5 reps',
+                weight: '25 lbs'
             },
             {
-                name: 'Lat Pulldowns',
-                sets: '4',
-                reps: '10 reps',
-                weight: '140'
+                name: 'Barbell Row',
+                sets: '2',
+                reps: '5 reps',
+                weight: '135 lbs'
             },
             {
-                name: 'Machine Bicep Curl',
-                sets: '4',
-                reps: '10 reps',
-                weight: '40'
+                name: 'Cable Pallof Press (Anti-Rotation)',
+                sets: '3',
+                reps: '10 reps/side',
+                weight: '15 lbs'
             },
-        ]
-    },
-    'Tuesday': {
-        title: 'Leg Day',
-        time: '90 mins',
-        exercises: [
             {
-                name: 'Warmup',
-                sets: '',
-                reps: '10 minutes',
+                name: 'Side Plank (Anti-Lateral Flexion)',
+                sets: '2',
+                reps: '45 seconds/side',
                 weight: ''
             },
             {
-                name: 'Back Squats',
-                sets: '4',
-                reps: '6 reps',
-                weight: '225'
-            },
-            {
-                name: 'Leg Press',
-                sets: '4',
-                reps: '10 reps',
-                weight: '320'
-            },
-            {
-                name: 'Leg Curls',
-                sets: '4',
-                reps: '12 reps',
-                weight: '110'
-            },
-            {
-                name: 'Leg Extension',
-                sets: '4',
-                reps: '12 reps',
-                weight: '120'
-            },
-            {
-                name: 'Calf Raises',
-                sets: '4',
+                name: 'Face Pulls (Rotator Cuff / Scap Stability)',
+                sets: '2',
                 reps: '15 reps',
-                weight: ''
+                weight: '10 lbs'
             }
         ]
     },
-    'Wednesday': {
-        title: 'Cardio (HIIT)',
-        time: '40 mins',
+
+    'Tuesday': {
+        title: 'Cardio – Cycling',
+        time: '45–60 mins',
         exercises: [
             {
-                name: 'Rowing Machine HIIT https://www.rowingmachineworkouts.com/rowing-workouts/hiit-rowing',
-                sets: '3 rounds',
-                reps: '(30s sprint / 30s easy) x 3 + 2 minute rest',
+                name: 'Stationary Bike',
+                sets: 'Zone 3',
+                reps: '45 minutes',
+                weight: 'Level 8'
+            }
+        ]
+    },
+
+    'Wednesday': {
+        title: 'Full Body Strength (Heavy)',
+        time: '60 mins',
+        exercises: [
+            {
+                name: 'Warmup',
+                sets: '',
+                reps: '10 minutes',
                 weight: ''
             },
             {
-                name: 'Weighted Crunches',
-                sets: '4',
-                reps: '12 reps',
-                weight: '80'
+                name: 'Deadlift',
+                sets: '2',
+                reps: '5 reps',
+                weight: '275 lbs'
+            },
+            {
+                name: 'Overhead Press (Strict)',
+                sets: '2',
+                reps: '5 reps',
+                weight: '95 lbs'
+            },
+            {
+                name: 'PullDown',
+                sets: '2',
+                reps: '5 reps',
+                weight: '180 lbs'
             },
             {
                 name: 'Hanging Leg Raises',
-                sets: '4',
-                reps: '6 reps',
+                sets: '1',
+                reps: '6–8 reps',
+                weight: ''
+            },
+            {
+                name: 'Bulgarian Split Squat (Single-Leg Strength)',
+                sets: '2',
+                reps: '6 reps/leg',
                 weight: '0'
+            },
+            {
+                name: 'External Rotations (Cuff Work)',
+                sets: '2',
+                reps: '15 reps',
+                weight: 'Light Band'
             }
         ]
     },
     'Thursday': {
-        title: 'Upper Body',
-        time: '60 mins',
+        title: 'Cardio – Rowing (Zone 2)',
+        time: '30–60 mins',
         exercises: [
             {
-                name: 'Pec Deck',
-                sets: '4',
-                reps: '10 reps',
-                weight: '160'
-            },
-            {
-                name: 'Cable Flyes',
-                sets: '4',
-                reps: '12 reps',
-                weight: '50'
-            },
-            {
-                name: 'Cable Curls',
-                sets: '3',
-                reps: '12 reps',
-                weight: '25'
-            },
-            {
-                name: 'Tricep Cable Extension',
-                sets: '4',
-                reps: '12 reps',
-                weight: '40'
-            },
-            {
-                name: 'Hammer Curls',
-                sets: '3',
-                reps: '10 reps',
-                weight: '20'
+                name: 'Rowing Machine – Steady State',
+                sets: 'Zone 2',
+                reps: '30 minutes',
+                weight: ''
             }
         ]
     },
     'Friday': {
-        title: 'Cardio',
-        time: '40 mins',
+        title: 'Full Body Strength (Heavy)',
+        time: '60 mins',
         exercises: [
             {
-                name: 'Incline Treadmill Walk',
-                sets: '15% incline',
-                reps: '40 minutes',
-                weight: '3 mph'
+                name: 'Warmup',
+                sets: '',
+                reps: '10 minutes',
+                weight: ''
+            },
+            {
+                name: 'Front Squat',
+                sets: '2',
+                reps: '5 reps',
+                weight: '135 lbs'
+            },
+            {
+                name: 'Incline Bench Press',
+                sets: '2',
+                reps: '5 reps',
+                weight: '135 lbs'
+            },
+            {
+                name: 'Weighted Dips',
+                sets: '2',
+                reps: '5 reps',
+                weight: '45 lbs'
+            },
+            {
+                name: 'Cable Crunches (Heavy Abs)',
+                sets: '3',
+                reps: '10 reps',
+                weight: 'Heavy'
+            },
+            {
+                name: 'Suitcase Carry (Anti-Lateral Flexion)',
+                sets: '2',
+                reps: '40 seconds',
+                weight: '60 lbs'
+            },
+            {
+                name: 'Tibialis Raises',
+                sets: '2',
+                reps: '15 reps',
+                weight: '0'
             }
         ]
     },
     'Saturday': {
-        title: 'Push Day',
-        time: '60 mins',
+        title: 'Recovery Day',
+        time: 'Rest',
         exercises: [
             {
-                name: 'Bench Press',
-                sets: '4',
-                reps: '8 reps',
-                weight: '185'
-            },
-            {
-                name: 'Incline DB Press',
-                sets: '4',
-                reps: '10 reps',
-                weight: '90'
-            },
-            {
-                name: 'Cable Lateral Raises',
-                sets: '4',
-                reps: '12 reps',
-                weight: '5'
-            },
-            {
-                name: 'Face Pulls',
-                sets: '4',
-                reps: '12 reps',
-                weight: '5'
-            },
-            {
-                name: 'Tricep Cable Kickback',
-                sets: '3',
-                reps: '12 reps',
-                weight: '5'
+                name: 'Recovery',
+                sets: '',
+                reps: 'Full day of rest — optional light walk or stretch',
+                weight: ''
             }
         ]
     },
     'Sunday': {
-        title: 'Cardio',
-        time: '40 mins',
+        title: 'Cardio – Cycling Outdoors (Zone 2)',
+        time: '60 mins',
         exercises: [
             {
-                name: 'Bike HIIT',
-                sets: '6 rounds',
-                reps: '45s hard / 2 min easy',
-                weight: ''
-            },
-            {
-                name: 'Weighted Crunches',
-                sets: '4',
-                reps: '12 reps',
-                weight: '80'
-            },
-            {
-                name: 'Hanging Leg Raises',
-                sets: '4',
-                reps: '6 reps',
-                weight: '0'
+                name: 'Cycling Outdoors',
+                sets: 'Zone 2',
+                reps: '60 minutes',
+                weight: 'At least to bridge and back'
             }
         ]
     }
