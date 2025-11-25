@@ -13,7 +13,7 @@ export default {
                 name: 'Squat',
                 sets: '2',
                 reps: '5 reps',
-                weight: '225 lbs'
+                weight: '245 lbs'
             },
             {
                 name: 'Bench',
@@ -25,13 +25,13 @@ export default {
                 name: 'Weighted Chin-Ups',
                 sets: '2',
                 reps: '5 reps',
-                weight: '25 lbs'
+                weight: '0 lbs'
             },
             {
-                name: 'Barbell Row',
+                name: 'One Arm Dumbbell Row',
                 sets: '2',
-                reps: '5 reps',
-                weight: '135 lbs'
+                reps: '6 reps',
+                weight: '70 lbs'
             },
             {
                 name: 'Cable Pallof Press (Anti-Rotation)',
@@ -80,7 +80,7 @@ export default {
             {
                 name: 'Deadlift',
                 sets: '2',
-                reps: '5 reps',
+                reps: '3 reps',
                 weight: '275 lbs'
             },
             {
