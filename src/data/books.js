@@ -102,6 +102,55 @@ export default {
             title: "Trading and Exchanges", 
             topic: "Market Microstructure",
             score: 0 
+        },
+        // Systems Thinking + Engineering Thought Process
+        {
+            title: "Thinking in Systems",
+            topic: "Systems Thinking",
+            score: 0
+        },
+        {
+            title: "Engineering and the Mind's Eye",
+            topic: "Visualization & Diagrammatic Reasoning",
+            score: 0
+        },
+        {
+            title: "Thinking: A Guide to Systems Engineering Problem-Solving",
+            topic: "Systems Engineering",
+            score: 0
+        },
+        {
+            title: "The MITRE Systems Engineering Guide",
+            topic: "Systems Architecture & Documentation",
+            score: 0
+        },
+
+        // Build Systems / Toolchains / Compilers
+        {
+            title: "Software Build Systems: Principles and Experience",
+            topic: "Build Systems",
+            score: 0
+        },
+        {
+            title: "Linkers and Loaders",
+            topic: "Toolchains / Linking",
+            score: 0
+        },
+        {
+            title: "Engineering a Compiler",
+            topic: "Compilers",
+            score: 0
+        },
+        // Modern Build / DevProd Philosophy
+        {
+            title: "Continuous Delivery",
+            topic: "CI/CD & Release Engineering",
+            score: 0
+        },
+        {
+            title: "Software Engineering at Google",
+            topic: "Developer Productivity / Build Infra",
+            score: 0
         }
     ],
     Suggestions: [
