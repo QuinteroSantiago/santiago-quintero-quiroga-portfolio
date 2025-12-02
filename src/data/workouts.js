@@ -1,7 +1,7 @@
 export default {
     'Monday': {
         title: 'Full Body Strength (Heavy)',
-        time: '60 mins',
+        time: '90 mins',
         exercises: [
             {
                 name: 'Warmup',
@@ -16,15 +16,21 @@ export default {
                 weight: '245 lbs'
             },
             {
+                name: 'External Rotations (Cuff Work)',
+                sets: '2',
+                reps: '15 reps',
+                weight: 'Light Band'
+            },
+            {
                 name: 'Bench',
                 sets: '2',
-                reps: '5 reps',
-                weight: '185 lbs'
+                reps: '4 reps',
+                weight: '205 lbs'
             },
             {
                 name: 'Weighted Chin-Ups',
                 sets: '2',
-                reps: '5 reps',
+                reps: '6 reps',
                 weight: '0 lbs'
             },
             {
@@ -44,32 +50,24 @@ export default {
                 sets: '2',
                 reps: '45 seconds/side',
                 weight: ''
-            },
-            {
-                name: 'Face Pulls (Rotator Cuff / Scap Stability)',
-                sets: '2',
-                reps: '15 reps',
-                weight: '10 lbs'
             }
         ]
     },
-
     'Tuesday': {
         title: 'Cardio – Cycling',
-        time: '45–60 mins',
+        time: '35 mins',
         exercises: [
             {
                 name: 'Stationary Bike',
-                sets: 'Zone 3',
-                reps: '45 minutes',
-                weight: 'Level 8'
+                sets: 'Zone 2',
+                reps: '35 minutes',
+                weight: 'Level 9'
             }
         ]
     },
-
     'Wednesday': {
         title: 'Full Body Strength (Heavy)',
-        time: '60 mins',
+        time: '90 mins',
         exercises: [
             {
                 name: 'Warmup',
@@ -80,25 +78,25 @@ export default {
             {
                 name: 'Deadlift',
                 sets: '2',
-                reps: '3 reps',
+                reps: '4 reps',
                 weight: '275 lbs'
             },
             {
-                name: 'Overhead Press (Strict)',
+                name: 'Overhead Press (Smith Machine)',
                 sets: '2',
-                reps: '5 reps',
-                weight: '95 lbs'
+                reps: '4 reps',
+                weight: '115 lbs'
             },
             {
-                name: 'PullDown',
+                name: 'Pull Down',
                 sets: '2',
                 reps: '5 reps',
                 weight: '180 lbs'
             },
             {
-                name: 'Hanging Leg Raises',
-                sets: '1',
-                reps: '6–8 reps',
+                name: 'Hanging Knee Raises',
+                sets: '2',
+                reps: '10 reps',
                 weight: ''
             },
             {
@@ -108,22 +106,22 @@ export default {
                 weight: '0'
             },
             {
-                name: 'External Rotations (Cuff Work)',
+                name: 'Face Pulls (Rotator Cuff / Scap Stability)',
                 sets: '2',
                 reps: '15 reps',
-                weight: 'Light Band'
+                weight: '10 lbs'
             }
         ]
     },
     'Thursday': {
-        title: 'Cardio – Rowing (Zone 2)',
-        time: '30–60 mins',
+        title: 'Cardio – Cycling',
+        time: '35 mins',
         exercises: [
             {
-                name: 'Rowing Machine – Steady State',
+                name: 'Stationary Bike',
                 sets: 'Zone 2',
-                reps: '30 minutes',
-                weight: ''
+                reps: '35 minutes',
+                weight: 'Level 9'
             }
         ]
     },
