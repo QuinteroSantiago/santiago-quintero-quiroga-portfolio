@@ -1,9 +1,9 @@
 export default {
     Current: [
-        { 
-            title: "Financial Theory with Python", 
-            topic: "Quant Foundations", 
-            score: 0 
+        {
+            title: "The Meditations of Marcus Aurelius", 
+            topic: "Philosophy",
+            score: 6
         },
     ],
     Wishlist: [
@@ -11,6 +11,11 @@ export default {
             title: "The Pragmatic Programmer",
             topic: "Software",
             score: 0
+        },
+        { 
+            title: "Financial Theory with Python", 
+            topic: "Quant Foundations", 
+            score: 0 
         },
         // Quant Foundations
         {
@@ -271,18 +276,8 @@ export default {
             score: 8
         },
         {
-            title: "Meditations", 
-            topic: "Philosophy",
-            score: 6
-        },
-        {
             title: "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life", 
             topic: "Self-Help",
-            score: 6
-        },
-        {
-            title: "The Meditations of Marcus Aurelius", 
-            topic: "Philosophy",
             score: 6
         },
         {
