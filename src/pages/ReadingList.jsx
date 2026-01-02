@@ -7,7 +7,7 @@ function ReadingList() {
     useDocumentTitle("Reading List - Santiago Quintero");
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [selectedCategory, setSelectedCategory] = useState('Suggestions');
+    const [selectedCategory, setSelectedCategory] = useState('Current');
     const [sortOrder, setSortOrder] = useState('desc'); // 'desc' = highest score first
 
     useEffect(() => {
@@ -37,25 +37,38 @@ function ReadingList() {
 
     const filteredBooks = books[selectedCategory] || [];
 
-    const tableData = useMemo(() => {
-        const sorted = [...filteredBooks].sort((a, b) => {
-            const scoreA = getScore(a);
-            const scoreB = getScore(b);
-
-            if (sortOrder === 'asc') {
-                return scoreA - scoreB; // lowest first
-            } else {
-                return scoreB - scoreA; // highest first
-            }
+    const topicGroups = useMemo(() => {
+        const groups = {};
+        filteredBooks.forEach((b) => {
+            const topic = b.topic || b.Topic || 'Misc';
+            if (!groups[topic]) groups[topic] = [];
+            groups[topic].push(b);
         });
 
-        return sorted.map(({ category, notes, ...rest }) => ({
-            ...rest,
-            notes: truncateNotes(notes),
-        }));
+        const result = {};
+        Object.keys(groups).forEach((topic) => {
+            const sorted = [...groups[topic]].sort((a, b) => {
+                const scoreA = getScore(a);
+                const scoreB = getScore(b);
+
+                if (sortOrder === 'asc') {
+                    return scoreA - scoreB;
+                } else {
+                    return scoreB - scoreA;
+                }
+            });
+
+            result[topic] = sorted.map(({ category, notes, topic: _t, ...rest }) => ({
+                ...rest,
+                topic: _t,
+                notes: truncateNotes(notes),
+            }));
+        });
+
+        return result;
     }, [filteredBooks, sortOrder]);
 
-    const columns = ["Title", "Topic", "Score", "Notes"];
+    const columns = ["Title", "Score", "Notes"]; 
 
     const renderCategorySelector = () => {
         if (windowWidth < 1000) {
@@ -120,13 +133,21 @@ function ReadingList() {
                     {renderCategorySelector()}
                     {renderSortSelector()}
 
-                    <div className="mt-8">
-                        <Table columns={columns} data={tableData} />
+                    <div className="mt-8 grid gap-8">
+                        {Object.keys(topicGroups).length === 0 ? (
+                            <p className="text-center text-sm text-gray-500 dark:text-gray-400">No books found in this category.</p>
+                        ) : (
+                            Object.keys(topicGroups).map((topic) => (
+                                <div key={topic} className="bg-white dark:bg-gray-800 p-4 rounded shadow">
+                                    <h2 className="text-2xl font-semibold mb-2">{topic} ({(topicGroups[topic] || []).length})</h2>
+                                    <Table columns={columns} data={topicGroups[topic]} />
+                                </div>
+                            ))
+                        )}
                     </div>
 
                     <p className="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
-                        Showing {filteredBooks.length} books in "
-                        {selectedCategory}" category.
+                        Showing {filteredBooks.length} books in "{selectedCategory}" across {Object.keys(topicGroups).length} topics.
                     </p>
                 </div>
             </div>
