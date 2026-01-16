@@ -1,25 +1,25 @@
 export default {
     'Monday': {
-        title: 'Full Body Hypertrophy (Lower + Push Bias)',
+        title: 'Full Body Hypertrophy',
         time: '60 mins',
         exercises: [
             {
                 name: 'Warmup',
                 sets: '',
-                reps: '8–10 minutes',
+                reps: '8 minutes',
                 weight: ''
             },
             {
-                name: 'Back Squat',
+                name: 'Leg Press (Feet High)',
                 sets: '4',
-                reps: '6–8 reps',
-                weight: 'Progressive'
+                reps: '8–12 reps',
+                weight: 'Progressive (2 RIR)'
             },
             {
                 name: 'Bench Press',
                 sets: '4',
                 reps: '6–10 reps',
-                weight: 'Progressive'
+                weight: 'Progressive (1–2 RIR)'
             },
             {
                 name: 'Lat Pulldown',
@@ -28,33 +28,43 @@ export default {
                 weight: 'Progressive'
             },
             {
-                name: 'Leg Curl (Machine or Nordic)',
-                sets: '2',
+                name: 'Seated or Lying Leg Curl',
+                sets: '3',
                 reps: '10–15 reps',
                 weight: 'Moderate'
             },
             {
                 name: 'Cable Triceps Pushdown',
-                sets: '2',
+                sets: '3',
                 reps: '12–15 reps',
+                weight: 'Moderate'
+            },
+            {
+                name: 'Standing Calf Raise',
+                sets: '2',
+                reps: '10–15 reps',
                 weight: 'Moderate'
             }
         ]
     },
-
     'Tuesday': {
-        title: 'Active Recovery / Steps',
-        time: '30–45 mins',
+        title: 'Zone 2 Cardio + Steps',
+        time: '45 mins',
         exercises: [
             {
+                name: 'Bike',
+                sets: 'Zone 2',
+                reps: '45 minutes',
+                weight: ''
+            },
+            {
                 name: 'Walking',
-                sets: 'Zone 1–2',
-                reps: '8–10k steps',
+                sets: 'Zone 1',
+                reps: '8k steps',
                 weight: ''
             }
         ]
     },
-
     'Wednesday': {
         title: 'Full Body Hypertrophy (Posterior + Pull Bias)',
         time: '60 mins',
@@ -69,7 +79,7 @@ export default {
                 name: 'Romanian Deadlift',
                 sets: '4',
                 reps: '6–10 reps',
-                weight: 'Progressive'
+                weight: 'Progressive (1–2 RIR)'
             },
             {
                 name: 'Overhead Press',
@@ -97,35 +107,33 @@ export default {
             }
         ]
     },
-
     'Thursday': {
-        title: 'Low-Intensity Cardio',
-        time: '30 mins',
+        title: 'Zone 2 Cardio',
+        time: '45 mins',
         exercises: [
             {
                 name: 'Stationary Bike or Incline Walk',
                 sets: 'Zone 2',
-                reps: '30 minutes',
+                reps: '45 minutes',
                 weight: ''
             }
         ]
     },
-
     'Friday': {
-        title: 'Full Body Hypertrophy (Volume + Arms)',
+        title: 'Full Body Hypertrophy (Volume + Arms — Knee-Safe)',
         time: '60 mins',
         exercises: [
             {
                 name: 'Warmup',
                 sets: '',
-                reps: '8–10 minutes',
+                reps: '8–10 minutes (bike + light leg press warmups)',
                 weight: ''
             },
             {
-                name: 'Leg Press or Bulgarian Split Squat',
+                name: 'Bulgarian Split Squat (Short Stance, Dumbbells)',
                 sets: '3',
-                reps: '8–12 reps',
-                weight: 'Progressive'
+                reps: '8–12 reps per leg',
+                weight: 'Moderate (3 RIR)'
             },
             {
                 name: 'Incline Dumbbell Press',
@@ -146,14 +154,25 @@ export default {
                 weight: 'Moderate'
             },
             {
+                name: 'Hip Thrust or Machine Glute Bridge',
+                sets: '3',
+                reps: '8–12 reps',
+                weight: 'Moderate–Heavy'
+            },
+            {
                 name: 'Cable Crunch',
                 sets: '2',
                 reps: '12–15 reps',
                 weight: 'Moderate'
+            },
+            {
+                name: 'Seated Calf Raise',
+                sets: '2',
+                reps: '12–20 reps',
+                weight: 'Moderate'
             }
         ]
     },
-
     'Saturday': {
         title: 'Recovery Day',
         time: 'Rest',
@@ -161,20 +180,19 @@ export default {
             {
                 name: 'Recovery',
                 sets: '',
-                reps: 'Optional light walk, stretch, or mobility',
+                reps: 'Optional light walk, mobility, or stretching',
                 weight: ''
             }
         ]
     },
-
     'Sunday': {
-        title: 'Optional Conditioning / Lifestyle Cardio',
-        time: '45–60 mins',
+        title: 'Zone 2 Lifestyle Cardio',
+        time: '60 mins',
         exercises: [
             {
-                name: 'Outdoor Walk, Hike, or Easy Bike',
+                name: 'Easy Bike',
                 sets: 'Zone 2',
-                reps: '45–60 minutes',
+                reps: '60 minutes',
                 weight: ''
             }
         ]
