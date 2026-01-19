@@ -3,28 +3,24 @@ import { Link, useLocation } from 'react-router-dom'
 
 function Navigation() {
 	const location = useLocation();
-	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 	const buttonRef = useRef(null);
 	const [buttonPosition, setButtonPosition] = useState({ x: 80, y: 112 });
 
-	useEffect(() => {
-		const currentTheme = localStorage.getItem('theme');
-		if (currentTheme) {
-			setTheme(currentTheme);
-		} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('dark');
-		} else {
-			setTheme('light');
-		}
-		document.documentElement.className = theme;
-	}, []);
+	const getInitialTheme = () => {
+		const saved = localStorage.getItem('theme');
+		if (saved === 'light' || saved === 'dark') return saved;
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+
+	const [theme, setTheme] = useState(getInitialTheme);
 
 	useEffect(() => {
 		localStorage.setItem('theme', theme);
+		const root = document.documentElement;
 		if (theme === 'dark') {
-			document.documentElement.classList.add('dark');
+			root.classList.add('dark');
 		} else {
-			document.documentElement.classList.remove('dark');
+			root.classList.remove('dark');
 		}
 	}, [theme]);
 
@@ -184,18 +180,17 @@ function Navigation() {
 	// 		<path d="M198.744 315.68C198.744 317.274 198.744 319.614 198.744 322.7" stroke="currentColor" strokeOpacity="0.9" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" />
 	// 	</svg>
 	// );
-const readingIcon = (
-	<svg 
-		xmlns="http://www.w3.org/2000/svg" 
-        className="w-6 h-6"
-		width="24" 
-		height="24" 
-		fill="currentColor" 
-		class="bi bi-book" 
-		viewBox="0 0 16 16">
-		<path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
-	</svg>
-);
+	const readingIcon = (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			className="w-6 h-6"
+			width="24"
+			height="24"
+			fill="currentColor"
+			viewBox="0 0 16 16">
+			<path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+		</svg>
+	);
 
 
 	return (
@@ -227,9 +222,9 @@ const readingIcon = (
 						{questionMark}
 					</button>
 				</Link> */}
-                {location.pathname !== '/reading' && (
-                    <Link to="/reading" aria-label="Go to Reading Page" className="p-1 sm:p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{readingIcon}</Link>
-                )}
+				{location.pathname !== '/reading' && (
+					<Link to="/reading" aria-label="Go to Reading Page" className="p-1 sm:p-2 bg-black text-white dark:bg-yellow-500 dark:text-black text-lg rounded-md">{readingIcon}</Link>
+				)}
 			</div>
 			<button
 				aria-label="Switch theme button"
