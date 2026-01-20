@@ -14,7 +14,7 @@
 ### Santiago Quintero
 **Software Engineer @ Corellium**
 
-Software Engineer with 3 years of experience in agile full-stack development, specializing in process automation and optimization across hybrid, onsite, and cloud environments. Skilled in ReactJS, NodeJS, and CI/CD pipelines, I enhance system efficiency and performance. With additional expertise in NextJS and Vercel, I am dedicated to boosting engineering velocity and developing platforms that empower engineers and streamline workflows.
+Platform-oriented software engineer with 5+ years of experience building and operating production systems that improve developer velocity and system reliability. Specializes in automation, CI/CD, and cloud-native full-stack and backend systems using Go, Node.js, and React. Experienced in designing internal platforms, reducing operational overhead, and scaling workflows across hybrid and cloud environments.
 
 <br clear="left"/>
 
