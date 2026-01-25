@@ -12,31 +12,31 @@ export default {
             {
                 name: 'Leg Press (Feet High)',
                 sets: '4',
-                reps: '8–12 reps',
+                reps: '12 reps',
                 weight: 'Progressive (1-2 RIR)'
             },
             {
                 name: 'Bench Press',
                 sets: '4',
-                reps: '8–10 reps',
+                reps: '8 reps',
                 weight: 'Progressive (1–2 RIR)'
             },
             {
                 name: 'Lat Pulldown',
                 sets: '4',
-                reps: '10–12 reps',
+                reps: '10 reps',
                 weight: 'Progressive (2 RIR)'
             },
             {
-                name: 'Seated or Lying Leg Curl',
-                sets: '3',
-                reps: '12–15 reps',
+                name: 'Seated Leg Curl',
+                sets: '4',
+                reps: '12 reps',
                 weight: 'Moderate'
             },
             {
                 name: 'Tricep Pulldown',
-                sets: '3',
-                reps: '12–15 reps',
+                sets: '4',
+                reps: '12 reps',
                 weight: 'Moderate'
             },
             {
@@ -46,7 +46,7 @@ export default {
                 weight: 'Progressive'
             },
             {
-                name: 'The Transition Row',
+                name: 'Rowing',
                 sets: '1',
                 reps: '25 minutes',
                 weight: '5500m Total Target'
@@ -78,19 +78,19 @@ export default {
             {
                 name: 'Romanian Deadlift',
                 sets: '4',
-                reps: '8–10 reps',
+                reps: '10 reps',
                 weight: 'Heavy (1–2 RIR)'
             },
             {
                 name: 'Overhead Press',
                 sets: '4',
-                reps: '10–12 reps',
+                reps: '10 reps',
                 weight: 'Moderate (2 RIR)'
             },
             {
                 name: 'Dumbbell Row',
                 sets: '3',
-                reps: '10–12 reps',
+                reps: '10 reps',
                 weight: 'Progressive'
             },
             {
@@ -114,7 +114,7 @@ export default {
         ]
     },
     'Thursday': {
-        title: 'HIIT Reset',
+        title: 'HIIT Row',
         time: '30 mins',
         exercises: [
             {
@@ -144,31 +144,31 @@ export default {
             {
                 name: 'Bulgarian Split Squat',
                 sets: '3',
-                reps: '10–12 reps',
+                reps: '12 reps',
                 weight: 'Progressive (2 RIR)'
             },
             {
                 name: 'Incline Dumbbell Press',
                 sets: '4',
-                reps: '10–12 reps',
+                reps: '10 reps',
                 weight: 'Heavy (1-2 RIR)'
             },
             {
                 name: 'Wide Pull-Ups',
                 sets: '3',
-                reps: 'To Technical Failure',
+                reps: 'To Failure',
                 weight: 'Bodyweight'
             },
             {
                 name: 'EZ-Bar Curl',
-                sets: '3',
-                reps: '12–15 reps',
+                sets: '4',
+                reps: '12 reps',
                 weight: 'Moderate'
             },
             {
                 name: 'Hip Thrust',
                 sets: '3',
-                reps: '10–12 reps',
+                reps: '10 reps',
                 weight: 'Moderate-Heavy'
             },
             {
@@ -186,9 +186,46 @@ export default {
         ]
     },
     'Saturday': {
-        title: 'Active Recovery',
-        time: 'Rest',
-        exercises: []
+        title: 'Upper Hypertrophy (Accessories)',
+        time: '60 mins',
+        exercises: [
+            {
+                name: 'Pec Deck Fly',
+                sets: '3',
+                reps: '12 reps',
+                weight: 'Moderate-Heavy (1–2 RIR)'
+            },
+            {
+                name: 'Chest-Supported Row',
+                sets: '3',
+                reps: '12 reps',
+                weight: 'Progressive (1–2 RIR)'
+            },
+            {
+                name: 'Cable Lateral Raise',
+                sets: '4',
+                reps: '15 reps',
+                weight: 'Controlled (1–2 RIR)'
+            },
+            {
+                name: 'Face Pull',
+                sets: '3',
+                reps: '12 reps',
+                weight: 'Moderate (2 RIR)'
+            },
+            {
+                name: 'Rope Tricep Pressdown',
+                sets: '3',
+                reps: '12 reps',
+                weight: 'Moderate (1–2 RIR)'
+            },
+            {
+                name: 'Incline Dumbbell Curl',
+                sets: '4',
+                reps: '10 reps',
+                weight: 'Moderate (1–2 RIR)'
+            }
+        ]
     },
     'Sunday': {
         title: 'Cardio',
