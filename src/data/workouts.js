@@ -114,13 +114,19 @@ export default {
         ]
     },
     'Thursday': {
-        title: 'HIIT Row',
+        title: 'Norwegian 4x4 Row',
         time: '30 mins',
         exercises: [
             {
                 name: 'Row',
+                sets: '10 minutes',
+                reps: 'Warm-Up',
+                weight: 'Easy Pace'
+            },
+            {
+                name: 'Row',
                 sets: '10 intervals',
-                reps: '30s on / 30s off',
+                reps: '4 minutes on / 3 minutes off off',
                 weight: 'Max Effort'
             },
             {
