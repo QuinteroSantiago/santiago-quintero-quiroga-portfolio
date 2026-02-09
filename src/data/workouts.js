@@ -13,25 +13,31 @@ export default {
                 name: 'Leg Press (Feet High)',
                 sets: '4',
                 reps: '12 reps',
-                weight: 'Progressive (1-2 RIR)'
+                weight: '280 lbs (Heavy, 1–2 RIR)'
+            },
+            {
+                name: 'Lat Pulldown',
+                sets: '4',
+                reps: '6 reps',
+                weight: '205 lbs (2 RIR)'
+            },
+            {
+                name: 'External Rotation (Cable)',
+                sets: '2',
+                reps: '15 reps',
+                weight: '10 lbs (Light, Focus on Form)'
+            },
+            {
+                name: 'Standing Calf Raise',
+                sets: '2',
+                reps: '15 reps',
+                weight: ''
             },
             {
                 name: 'Bench Press',
                 sets: '4',
                 reps: '8 reps',
-                weight: 'Progressive (1–2 RIR)'
-            },
-            {
-                name: 'Lat Pulldown',
-                sets: '4',
-                reps: '10 reps',
-                weight: 'Progressive (2 RIR)'
-            },
-            {
-                name: 'Seated Leg Curl',
-                sets: '4',
-                reps: '12 reps',
-                weight: 'Moderate'
+                weight: '185 lbs (Heavy, 1–2 RIR)'
             },
             {
                 name: 'Tricep Pulldown',
@@ -40,10 +46,10 @@ export default {
                 weight: 'Moderate'
             },
             {
-                name: 'Standing Calf Raise',
-                sets: '2',
-                reps: '15 reps',
-                weight: 'Progressive'
+                name: 'Seated Leg Curl',
+                sets: '4',
+                reps: '12 reps',
+                weight: 'Moderate'
             },
             {
                 name: 'Rowing',
@@ -62,12 +68,6 @@ export default {
                 sets: 'Zone 2',
                 reps: '30 minutes',
                 weight: ''
-            },
-            {
-                name: 'Walking',
-                sets: '',
-                reps: '8k-10k steps',
-                weight: ''
             }
         ]
     },
@@ -82,7 +82,7 @@ export default {
                 weight: 'Heavy (1–2 RIR)'
             },
             {
-                name: 'Overhead Press',
+                name: 'Dumbbell Overhead Press',
                 sets: '4',
                 reps: '10 reps',
                 weight: 'Moderate (2 RIR)'
@@ -106,34 +106,28 @@ export default {
                 weight: 'Slow Tempo'
             },
             {
-                name: 'Rhythmic Walking',
+                name: 'Incline Walk',
                 sets: '',
                 reps: '20 minutes',
-                weight: 'Incline 3.0'
+                weight: 'Incline 15%, Speed 4 mph'
             }
         ]
     },
     'Thursday': {
-        title: 'Norwegian 4x4 Row',
+        title: 'Norwegian 4x3 Row',
         time: '30 mins',
         exercises: [
             {
-                name: 'Row',
-                sets: '10 minutes',
+                name: 'Bike',
+                sets: '15 minutes',
                 reps: 'Warm-Up',
-                weight: 'Easy Pace'
+                weight: '80 W, 120 W, 160 W, 100 W, 160 W, 100 W'
             },
             {
                 name: 'Row',
-                sets: '10 intervals',
-                reps: '4 minutes on / 3 minutes off off',
-                weight: 'Max Effort'
-            },
-            {
-                name: 'Walking',
-                sets: '',
-                reps: '8k steps',
-                weight: ''
+                sets: '4 intervals',
+                reps: '4 minutes on / 3 minutes off',
+                weight: '200 W/ 100 W'
             }
         ]
     },    
