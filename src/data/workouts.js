@@ -4,58 +4,58 @@ export default {
         time: '75 mins',
         exercises: [
             {
-                name: 'Rowing Warm-Up',
+                name: 'Warm-Up',
                 sets: '1',
-                reps: '5 mins',
+                reps: '7 mins',
                 weight: 'Easy Pace'
             },
             {
                 name: 'Leg Press (Feet High)',
                 sets: '4',
-                reps: '12 reps',
-                weight: '280 lbs (Heavy, 1–2 RIR)'
-            },
-            {
-                name: 'Lat Pulldown',
-                sets: '4',
-                reps: '6 reps',
-                weight: '205 lbs (2 RIR)'
-            },
-            {
-                name: 'External Rotation (Cable)',
-                sets: '2',
-                reps: '15 reps',
-                weight: '10 lbs (Light, Focus on Form)'
-            },
-            {
-                name: 'Standing Calf Raise',
-                sets: '2',
-                reps: '15 reps',
-                weight: ''
-            },
-            {
-                name: 'Bench Press',
-                sets: '4',
-                reps: '8 reps',
-                weight: '185 lbs (Heavy, 1–2 RIR)'
-            },
-            {
-                name: 'Tricep Pulldown',
-                sets: '4',
-                reps: '12 reps',
-                weight: 'Moderate'
+                reps: '10',
+                weight: '380 lbs (Heavy, 1–2 RIR)'
             },
             {
                 name: 'Seated Leg Curl',
                 sets: '4',
-                reps: '12 reps',
-                weight: 'Moderate'
+                reps: '10',
+                weight: '60 lbs'
             },
             {
-                name: 'Rowing',
-                sets: '1',
-                reps: '25 minutes',
-                weight: '5500m Total Target'
+                name: 'Lat Pulldown',
+                sets: '3',
+                reps: '10',
+                weight: '180 lbs (2 RIR)'
+            },
+            {
+                name: 'External Rotation (Cable)',
+                sets: '2',
+                reps: '15',
+                weight: '10 lbs (Light, Focus on Form)'
+            },
+            {
+                name: 'Bench Press',
+                sets: '4',
+                reps: '8',
+                weight: '185 lbs (Heavy, 1–2 RIR)'
+            },
+            {
+                name: 'Standing Calf Raise',
+                sets: '2',
+                reps: '15',
+                weight: ''
+            },
+            {
+                name: 'Tricep Kickback',
+                sets: '3',
+                reps: '12',
+                weight: '20 lbs'
+            },
+            {
+                name: 'Tricep Pulldown',
+                sets: '3',
+                reps: '12',
+                weight: '120 lbs'
             }
         ]
     },
@@ -76,58 +76,64 @@ export default {
         time: '60 mins',
         exercises: [
             {
+                name: 'Jumping Jacks Warm-Up',
+                sets: '1',
+                reps: '200',
+                weight: ''
+            },
+            {
                 name: 'Romanian Deadlift',
                 sets: '4',
-                reps: '10 reps',
-                weight: 'Heavy (1–2 RIR)'
+                reps: '10',
+                weight: '155 lbs'
+            },
+            {
+                name: 'Hollow Body Leg Raises',
+                sets: '3',
+                reps: '12',
+                weight: 'Slow Tempo'
             },
             {
                 name: 'Dumbbell Overhead Press',
                 sets: '4',
-                reps: '10 reps',
-                weight: 'Moderate (2 RIR)'
+                reps: '10',
+                weight: '80 lbs'
             },
             {
-                name: 'Dumbbell Row',
+                name: 'Dumbbell Row (Single Arm)',
                 sets: '3',
-                reps: '10 reps',
-                weight: 'Progressive'
+                reps: '8',
+                weight: '65 lbs'
             },
             {
                 name: 'Lateral Raises',
                 sets: '3',
-                reps: '15 reps',
-                weight: 'Light-Moderate'
-            },
-            {
-                name: 'Hanging Knee Raises',
-                sets: '3',
-                reps: '12 reps',
-                weight: 'Slow Tempo'
+                reps: '15',
+                weight: '10 lbs'
             },
             {
                 name: 'Incline Walk',
                 sets: '',
                 reps: '20 minutes',
-                weight: 'Incline 15%, Speed 4 mph'
+                weight: 'Incline 15%, Speed 3 mph'
             }
         ]
     },
     'Thursday': {
-        title: 'Norwegian 4x3 Row',
-        time: '30 mins',
+        title: 'Norwegian 4x4x4 Bike Workout',
+        time: '50 mins',
         exercises: [
             {
                 name: 'Bike',
                 sets: '15 minutes',
                 reps: 'Warm-Up',
-                weight: '80 W, 120 W, 160 W, 100 W, 160 W, 100 W'
+                weight: '95W (5 min), 130W (3 min), 170W (2 min), 110W (1 min), 170W (2 min), 110 W (2 min)'
             },
             {
-                name: 'Row',
+                name: 'Bike',
                 sets: '4 intervals',
-                reps: '4 minutes on / 3 minutes off',
-                weight: '200 W/ 100 W'
+                reps: '4 minutes on / 4 minutes off',
+                weight: '240W / 120W'
             }
         ]
     },    
@@ -144,44 +150,44 @@ export default {
             {
                 name: 'Bulgarian Split Squat',
                 sets: '3',
-                reps: '12 reps',
-                weight: 'Progressive (2 RIR)'
+                reps: '12',
+                weight: '20 lbs Dumbbells'
+            },
+            {
+                name: 'Dead Hang',
+                sets: '1',
+                reps: 'Max Time',
+                weight: 'Target: 45s+'
             },
             {
                 name: 'Incline Dumbbell Press',
                 sets: '4',
-                reps: '10 reps',
-                weight: 'Heavy (1-2 RIR)'
+                reps: '10',
+                weight: '60 lbs'
             },
             {
-                name: 'Wide Pull-Ups',
-                sets: '3',
+                name: 'Pull-Ups',
+                sets: '2',
                 reps: 'To Failure',
                 weight: 'Bodyweight'
             },
             {
                 name: 'EZ-Bar Curl',
                 sets: '4',
-                reps: '12 reps',
-                weight: 'Moderate'
+                reps: '12',
+                weight: '60 lbs'
             },
             {
-                name: 'Hip Thrust',
-                sets: '3',
-                reps: '10 reps',
-                weight: 'Moderate-Heavy'
+                name: 'Standing Calf Raise',
+                sets: '2',
+                reps: '15',
+                weight: ''
             },
             {
                 name: 'Cable Crunch',
                 sets: '3',
-                reps: '15 reps',
+                reps: '15',
                 weight: 'Moderate'
-            },
-            {
-                name: 'Dead Hang',
-                sets: '2',
-                reps: 'Max Time',
-                weight: 'Target: 45s+'
             }
         ]
     },
@@ -192,37 +198,37 @@ export default {
             {
                 name: 'Pec Deck Fly',
                 sets: '3',
-                reps: '12 reps',
+                reps: '12',
                 weight: 'Moderate-Heavy (1–2 RIR)'
             },
             {
                 name: 'Chest-Supported Row',
                 sets: '3',
-                reps: '12 reps',
+                reps: '12',
                 weight: 'Progressive (1–2 RIR)'
             },
             {
                 name: 'Cable Lateral Raise',
                 sets: '4',
-                reps: '15 reps',
+                reps: '15',
                 weight: 'Controlled (1–2 RIR)'
             },
             {
                 name: 'Face Pull',
                 sets: '3',
-                reps: '12 reps',
+                reps: '12',
                 weight: 'Moderate (2 RIR)'
             },
             {
                 name: 'Rope Tricep Pressdown',
                 sets: '3',
-                reps: '12 reps',
+                reps: '12',
                 weight: 'Moderate (1–2 RIR)'
             },
             {
                 name: 'Incline Dumbbell Curl',
                 sets: '4',
-                reps: '10 reps',
+                reps: '10',
                 weight: 'Moderate (1–2 RIR)'
             }
         ]
@@ -239,4 +245,4 @@ export default {
             }
         ]
     }
-};
+}
