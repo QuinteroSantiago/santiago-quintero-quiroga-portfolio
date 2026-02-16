@@ -1,6 +1,114 @@
 export default {
     'Monday': {
         title: 'Full Body',
+        time: '60 mins',
+        exercises: [
+            {
+                name: 'Bike Warm-Up',
+                sets: '',
+                reps: '8 minutes',
+                weight: 'Low Intensity'
+            },
+            {
+                name: 'Bulgarian Split Squat',
+                sets: '3',
+                reps: '12',
+                weight: '20 lbs Dumbbells'
+            },
+            {
+                name: 'Dead Hang',
+                sets: '1',
+                reps: 'Max Time',
+                weight: 'Target: 45s+'
+            },
+            {
+                name: 'Incline Dumbbell Press',
+                sets: '4',
+                reps: '10',
+                weight: '60 lbs'
+            },
+            {
+                name: 'Pull-Ups',
+                sets: '2',
+                reps: 'To Failure',
+                weight: 'Bodyweight'
+            },
+            {
+                name: 'EZ-Bar Curl',
+                sets: '4',
+                reps: '12',
+                weight: '60 lbs'
+            },
+            {
+                name: 'Standing Calf Raise',
+                sets: '2',
+                reps: '15',
+                weight: ''
+            },
+            {
+                name: 'Cable Crunch',
+                sets: '3',
+                reps: '15',
+                weight: 'Moderate'
+            }
+        ]
+    },
+    'Tuesday': {
+        title: 'Upper Hypertrophy (Accessories)',
+        time: '60 mins',
+        exercises: [
+            {
+                name: 'Pec Deck Fly',
+                sets: '3',
+                reps: '12',
+                weight: 'Moderate-Heavy (1–2 RIR)'
+            },
+            {
+                name: 'Chest-Supported Row',
+                sets: '3',
+                reps: '12',
+                weight: 'Progressive (1–2 RIR)'
+            },
+            {
+                name: 'Cable Lateral Raise',
+                sets: '4',
+                reps: '15',
+                weight: 'Controlled (1–2 RIR)'
+            },
+            {
+                name: 'Face Pull',
+                sets: '3',
+                reps: '12',
+                weight: 'Moderate (2 RIR)'
+            },
+            {
+                name: 'Rope Tricep Pressdown',
+                sets: '3',
+                reps: '12',
+                weight: 'Moderate (1–2 RIR)'
+            },
+            {
+                name: 'Incline Dumbbell Curl',
+                sets: '4',
+                reps: '10',
+                weight: 'Moderate (1–2 RIR)'
+            }
+        ]
+    },
+    'Wednesday': {
+        title: 'Cardio',
+        time: '60 mins',
+        exercises: [
+            {
+                name: 'Easy Bike',
+                sets: 'Zone 2',
+                reps: '60 minutes',
+                weight: ''
+            }
+        ]
+    },
+    'Thursday': {
+        title: 'Full Body',
         time: '75 mins',
         exercises: [
             {
@@ -59,7 +167,7 @@ export default {
             }
         ]
     },
-    'Tuesday': {
+    'Friday': {
         title: 'Cardio',
         time: '45 mins',
         exercises: [
@@ -71,9 +179,9 @@ export default {
             }
         ]
     },
-    'Wednesday': {
+    'Saturday': {
         title: 'Full Body - Posterior Chain',
-        time: '60 mins',
+        time: '120 mins',
         exercises: [
             {
                 name: 'Jumping Jacks Warm-Up',
@@ -112,18 +220,6 @@ export default {
                 weight: '10 lbs'
             },
             {
-                name: 'Incline Walk',
-                sets: '',
-                reps: '20 minutes',
-                weight: 'Incline 15%, Speed 3 mph'
-            }
-        ]
-    },
-    'Thursday': {
-        title: 'Norwegian 4x4x4 Bike Workout',
-        time: '50 mins',
-        exercises: [
-            {
                 name: 'Bike',
                 sets: '15 minutes',
                 reps: 'Warm-Up',
@@ -136,113 +232,10 @@ export default {
                 weight: '240W / 120W'
             }
         ]
-    },    
-    'Friday': {
-        title: 'Full Body',
-        time: '60 mins',
-        exercises: [
-            {
-                name: 'Bike Warm-Up',
-                sets: '',
-                reps: '8 minutes',
-                weight: 'Low Intensity'
-            },
-            {
-                name: 'Bulgarian Split Squat',
-                sets: '3',
-                reps: '12',
-                weight: '20 lbs Dumbbells'
-            },
-            {
-                name: 'Dead Hang',
-                sets: '1',
-                reps: 'Max Time',
-                weight: 'Target: 45s+'
-            },
-            {
-                name: 'Incline Dumbbell Press',
-                sets: '4',
-                reps: '10',
-                weight: '60 lbs'
-            },
-            {
-                name: 'Pull-Ups',
-                sets: '2',
-                reps: 'To Failure',
-                weight: 'Bodyweight'
-            },
-            {
-                name: 'EZ-Bar Curl',
-                sets: '4',
-                reps: '12',
-                weight: '60 lbs'
-            },
-            {
-                name: 'Standing Calf Raise',
-                sets: '2',
-                reps: '15',
-                weight: ''
-            },
-            {
-                name: 'Cable Crunch',
-                sets: '3',
-                reps: '15',
-                weight: 'Moderate'
-            }
-        ]
-    },
-    'Saturday': {
-        title: 'Upper Hypertrophy (Accessories)',
-        time: '60 mins',
-        exercises: [
-            {
-                name: 'Pec Deck Fly',
-                sets: '3',
-                reps: '12',
-                weight: 'Moderate-Heavy (1–2 RIR)'
-            },
-            {
-                name: 'Chest-Supported Row',
-                sets: '3',
-                reps: '12',
-                weight: 'Progressive (1–2 RIR)'
-            },
-            {
-                name: 'Cable Lateral Raise',
-                sets: '4',
-                reps: '15',
-                weight: 'Controlled (1–2 RIR)'
-            },
-            {
-                name: 'Face Pull',
-                sets: '3',
-                reps: '12',
-                weight: 'Moderate (2 RIR)'
-            },
-            {
-                name: 'Rope Tricep Pressdown',
-                sets: '3',
-                reps: '12',
-                weight: 'Moderate (1–2 RIR)'
-            },
-            {
-                name: 'Incline Dumbbell Curl',
-                sets: '4',
-                reps: '10',
-                weight: 'Moderate (1–2 RIR)'
-            }
-        ]
     },
     'Sunday': {
-        title: 'Cardio',
-        time: '60 mins',
-        exercises: [
-            {
-                name: 'Easy Bike',
-                sets: 'Zone 2',
-                reps: '60 minutes',
-                weight: ''
-            }
-        ]
-    }
+        title: 'REST DAY',
+        time: '',
+        exercises: []
+    },    
 }
