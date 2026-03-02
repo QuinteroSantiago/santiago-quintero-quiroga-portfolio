@@ -16,12 +16,6 @@ export default {
                 weight: '20 lbs Dumbbells'
             },
             {
-                name: 'Dead Hang',
-                sets: '1',
-                reps: 'Max Time',
-                weight: 'Target: 45s+'
-            },
-            {
                 name: 'Incline Dumbbell Press',
                 sets: '4',
                 reps: '10',
@@ -38,12 +32,6 @@ export default {
                 sets: '4',
                 reps: '12',
                 weight: '60 lbs'
-            },
-            {
-                name: 'Standing Calf Raise',
-                sets: '2',
-                reps: '15',
-                weight: ''
             },
             {
                 name: 'Cable Crunch',
@@ -121,7 +109,13 @@ export default {
                 name: 'Leg Press (Feet High)',
                 sets: '4',
                 reps: '10',
-                weight: '380 lbs (Heavy, 1–2 RIR)'
+                weight: '400 lbs (Heavy, 1–2 RIR)'
+            },
+            {
+                name: 'Leg Press Calf Raise',
+                sets: '2',
+                reps: '15',
+                weight: '400'
             },
             {
                 name: 'Seated Leg Curl',
@@ -148,12 +142,6 @@ export default {
                 weight: '185 lbs (Heavy, 1–2 RIR)'
             },
             {
-                name: 'Standing Calf Raise',
-                sets: '2',
-                reps: '15',
-                weight: ''
-            },
-            {
                 name: 'Tricep Kickback',
                 sets: '3',
                 reps: '12',
@@ -174,7 +162,7 @@ export default {
             {
                 name: 'Bike',
                 sets: 'Zone 2',
-                reps: '30 minutes',
+                reps: '45 minutes',
                 weight: ''
             }
         ]
@@ -191,7 +179,7 @@ export default {
             },
             {
                 name: 'Romanian Deadlift',
-                sets: '4',
+                sets: '3',
                 reps: '10',
                 weight: '155 lbs'
             },
@@ -203,7 +191,7 @@ export default {
             },
             {
                 name: 'Dumbbell Overhead Press',
-                sets: '4',
+                sets: '3',
                 reps: '10',
                 weight: '80 lbs'
             },
@@ -214,22 +202,10 @@ export default {
                 weight: '65 lbs'
             },
             {
-                name: 'Lateral Raises',
-                sets: '3',
-                reps: '15',
-                weight: '10 lbs'
-            },
-            {
                 name: 'Bike',
-                sets: '15 minutes',
-                reps: 'Warm-Up',
-                weight: '95W (5 min), 130W (3 min), 170W (2 min), 110W (1 min), 170W (2 min), 110 W (2 min)'
-            },
-            {
-                name: 'Bike',
-                sets: '4 intervals',
-                reps: '4 minutes on / 4 minutes off',
-                weight: '240W / 120W'
+                sets: 'Zone 2',
+                reps: '30 minutes',
+                weight: ''
             }
         ]
     },
