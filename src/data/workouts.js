@@ -38,7 +38,7 @@ export default {
                 sets: '3',
                 reps: '15',
                 weight: 'Moderate'
-            }
+            },
         ]
     },
     'Tuesday': {
@@ -80,18 +80,30 @@ export default {
                 sets: '4',
                 reps: '10',
                 weight: 'Moderate (1–2 RIR)'
+            },
+            {
+                name: 'Bike',
+                sets: 'Zone 2',
+                reps: '40 minutes',
+                weight: 'Steady aerobic'
             }
         ]
     },
     'Wednesday': {
         title: 'Cardio',
-        time: '60 mins',
+        time: '50 mins',
         exercises: [
             {
-                name: 'Easy Bike',
-                sets: 'Zone 2',
-                reps: '60 minutes',
-                weight: ''
+                name: 'Bike',
+                sets: '15 minutes',
+                reps: 'Warm-Up',
+                weight: '95W (5 min), 130W (3 min), 170W (2 min), 110W (1 min), 170W (2 min), 110 W (2 min)'
+            },
+            {
+                name: 'Bike',
+                sets: '4 intervals',
+                reps: '4 minutes on / 4 minutes off',
+                weight: '240W / 120W'
             }
         ]
     },
@@ -157,12 +169,12 @@ export default {
     },
     'Friday': {
         title: 'Cardio',
-        time: '45 mins',
+        time: '60 mins',
         exercises: [
             {
                 name: 'Bike',
                 sets: 'Zone 2',
-                reps: '45 minutes',
+                reps: '60 minutes',
                 weight: ''
             }
         ]
@@ -204,7 +216,7 @@ export default {
             {
                 name: 'Bike',
                 sets: 'Zone 2',
-                reps: '30 minutes',
+                reps: '45 minutes',
                 weight: ''
             }
         ]
