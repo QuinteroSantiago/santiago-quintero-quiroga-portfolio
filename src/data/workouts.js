@@ -1,6 +1,6 @@
 export default {
     'Monday': {
-        title: 'Full Body',
+        title: 'Push (Chest / Shoulders / Triceps)',
         time: '60 mins',
         exercises: [
             {
@@ -10,10 +10,10 @@ export default {
                 weight: 'Low Intensity'
             },
             {
-                name: 'Bulgarian Split Squat',
-                sets: '3',
-                reps: '12',
-                weight: '20 lbs Dumbbells'
+                name: 'Bench Press',
+                sets: '4',
+                reps: '8',
+                weight: '185 lbs (Heavy, 1–2 RIR)'
             },
             {
                 name: 'Incline Dumbbell Press',
@@ -22,70 +22,70 @@ export default {
                 weight: '60 lbs'
             },
             {
-                name: 'Pull-Ups',
-                sets: '2',
-                reps: 'To Failure',
+                name: 'Single Arm Cable Lateral Raise (Behind Body)',
+                sets: '4',
+                reps: '12–15',
+                weight: 'Controlled (1–2 RIR)'
+            },
+            {
+                name: 'Overhead Cable Tricep Extension',
+                sets: '4',
+                reps: '10–12',
+                weight: 'Moderate-Heavy (1–2 RIR)'
+            },
+            {
+                name: 'EZ-Bar Skull Crushers',
+                sets: '3',
+                reps: '10–12',
+                weight: 'Moderate (1–2 RIR)'
+            }
+        ]
+    },
+    'Tuesday': {
+        title: 'Pull (Back / Biceps)',
+        time: '65 mins',
+        exercises: [
+            {
+                name: 'Hex Bar Deadlift',
+                sets: '4',
+                reps: '5–6',
+                weight: 'Heavy (2 RIR)'
+            },
+            {
+                name: 'Neutral Grip Pull-Ups',
+                sets: '3',
+                reps: '8–10',
                 weight: 'Bodyweight'
+            },
+            {
+                name: 'Lat Pulldown',
+                sets: '3',
+                reps: '10',
+                weight: '180 lbs (1–2 RIR)'
+            },
+            {
+                name: 'Chest-Supported T-Bar Row',
+                sets: '3',
+                reps: '8–10',
+                weight: 'Heavy (1–2 RIR)'
+            },
+            {
+                name: 'Rear Delt Cable Fly',
+                sets: '3',
+                reps: '15',
+                weight: 'Controlled'
             },
             {
                 name: 'EZ-Bar Curl',
                 sets: '4',
-                reps: '12',
+                reps: '10–12',
                 weight: '60 lbs'
             },
             {
-                name: 'Cable Crunch',
-                sets: '3',
-                reps: '15',
-                weight: 'Moderate'
-            },
-        ]
-    },
-    'Tuesday': {
-        title: 'Upper Hypertrophy (Accessories)',
-        time: '60 mins',
-        exercises: [
-            {
-                name: 'Pec Deck Fly',
-                sets: '3',
-                reps: '12',
-                weight: 'Moderate-Heavy (1–2 RIR)'
-            },
-            {
-                name: 'Chest-Supported Row',
-                sets: '3',
-                reps: '12',
-                weight: 'Progressive (1–2 RIR)'
-            },
-            {
-                name: 'Cable Lateral Raise',
-                sets: '4',
-                reps: '15',
-                weight: 'Controlled (1–2 RIR)'
-            },
-            {
-                name: 'Face Pull',
-                sets: '3',
-                reps: '12',
-                weight: 'Moderate (2 RIR)'
-            },
-            {
-                name: 'Rope Tricep Pressdown',
-                sets: '3',
-                reps: '12',
-                weight: 'Moderate (1–2 RIR)'
-            },
-            {
                 name: 'Incline Dumbbell Curl',
-                sets: '4',
-                reps: '10',
+                sets: '3',
+                reps: '10–12',
                 weight: 'Moderate (1–2 RIR)'
-            },
-            {
-                name: 'Bike',
-                sets: 'Zone 2',
-                reps: '40 minutes',
-                weight: 'Steady aerobic'
             }
         ]
     },
@@ -108,8 +108,8 @@ export default {
         ]
     },
     'Thursday': {
-        title: 'Full Body',
-        time: '75 mins',
+        title: 'Leg Day',
+        time: '80 mins',
         exercises: [
             {
                 name: 'Warm-Up',
@@ -118,52 +118,34 @@ export default {
                 weight: 'Easy Pace'
             },
             {
-                name: 'Leg Press (Feet High)',
+                name: 'Machine Squat',
                 sets: '4',
-                reps: '10',
-                weight: '400 lbs (Heavy, 1–2 RIR)'
+                reps: '8–10',
+                weight: 'Heavy (1–2 RIR)'
             },
             {
-                name: 'Leg Press Calf Raise',
-                sets: '2',
-                reps: '15',
-                weight: '400'
+                name: 'Leg Press',
+                sets: '3',
+                reps: '10–15',
+                weight: 'Moderate-Heavy (1–2 RIR)'
+            },
+            {
+                name: 'Bulgarian Split Squat',
+                sets: '3',
+                reps: '10–12',
+                weight: 'Moderate'
             },
             {
                 name: 'Seated Leg Curl',
                 sets: '4',
-                reps: '10',
-                weight: '60 lbs'
+                reps: '10–12',
+                weight: 'Moderate (1–2 RIR)'
             },
             {
-                name: 'Lat Pulldown',
-                sets: '3',
-                reps: '10',
-                weight: '180 lbs (2 RIR)'
-            },
-            {
-                name: 'External Rotation (Cable)',
-                sets: '2',
-                reps: '15',
-                weight: '10 lbs (Light, Focus on Form)'
-            },
-            {
-                name: 'Bench Press',
+                name: 'Standing Calf Raise',
                 sets: '4',
-                reps: '8',
-                weight: '185 lbs (Heavy, 1–2 RIR)'
-            },
-            {
-                name: 'Tricep Kickback',
-                sets: '3',
-                reps: '12',
-                weight: '20 lbs'
-            },
-            {
-                name: 'Tricep Pulldown',
-                sets: '3',
-                reps: '12',
-                weight: '120 lbs'
+                reps: '12–15',
+                weight: 'Controlled'
             }
         ]
     },
@@ -180,8 +162,8 @@ export default {
         ]
     },
     'Saturday': {
-        title: 'Full Body - Posterior Chain',
-        time: '120 mins',
+        title: 'Upper (Accessory + Core)',
+        time: '90 mins',
         exercises: [
             {
                 name: 'Jumping Jacks Warm-Up',
@@ -190,34 +172,58 @@ export default {
                 weight: ''
             },
             {
-                name: 'Romanian Deadlift',
-                sets: '3',
-                reps: '10',
-                weight: '155 lbs'
-            },
-            {
-                name: 'Hollow Body Leg Raises',
-                sets: '3',
-                reps: '12',
-                weight: 'Slow Tempo'
-            },
-            {
                 name: 'Dumbbell Overhead Press',
                 sets: '3',
-                reps: '10',
+                reps: '8–10',
                 weight: '80 lbs'
+            },
+            {
+                name: 'Pec Deck Fly',
+                sets: '3',
+                reps: '12',
+                weight: 'Moderate-Heavy (1–2 RIR)'
             },
             {
                 name: 'Dumbbell Row (Single Arm)',
                 sets: '3',
-                reps: '8',
+                reps: '8–10',
                 weight: '65 lbs'
+            },
+            {
+                name: 'Rear Delt Cable Fly',
+                sets: '3',
+                reps: '15',
+                weight: 'Controlled'
+            },
+            {
+                name: 'Weighted Hanging Leg Raise',
+                sets: '3',
+                reps: '10–12',
+                weight: 'Controlled'
+            },
+            {
+                name: 'Cable Crunch',
+                sets: '3',
+                reps: '12–15',
+                weight: 'Moderate'
             },
             {
                 name: 'Bike',
                 sets: 'Zone 2',
                 reps: '45 minutes',
                 weight: ''
+            },
+            {
+                name: 'Single Arm Cable Lateral Raise (Behind Body)',
+                sets: '3',
+                reps: '12–15',
+                weight: 'Controlled (1–2 RIR)'
+            },
+            {
+                name: 'Seated Calf Raise',
+                sets: '4',
+                reps: '12–15',
+                weight: 'Controlled'
             }
         ]
     },
@@ -225,5 +231,5 @@ export default {
         title: 'REST DAY',
         time: '',
         exercises: []
-    },    
+    },
 }
