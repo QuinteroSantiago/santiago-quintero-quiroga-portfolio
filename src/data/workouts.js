@@ -1,5 +1,5 @@
 export default {
-    'Monday': {
+    'Tuesday': {
         title: 'Push (Chest / Shoulders / Triceps)',
         time: '60 mins',
         exercises: [
@@ -41,7 +41,7 @@ export default {
             }
         ]
     },
-    'Tuesday': {
+    'Wednesday': {
         title: 'Pull (Back / Biceps)',
         time: '65 mins',
         exercises: [
@@ -89,9 +89,9 @@ export default {
             }
         ]
     },
-    'Wednesday': {
-        title: 'Cardio',
-        time: '50 mins',
+    'Monday': {
+        title: 'Soccer',
+        time: '60 mins',
         exercises: [
             {
                 name: 'Bike',
@@ -107,7 +107,7 @@ export default {
             }
         ]
     },
-    'Thursday': {
+    'Friday': {
         title: 'Leg Day',
         time: '80 mins',
         exercises: [
@@ -149,7 +149,7 @@ export default {
             }
         ]
     },
-    'Friday': {
+    'Thursday': {
         title: 'Cardio',
         time: '60 mins',
         exercises: [
