@@ -5,7 +5,7 @@ export default {
         exercises: [
             {
                 name: 'Wall Sit (Pre-Soccer Warm-Up)',
-                sets: '2-3',
+                sets: '2',
                 reps: '30-45 sec',
                 weight: 'Bodyweight'
             },
@@ -22,28 +22,16 @@ export default {
         time: '70 mins',
         exercises: [
             {
-                name: 'Wall Sit',
-                sets: '5',
-                reps: '30-45 sec',
-                weight: 'Bodyweight'
-            },
-            {
                 name: 'Bench Press',
                 sets: '4',
                 reps: '6-8',
                 weight: '185 lbs (Heavy, 1–2 RIR)'
             },
             {
-                name: 'Incline Dumbbell Press',
+                name: 'Incline Press',
                 sets: '3',
                 reps: '8-12',
                 weight: '60 lbs'
-            },
-            {
-                name: 'Chest Fly Machine',
-                sets: '3',
-                reps: '8-12',
-                weight: 'Moderate-Heavy (1–2 RIR)'
             },
             {
                 name: 'Overhead Press Machine',
@@ -68,6 +56,12 @@ export default {
                 sets: '3',
                 reps: '8–12',
                 weight: 'Moderate (1–2 RIR)'
+            },
+            {
+                name: 'Calf Raise',
+                sets: '3',
+                reps: '10–15',
+                weight: 'Controlled'
             }
         ]
     },
@@ -75,12 +69,6 @@ export default {
         title: 'Pull (Back / Biceps)',
         time: '75 mins',
         exercises: [
-            {
-                name: 'Deadlift',
-                sets: '3',
-                reps: '5–6',
-                weight: 'Heavy (2 RIR)'
-            },
             {
                 name: 'Chin Ups',
                 sets: '2',
@@ -113,10 +101,22 @@ export default {
             },
             {
                 name: 'EZ-Bar Curl',
-                sets: '4',
+                sets: '3',
                 reps: '8–12',
                 weight: '60 lbs'
-            }
+            },
+            {
+                name: 'Machine Crunch',
+                sets: '3',
+                reps: '12–15',
+                weight: 'Moderate'
+            },
+            {
+                name: 'Spanish Squat',
+                sets: '2',
+                reps: '12-15',
+                weight: 'Bodyweight / Band Assisted (3 sec down, 3 sec up)'
+            },
         ]
     },
     'Thursday': {
@@ -137,21 +137,27 @@ export default {
         exercises: [
             {
                 name: 'Wall Sit',
-                sets: '5',
+                sets: '3',
                 reps: '30-45 sec',
                 weight: 'Bodyweight'
             },
+            // {
+            //     name: 'Deadlift',
+            //     sets: '3',
+            //     reps: '5–6',
+            //     weight: 'Heavy (2 RIR)'
+            // },
+            // {
+            //     name: 'Machine Squat',
+            //     sets: '4',
+            //     reps: '6',
+            //     weight: 'Heavy (1–2 RIR, slight forward lean, pain-free depth, 3 sec eccentric)'
+            // },
             {
-                name: 'Spanish Squat',
+                name: 'Leg Press',
                 sets: '3',
-                reps: '12-15',
-                weight: 'Bodyweight / Band Assisted (3 sec down, 3 sec up)'
-            },
-            {
-                name: 'Machine Squat',
-                sets: '4',
-                reps: '6',
-                weight: 'Heavy (1–2 RIR, slight forward lean, pain-free depth, 3 sec eccentric)'
+                reps: '12',
+                weight: 'Moderate-Heavy (1–2 RIR, feet slightly higher, controlled depth)'
             },
             {
                 name: 'Romanian Deadlift',
@@ -160,14 +166,8 @@ export default {
                 weight: 'Heavy (2 RIR)'
             },
             {
-                name: 'Leg Press',
-                sets: '3',
-                reps: '12',
-                weight: 'Moderate-Heavy (1–2 RIR, feet slightly higher, controlled depth)'
-            },
-            {
                 name: 'Reverse Lunges',
-                sets: '3',
+                sets: '2',
                 reps: '10–12',
                 weight: 'Moderate (slight forward torso lean)'
             },
@@ -179,7 +179,7 @@ export default {
             },
             {
                 name: 'Calf Raise',
-                sets: '4',
+                sets: '3',
                 reps: '10–15',
                 weight: 'Controlled'
             }
@@ -189,12 +189,6 @@ export default {
         title: 'Upper (Accessory + Core)',
         time: '60 mins',
         exercises: [
-            {
-                name: 'Bike Warm-Up',
-                sets: '1',
-                reps: '5-8 minutes',
-                weight: 'Easy pace'
-            },
             {
                 name: 'Pec Deck Fly',
                 sets: '3',
