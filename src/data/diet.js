@@ -3,7 +3,7 @@
 // Targets: very low saturated fat, high fiber, high protein.
 // Notes: all macros are estimates; brands vary. Keep sat fat ≤7g/day, fiber ≥45g/day.
 
-const DAILY_TARGETS = { calories: 1600, protein: 170, carbs: 140, fat: 40 };
+const DAILY_TARGETS = { calories: 1985, protein: 150, carbs: 200, fat: 65 };
 
 const DEFAULT_SUPPLEMENTS = [
   {
@@ -41,22 +41,18 @@ const DEFAULT_SUPPLEMENTS = [
 
 export default {
   Monday: {
-    title: "Training Day (LDL Cut)",
-    goal: "Lose ~2 lb/week while minimizing ApoB/LDL stimulus",
-    notes:
-      "Keep fats mostly unsaturated; avoid eggs/cheese/red meat. Aim fiber ≥45 g. Meals are front-loaded for training performance.",
     targetMacros: DAILY_TARGETS,
     supplements: DEFAULT_SUPPLEMENTS,
     meals: [
       {
         meal: "Breakfast",
         food:
-          "LDL pancakes: 171g nonfat cottage cheese + 78g oats + 300g egg whites + 60g spinach + salt + 1 medium banana + PBfit (2 tbsp mixed with water)",
-        serving: "1/2 batch (1 serving) eaten as breakfast",
-        calories: 350,
-        protein: 39,
-        carbs: 45,
-        fat: 3.5,
+          "LDL pancakes",
+        serving: "3 pancakes",
+        calories: 330,
+        protein: 33.4,
+        carbs: 37.4,
+        fat: 6.3,
       },
       {
         meal: "Lunch",
@@ -67,6 +63,16 @@ export default {
         protein: 75,
         carbs: 55,
         fat: 14,
+      },
+      {
+        meal: "Snack",
+        food:
+          "Nonfat Greek yogurt (250g) + berries (200g) + chia seeds (10g)",
+        serving: "1 bowl",
+        calories: 300,
+        protein: 30,
+        carbs: 25,
+        fat: 6,
       },
       {
         meal: "Dinner",
@@ -82,10 +88,6 @@ export default {
   },
 
   Tuesday: {
-    title: "Training Day (Upper / LDL Cut)",
-    goal: "Lose ~2 lb/week while minimizing ApoB/LDL stimulus",
-    notes:
-      "If hunger rises, add carbs (fruit/potato/oats), not fats. Keep sat fat ≤7g/day.",
     targetMacros: DAILY_TARGETS,
     supplements: DEFAULT_SUPPLEMENTS,
     meals: [
@@ -123,22 +125,18 @@ export default {
   },
 
   Wednesday: {
-    title: "Zone 2 Day (LDL Cut)",
-    goal: "Maintain deficit; support recovery; keep fiber high",
-    notes:
-      "Lower-fat day. Keep steps high. Cardio supports vascular health even if LDL is diet-driven.",
     targetMacros: DAILY_TARGETS,
     supplements: DEFAULT_SUPPLEMENTS,
     meals: [
       {
         meal: "Breakfast",
         food:
-          "LDL pancakes (same as Monday) + berries (150g) instead of banana + PBfit (2 tbsp)",
-        serving: "1/2 batch (1 serving) eaten as breakfast",
-        calories: 325,
-        protein: 39,
-        carbs: 38,
-        fat: 3.5,
+          "LDL pancakes",
+        serving: "3 pancakes",
+        calories: 330,
+        protein: 33.4,
+        carbs: 37.4,
+        fat: 6.3,
       },
       {
         meal: "Lunch",
@@ -164,10 +162,6 @@ export default {
   },
 
   Thursday: {
-    title: "Training Day (Full Body / LDL Cut)",
-    goal: "Lose ~2 lb/week while minimizing ApoB/LDL stimulus",
-    notes:
-      "Keep fats controlled; prioritize carbs around training. Avoid restaurant hidden fats (butter/palm oil).",
     targetMacros: DAILY_TARGETS,
     supplements: DEFAULT_SUPPLEMENTS,
     meals: [
@@ -205,22 +199,18 @@ export default {
   },
 
   Friday: {
-    title: "Zone 2 Day (LDL Cut)",
-    goal: "Maintain deficit; support recovery and adherence",
-    notes:
-      "If scale stalls, do not cut protein—adjust carbs slightly. Keep psyllium consistent.",
     targetMacros: DAILY_TARGETS,
     supplements: DEFAULT_SUPPLEMENTS,
     meals: [
       {
         meal: "Breakfast",
         food:
-          "LDL pancakes (same as Monday) + PBfit (2 tbsp) + strawberries (150g)",
-        serving: "1/2 batch (1 serving) eaten as breakfast",
+          "LDL pancakes",
+        serving: "3 pancakes",
         calories: 330,
-        protein: 39,
-        carbs: 39,
-        fat: 3.5,
+        protein: 33.4,
+        carbs: 37.4,
+        fat: 6.3,
       },
       {
         meal: "Lunch",
@@ -246,10 +236,6 @@ export default {
   },
 
   Saturday: {
-    title: "Training Day (Posterior Chain / LDL Cut)",
-    goal: "Lose ~2 lb/week while preserving strength",
-    notes:
-      "No HIIT (drop Norwegian 4×4). Do steady Zone 2 after lifting. Keep carbs adequate today.",
     targetMacros: DAILY_TARGETS,
     supplements: DEFAULT_SUPPLEMENTS,
     meals: [
@@ -287,22 +273,18 @@ export default {
   },
 
   Sunday: {
-    title: "Rest Day (LDL Cut / Recovery)",
-    goal: "Maintain deficit; manage hunger; keep fiber high",
-    notes:
-      "If hunger is high, add vegetables/berries/legumes. Keep fats low and mostly unsaturated.",
     targetMacros: DAILY_TARGETS,
     supplements: DEFAULT_SUPPLEMENTS,
     meals: [
       {
         meal: "Breakfast",
         food:
-          "LDL pancakes (same as Monday) + berries (200g) + PBfit (2 tbsp)",
-        serving: "1/2 batch (1 serving) eaten as breakfast",
-        calories: 335,
-        protein: 39,
-        carbs: 40,
-        fat: 3.5,
+          "LDL pancakes",
+        serving: "3 pancakes",
+        calories: 330,
+        protein: 33.4,
+        carbs: 37.4,
+        fat: 6.3,
       },
       {
         meal: "Lunch",

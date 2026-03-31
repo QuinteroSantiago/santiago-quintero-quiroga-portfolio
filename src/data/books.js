@@ -23,11 +23,6 @@ Emphasizes personal ROI over public consensus.
 
 export default {
     Current: [
-        {
-            title: "The Meditations of Marcus Aurelius", 
-            topic: "Philosophy",
-            score: 6
-        },
     ],
     Wishlist: [
         {
@@ -204,6 +199,16 @@ export default {
         }
     ],
     Archive: [
+        {
+            title: "Stoicism by john sellars", 
+            topic: "Philosophy",
+            score: 7
+        },
+        {
+            title: "The Meditations of Marcus Aurelius", 
+            topic: "Philosophy",
+            score: 6
+        },
         {
             title: "The Magician’s Nephew (Chronicles of Narnia, #6)", 
             topic: "Fiction",
