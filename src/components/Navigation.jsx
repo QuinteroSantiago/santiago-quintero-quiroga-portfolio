@@ -3,9 +3,9 @@ import useTheme from '../hooks/useTheme';
 
 const NAV_LINKS = [
     { to: '/', label: 'Index' },
-    { to: '/workout', label: 'Training' },
+    { to: '/workout', label: 'Workout' },
     { to: '/reading', label: 'Reading' },
-    { to: '/diet', label: 'Nutrition' },
+    // { to: '/diet', label: 'Nutrition' },
 ];
 
 function Navigation() {
@@ -28,11 +28,10 @@ function Navigation() {
                             <Link
                                 key={link.to}
                                 to={link.to}
-                                className={`rounded-full px-4 py-2 text-sm transition-colors ${
-                                    isActive
+                                className={`rounded-full px-4 py-2 text-sm transition-colors ${isActive
                                         ? 'bg-[var(--text)] text-[var(--bg)]'
                                         : 'text-[var(--muted)] hover:bg-[var(--accent-soft)] hover:text-[var(--text)]'
-                                }`}
+                                    }`}
                             >
                                 {link.label}
                             </Link>
@@ -58,11 +57,10 @@ function Navigation() {
                         <Link
                             key={link.to}
                             to={link.to}
-                            className={`whitespace-nowrap rounded-full px-4 py-2 text-sm ${
-                                isActive
+                            className={`whitespace-nowrap rounded-full px-4 py-2 text-sm ${isActive
                                     ? 'bg-[var(--text)] text-[var(--bg)]'
                                     : 'surface-card text-[var(--muted)]'
-                            }`}
+                                }`}
                         >
                             {link.label}
                         </Link>

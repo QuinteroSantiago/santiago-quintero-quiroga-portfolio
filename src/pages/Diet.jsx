@@ -59,8 +59,6 @@ function DietPlanSection({ day, plan, columns, showDayHeading }) {
     <section key={day} className="section-frame rounded-[1.75rem] px-6 py-6 sm:px-8">
       <h2 className="mb-4 text-xl font-normal">
         {showDayHeading ? <strong>{day}</strong> : null}
-        {showDayHeading ? " - " : ""}
-        {plan.title}
       </h2>
 
       {plan.notes || plan.goal ? (
