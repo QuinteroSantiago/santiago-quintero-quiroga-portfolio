@@ -3,14 +3,22 @@ import { useEffect, useEffectEvent, useState } from 'react';
 const THEME_STORAGE_KEY = 'theme';
 const DARK_MEDIA_QUERY = '(prefers-color-scheme: dark)';
 
+function getStoredTheme() {
+    if (typeof window === 'undefined') {
+        return null;
+    }
+
+    const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+    return savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : null;
+}
+
 function getPreferredTheme() {
     if (typeof window === 'undefined') {
         return 'light';
     }
 
-    const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
-
-    if (savedTheme === 'light' || savedTheme === 'dark') {
+    const savedTheme = getStoredTheme();
+    if (savedTheme) {
         return savedTheme;
     }
 
@@ -23,11 +31,14 @@ function useTheme() {
     useEffect(() => {
         const root = document.documentElement;
         root.classList.toggle('dark', theme === 'dark');
-        window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+
+        if (getStoredTheme()) {
+            window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+        }
     }, [theme]);
 
     const syncWithSystemTheme = useEffectEvent((event) => {
-        const savedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+        const savedTheme = getStoredTheme();
 
         if (!savedTheme) {
             setTheme(event.matches ? 'dark' : 'light');
@@ -41,10 +52,14 @@ function useTheme() {
         return () => {
             mediaQueryList.removeEventListener('change', syncWithSystemTheme);
         };
-    }, [syncWithSystemTheme]);
+    }, []);
 
     const toggleTheme = () => {
-        setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'));
+        setTheme((currentTheme) => {
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+            return nextTheme;
+        });
     };
 
     return {

@@ -17,7 +17,6 @@ function useMediaQuery(query) {
             setMatches(event.matches);
         };
 
-        setMatches(mediaQueryList.matches);
         mediaQueryList.addEventListener('change', handleChange);
 
         return () => {

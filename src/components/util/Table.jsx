@@ -1,11 +1,12 @@
-function Table({ columns, data }) {
+function Table({ columns, data, caption }) {
     return (
         <div className="overflow-x-auto rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface-strong)]">
             <table className="mx-auto w-full min-w-[42rem] border-separate border-spacing-0">
+                {caption ? <caption className="sr-only">{caption}</caption> : null}
                 <thead className="bg-[var(--accent-soft)] text-[var(--text)]">
                     <tr>
                         {columns.map((column) => (
-                            <th key={column.key} className="px-4 pb-4 pt-4 text-left text-sm font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+                            <th scope="col" key={column.key} className="px-4 pb-4 pt-4 text-left text-sm font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
                                 {column.header}
                             </th>
                         ))}

@@ -58,6 +58,7 @@ function ReadingList() {
                 <h1 className="mb-6 text-5xl font-light">Reading List</h1>
 
                 <ResponsiveSelector
+                    label="Reading category"
                     options={categoryOptions}
                     value={selectedCategory}
                     onChange={setSelectedCategory}
@@ -66,8 +67,11 @@ function ReadingList() {
                 />
 
                 <div className="mt-4 flex items-center justify-center gap-2 text-sm">
-                    <span className="text-gray-600 dark:text-gray-400">Sort by rating:</span>
+                    <label htmlFor="reading-sort-order" className="text-gray-600 dark:text-gray-400">
+                        Sort by rating:
+                    </label>
                     <select
+                        id="reading-sort-order"
                         className="rounded bg-gray-200 px-3 py-1 dark:bg-gray-700"
                         value={sortOrder}
                         onChange={(event) => setSortOrder(event.target.value)}
@@ -87,15 +91,15 @@ function ReadingList() {
                             <h2 className="mb-4 border-b pb-2 text-2xl font-semibold dark:border-gray-700">
                                 {topic} ({booksInTopic.length})
                             </h2>
-                            <Table columns={COLUMNS} data={booksInTopic} />
+                            <Table columns={COLUMNS} data={booksInTopic} caption={`${topic} books`} />
                         </section>
                     ))
                 )}
             </main>
 
             <footer className="mb-8 mt-12 text-center text-sm text-gray-500">
-                Showing {books[selectedCategory]?.length || 0} books in "{selectedCategory}"
-                {" "}across {Object.keys(topicGroups).length} topics.
+                Showing {books[selectedCategory]?.length || 0} books in &quot;{selectedCategory}&quot;
+                {' '}across {Object.keys(topicGroups).length} topics.
             </footer>
         </div>
     );
