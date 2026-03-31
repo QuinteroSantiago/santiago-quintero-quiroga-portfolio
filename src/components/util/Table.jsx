@@ -1,14 +1,12 @@
-import React from 'react';
-
 function Table({ columns, data }) {
     return (
-        <div className="overflow-x-auto">
-            <table className="mx-auto w-full">
-                <thead className="bg-gray-100 dark:bg-gray-800">
+        <div className="overflow-x-auto rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface-strong)]">
+            <table className="mx-auto w-full min-w-[42rem] border-separate border-spacing-0">
+                <thead className="bg-[var(--accent-soft)] text-[var(--text)]">
                     <tr>
-                        {columns.map((column, index) => (
-                            <th key={index} className="pb-4 pt-4 px-4 font-bold text-lg">
-                                {column}
+                        {columns.map((column) => (
+                            <th key={column.key} className="px-4 pb-4 pt-4 text-left text-sm font-semibold uppercase tracking-[0.16em] text-[var(--muted)]">
+                                {column.header}
                             </th>
                         ))}
                     </tr>
@@ -16,14 +14,14 @@ function Table({ columns, data }) {
                 <tbody>
                     {data.map((row, rowIndex) => (
                         <tr
-                            key={rowIndex}
-                            className={`hover:bg-gray-50 dark:hover:bg-gray-600 ${
-                                rowIndex % 2 === 0 ? 'bg-gray-50 dark:bg-gray-700' : 'bg-white dark:bg-gray-800'
+                            key={row.id ?? row.title ?? row.name ?? `${rowIndex}-${columns[0]?.key ?? 'row'}`}
+                            className={`transition-colors hover:bg-[var(--accent-soft)] ${
+                                rowIndex % 2 === 0 ? 'bg-transparent' : 'bg-[rgba(127,101,81,0.04)]'
                             }`}
                         >
-                            {Object.values(row).map((value, colIndex) => (
-                                <td key={colIndex} className="pt-4 pb-4 px-4 font-light">
-                                    {value}
+                            {columns.map((column) => (
+                                <td key={column.key} className="border-t border-[var(--border)] px-4 pb-4 pt-4 align-top font-light text-[var(--muted)]">
+                                    {column.render ? column.render(row[column.key], row) : row[column.key] ?? '—'}
                                 </td>
                             ))}
                         </tr>
