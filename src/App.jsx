@@ -1,32 +1,24 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Home from './pages/Home'
-// import Blog from './pages/Blog';
-import NotFound from './pages/404'
+import { Route, Routes } from 'react-router-dom';
+import AppLayout from './components/layout/AppLayout';
+import Home from './pages/Home';
+import NotFound from './pages/404';
 import Workout from './pages/Workout';
 import ReadingList from './pages/ReadingList';
-import CopyComponent from './pages/CopyComponent'
-import Diet from './pages/Diet'
+import CopyComponent from './pages/CopyComponent';
+import Diet from './pages/Diet';
 
 function App() {
     return (
-        <BrowserRouter>
-            <div className="font-inter min-h-screen w-full m-0 p-0 text-zinc-900 dark:text-zinc-300 dark:bg-zinc-900">
-                <Navigation />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    {/* <Route path="/blog" element={<Blog />} /> */}
-                    <Route path="/workout" element={<Workout />} />
-                    <Route path="/reading" element={<ReadingList />} />
-                    <Route path="/copy" element={<CopyComponent />} />
-                    <Route path="/diet" element={<Diet />} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
-                <Footer />
-            </div>
-        </BrowserRouter>
+        <Routes>
+            <Route element={<AppLayout />}>
+                <Route path="/" element={<Home />} />
+                <Route path="/workout" element={<Workout />} />
+                <Route path="/reading" element={<ReadingList />} />
+                <Route path="/copy" element={<CopyComponent />} />
+                <Route path="/diet" element={<Diet />} />
+                <Route path="*" element={<NotFound />} />
+            </Route>
+        </Routes>
     );
 }
 

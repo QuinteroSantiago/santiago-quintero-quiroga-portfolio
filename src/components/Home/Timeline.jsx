@@ -1,4 +1,3 @@
-import React from 'react';
 import TimelineItem from './TimelineItem';
 import Title from '../Title';
 
@@ -35,9 +34,13 @@ function Timeline({ title, timeline }) {
    }
 
    return (
-      <div className="flex flex-col md:flex-row justify-center my-20">
-         <div className="w-full md:w-7/12 flex-grow">
+      <section className="section-frame my-16 rounded-[2rem] px-6 py-8 sm:px-8 md:px-10 md:py-10">
+         <div className="mb-3">
+            <p className="eyebrow mb-3">{title === 'Work' ? 'Selected roles' : 'Training and formal study'}</p>
             <Title>{title}</Title>
+         </div>
+
+         <div className="space-y-6">
             {timeline.map((item, index) => (
                <TimelineItem
                   key={index}
@@ -52,8 +55,8 @@ function Timeline({ title, timeline }) {
                />
             ))}
          </div>
-      </div>
-   )
+      </section>
+   );
 }
 
 export default Timeline;

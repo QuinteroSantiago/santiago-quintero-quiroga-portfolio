@@ -1,51 +1,40 @@
-import React from 'react';
-import Title from '../Title';
-
 function Contact() {
    return (
-      <>
-         <br />
-         <br />
-         <br />
-         <div className="flex flex-col mb-10 mx-auto">
-            <div className="flex justify-center items-center">
-               <form
-                  className="flex flex-col w-full md:w-7/12"
+      <section className="section-frame rounded-[2rem] px-6 py-8 sm:px-8 md:px-10 md:py-10">
+         <p className="eyebrow mb-3">Get in touch</p>
+         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+            <div>
+               <h2 className="font-display text-5xl leading-none tracking-tight text-[var(--text)] md:text-6xl">
+                  If you are building platforms, internal tooling, or automation-heavy systems, let’s talk.
+               </h2>
+               <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
+                  I’m most useful where product thinking meets infrastructure, reliability, and developer experience.
+               </p>
+            </div>
+
+            <div className="space-y-3">
+               <a
+                  href="https://www.linkedin.com/in/santiago-quintero/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="surface-card block rounded-[1.25rem] px-5 py-4 text-[var(--text)] transition-transform hover:-translate-y-0.5"
                >
-                  <Title className="text-zinc-500">Contact</Title>
-                  <input
-                     type="text"
-                     name="name"
-                     placeholder="Name"
-                     className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
-                     required
-                  />
-                  <input
-                     type="text"
-                     name="email"
-                     placeholder="Email"
-                     className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none"
-                     required
-                  />
-                  <textarea
-                     name="message"
-                     placeholder="Message"
-                     rows="10"
-                     className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
-                     required
-                  />
-                  <button
-                     aria-label="Submit the form button"
-                     type="submit"
-                     className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md text-white bg-gradient-to-b from-yellow-500 via-blue-500 to-red-900 drop-shadow-md hover:text-black"
-                  >
-                     Contact Me
-                  </button>
-               </form>
+                  <div className="eyebrow mb-1">Primary</div>
+                  <div className="text-xl">Connect on LinkedIn</div>
+               </a>
+               <a
+                  href="https://github.com/QuinteroSantiago"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="surface-card block rounded-[1.25rem] px-5 py-4 text-[var(--text)] transition-transform hover:-translate-y-0.5"
+               >
+                  <div className="eyebrow mb-1">Work</div>
+                  <div className="text-xl">Browse GitHub projects</div>
+               </a>
             </div>
          </div>
-      </>
-   )
+      </section>
+   );
 }
 
 export default Contact;

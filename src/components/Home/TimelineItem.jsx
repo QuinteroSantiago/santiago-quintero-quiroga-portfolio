@@ -1,73 +1,52 @@
-import React from 'react';
-
 function parseDetail(detail) {
   const parts = detail.split(/\*\*(.*?)\*\*/g);
   return parts.map((part, index) => {
     if (index % 2 === 1) {
-      return <strong key={index}>{part}</strong>;
+      return <strong key={index} className="text-[var(--text)]">{part}</strong>;
     }
     return part;
   });
 }
 
+function DetailList({ label, items }) {
+  if (!items || items.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="mt-6">
+      <p className="eyebrow mb-3">{label}</p>
+      <ul className="space-y-3 text-[15px] leading-7 text-[var(--muted)]">
+        {items.map((item, index) => (
+          <li key={index} className="flex gap-3">
+            <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
+            <span>{parseDetail(item)}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function TimelineItem({ year, imgUrl, title, duration, responsibilities, achievements, details, place }) {
   return (
-    <ol className="flex flex-col md:flex-row relative border-l border-zinc-200 dark:border-zinc-700 w-full">
-      <li className="mb-10 ml-4 w-full">
-        <div className="flex flex-wrap gap-4 flex-row items-center justify-between text-xs md:text-sm w-full">
-          <div className="flex gap-4 items-center">
-            <img src={imgUrl} alt={title} className="h-16 w-16 object-cover rounded-lg cursor-pointer border dark:bg-white" />
-            <span className="px-2 py-1 font-semibold text-white bg-black rounded-md dark:bg-zinc-300 dark:text-black">{year}</span>
-            <h3 className="text-lg font-semibold dark:text-white">{title}</h3>
-            <p className="text-sm leading-none dark:text-gray-400">{duration}</p>
+    <article className="surface-card rounded-[1.75rem] p-6 sm:p-8">
+      <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex items-start gap-4">
+          <img src={imgUrl} alt={title} className="h-16 w-16 rounded-2xl border border-[var(--border)] bg-white object-cover p-1" />
+          <div>
+            <div className="eyebrow mb-2">{year} • {duration}</div>
+            <h3 className="font-display text-3xl leading-tight text-[var(--text)]">{title}</h3>
+            {place ? <p className="mt-1 text-sm text-[var(--muted)]">{place}</p> : null}
           </div>
-          {place && (
-            <p className="text-lg font-semibold dark:text-white whitespace-nowrap mr-4">
-              <i>{place}</i>
-            </p>
-          )}
         </div>
-        <div>
-          {responsibilities && responsibilities.length > 0 && (
-            <><br />
-              <h4 className="text-md font-semibold text-zinc-700 dark:text-zinc-200">Responsibilities:</h4>
-              <ul>
-                {responsibilities.map((item, index) => (
-                  <li key={index} className="my-2 text-base font-normal text-zinc-500 dark:text-zinc-300">
-                    &#x2022; {parseDetail(item)}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-          {achievements && achievements.length > 0 && (
-            <><br />
-              <h4 className="text-md font-semibold text-zinc-700 dark:text-zinc-200">Achievements:</h4>
-              <ul>
-                {achievements.map((item, index) => (
-                  <li key={index} className="my-2 text-base font-normal text-zinc-500 dark:text-zinc-300">
-                    &#x2022; {parseDetail(item)}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-          {details && details.length > 0 && (
-            <><br />
-              <h4 className="text-md font-semibold text-zinc-700 dark:text-zinc-200">Details:</h4>
-              <ul>
-                {details.map((item, index) => (
-                  <li key={index} className="my-2 text-base font-normal text-zinc-500 dark:text-zinc-300">
-                    &#x2022; {parseDetail(item)}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-        </div>
-      </li>
-    </ol>
-  )
+      </div>
+
+      <DetailList label="Responsibilities" items={responsibilities} />
+      <DetailList label="Achievements" items={achievements} />
+      <DetailList label="Details" items={details} />
+    </article>
+  );
 }
 
 export default TimelineItem;

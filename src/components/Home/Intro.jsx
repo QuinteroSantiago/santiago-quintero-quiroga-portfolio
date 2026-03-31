@@ -1,4 +1,3 @@
-import React from 'react';
 import ProfileImage from './ProfileImage';
 
 function Intro() {
@@ -9,16 +8,33 @@ function Intro() {
    const diffYears = Math.floor(diffYearsExact);
    const fractionalYear = diffYearsExact - diffYears;
    const roundedYears = fractionalYear >= 0.5 ? diffYears + 1 : diffYears;
+
    return (
-      <div className="flex items-center justify-center flex-col text-center pt-20 pb-6">
-         <ProfileImage />
-         <h1 className="text-4xl dark:text-white mb-1 md:mb-3">Santiago Quintero</h1>
-         <h2 className="text-base md:text-xl mb-3 font-medium">Software Engineer</h2>
-         <p className="text-md max-w-xl mb-6">
-            Platform-oriented software engineer with {roundedYears} years of experience building and operating production systems that improve developer velocity and system reliability. Specializes in automation, CI/CD, and cloud-native full-stack and backend systems using Go, Node.js, and React. Experienced in designing internal platforms, reducing operational overhead, and scaling workflows across hybrid and cloud environments.
-         </p>
-      </div>
-   )
+      <section className="grid gap-10 py-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-14">
+         <div className="order-2 lg:order-1">
+            <p className="eyebrow mb-4">Platform Engineering • Automation • Systems</p>
+            <h1 className="font-display text-6xl leading-[0.94] tracking-tight text-[var(--text)] sm:text-7xl lg:text-[5.75rem]">
+               Santiago
+               <br />
+               Quintero
+            </h1>
+            <div className="mt-6 flex flex-wrap gap-3 text-sm text-[var(--muted)]">
+               <span className="soft-chip rounded-full px-3 py-1.5">Miami-based</span>
+               <span className="soft-chip rounded-full px-3 py-1.5">{roundedYears}+ years building production systems</span>
+               <span className="soft-chip rounded-full px-3 py-1.5">Go • Node.js • React</span>
+            </div>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-[var(--muted)]">
+               Platform-oriented software engineer focused on developer velocity, workflow automation,
+               and resilient backend systems. I design internal tools and delivery systems that reduce
+               operational drag, improve reliability, and make engineering teams faster in practice.
+            </p>
+         </div>
+
+         <div className="order-1 lg:order-2">
+            <ProfileImage />
+         </div>
+      </section>
+   );
 }
 
 export default Intro;

@@ -1,21 +1,14 @@
-import React from 'react';
-
 function ProfileImage() {
     return (
-        <div style={{
-            width: '300px',
-            height: '300px',
-            borderRadius: '50%',
-            overflow: 'hidden',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-        }}>
-            <img 
-                src="/assets/profile-pic.webp" 
-                alt="Profile" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-            />
+        <div className="relative mx-auto w-full max-w-[19rem]">
+            <div className="absolute inset-4 rounded-[2rem] bg-[rgba(165,106,67,0.16)] blur-2xl" />
+            <div className="surface-card relative overflow-hidden rounded-[2rem] p-3">
+                <img
+                    src="/assets/profile-pic.webp"
+                    alt="Portrait of Santiago Quintero"
+                    className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+                />
+            </div>
         </div>
     );
 }

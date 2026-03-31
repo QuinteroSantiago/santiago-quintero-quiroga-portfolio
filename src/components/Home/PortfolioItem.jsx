@@ -1,38 +1,36 @@
-import React from 'react';
-
 function PortfolioItem({ title, imgUrl, stack, link, date }) {
    return (
       <a
-			aria-label={`Check out ${title}`}
+         aria-label={`Check out ${title}`}
          href={link}
          target="_blank"
          rel="noopener noreferrer"
-         className="border border-zinc-900 dark:border-white rounded-md overflow-hidden dark:bg-zinc-400"
+         className="group surface-card overflow-hidden rounded-[1.5rem] transition-transform duration-300 hover:-translate-y-1"
       >
-         <div className="relative">
+         <div className="relative overflow-hidden">
             <img
                src={imgUrl}
                alt={title}
-               className="w-full h-36 md:h-48 object-cover cursor-pointer"
+               className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
-            <p className="absolute text-s top-2 right-2 text-white">
-               <span className="inline-block px-1 border dark:border-white bg-zinc-800 opacity-75 rounded-lg">
-                  {date}
-               </span>
-            </p>
+            <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
+               <span className="soft-chip rounded-full px-3 py-1 text-xs">{date}</span>
+               <span className="rounded-full bg-[rgba(20,16,14,0.72)] px-3 py-1 text-xs text-white">Open</span>
+            </div>
          </div>
-         <div className="w-full p-2">
-            <h3 className="text-lg md:text-xl dark:text-black mb-2 md:mb-3 font-semibold">{title}</h3>
-            <p className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm dark:text-black ">
+
+         <div className="p-5">
+            <h3 className="font-display text-3xl leading-tight text-[var(--text)]">{title}</h3>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
                {stack.map((item, index) => (
-                  <span key={index} className="inline-block px-2 py-1 border border-zinc-900 rounded-md">
+                  <span key={index} className="soft-chip rounded-full px-3 py-1">
                      {item}
                   </span>
                ))}
-            </p>
+            </div>
          </div>
       </a>
-   )
+   );
 }
 
 export default PortfolioItem;
