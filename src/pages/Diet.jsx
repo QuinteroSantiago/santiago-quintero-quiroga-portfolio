@@ -79,7 +79,7 @@ function DietPlanSection({ day, plan, columns, showDayHeading }) {
       ) : null}
 
       <MacrosSummary plan={plan} />
-      <Table columns={columns} data={plan.meals} />
+      <Table columns={columns} data={plan.meals} caption={`${plan.title} meal plan`} />
     </section>
   );
 }

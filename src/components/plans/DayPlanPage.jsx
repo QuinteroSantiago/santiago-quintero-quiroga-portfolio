@@ -33,6 +33,7 @@ function DayPlanPage({
                 <h1 className="mb-6 text-5xl font-light">{title}</h1>
 
                 <ResponsiveSelector
+                    label={`${title} day`}
                     options={dayOptions}
                     value={selectedDay}
                     onChange={setSelectedDay}
@@ -42,6 +43,7 @@ function DayPlanPage({
                 <button
                     type="button"
                     className="mt-4 rounded bg-blue-500 px-4 py-2 text-white"
+                    aria-pressed={showAllDays}
                     onClick={() => setShowAllDays((currentValue) => !currentValue)}
                 >
                     {showAllDays ? 'Show Single Day' : 'Show All Days'}

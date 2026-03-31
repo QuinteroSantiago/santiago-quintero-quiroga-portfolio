@@ -1,24 +1,26 @@
+import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AppLayout from './components/layout/AppLayout';
 import Home from './pages/Home';
-import NotFound from './pages/404';
-import Workout from './pages/Workout';
-import ReadingList from './pages/ReadingList';
-import CopyComponent from './pages/CopyComponent';
-import Diet from './pages/Diet';
+
+const Workout = lazy(() => import('./pages/Workout'));
+const ReadingList = lazy(() => import('./pages/ReadingList'));
+const Diet = lazy(() => import('./pages/Diet'));
+const NotFound = lazy(() => import('./pages/404'));
 
 function App() {
     return (
-        <Routes>
-            <Route element={<AppLayout />}>
-                <Route path="/" element={<Home />} />
-                <Route path="/workout" element={<Workout />} />
-                <Route path="/reading" element={<ReadingList />} />
-                <Route path="/copy" element={<CopyComponent />} />
-                <Route path="/diet" element={<Diet />} />
-                <Route path="*" element={<NotFound />} />
-            </Route>
-        </Routes>
+        <Suspense fallback={<div className="mx-auto max-w-6xl px-4 py-12 text-[var(--muted)]">Loading...</div>}>
+            <Routes>
+                <Route element={<AppLayout />}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/workout" element={<Workout />} />
+                    <Route path="/reading" element={<ReadingList />} />
+                    <Route path="/diet" element={<Diet />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
+            </Routes>
+        </Suspense>
     );
 }
 

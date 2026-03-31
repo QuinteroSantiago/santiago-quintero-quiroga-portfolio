@@ -28,7 +28,7 @@ function Workout() {
                     {plan.time ? (
                         <h3 className="mb-6 text-lg font-normal">Running Time: {plan.time}</h3>
                     ) : null}
-                    <Table columns={columns} data={plan.exercises} />
+                    <Table columns={columns} data={plan.exercises} caption={`${plan.title} exercises`} />
                 </section>
             )}
         />
