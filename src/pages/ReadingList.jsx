@@ -35,11 +35,7 @@ function ReadingList() {
                 groups[topic] = [];
             }
 
-            groups[topic].push({
-                ...book,
-                score,
-                notes: truncatedNotes,
-            });
+            groups[topic].push({ ...book, score, notes: truncatedNotes });
         });
 
         Object.keys(groups).forEach((topic) => {
@@ -52,44 +48,43 @@ function ReadingList() {
     }, [selectedCategory, sortOrder]);
 
     return (
-        <div className="mx-auto max-w-6xl px-4 font-sans text-gray-800 dark:text-gray-200">
-            <header className="py-12 text-center">
-                <p className="eyebrow mb-3">Books, papers, and mental models</p>
-                <h1 className="mb-6 text-5xl font-light">Reading List</h1>
+        <div className="mx-auto max-w-6xl">
+            <header className="py-10">
+                <p className="eyebrow mb-2">Books, papers, and mental models</p>
+                <h1 className="mb-6 text-3xl font-semibold text-[var(--text)]">Reading List</h1>
 
-                <ResponsiveSelector
-                    label="Reading category"
-                    options={categoryOptions}
-                    value={selectedCategory}
-                    onChange={setSelectedCategory}
-                    mobileLabel="Select a reading category"
-                    className="relative z-50 mb-4"
-                />
+                <div className="flex flex-wrap items-center gap-4">
+                    <ResponsiveSelector
+                        label="Reading category"
+                        options={categoryOptions}
+                        value={selectedCategory}
+                        onChange={setSelectedCategory}
+                        mobileLabel="Select a reading category"
+                    />
 
-                <div className="mt-4 flex items-center justify-center gap-2 text-sm">
-                    <label htmlFor="reading-sort-order" className="text-gray-600 dark:text-gray-400">
-                        Sort by rating:
+                    <label className="flex items-center gap-2 text-sm text-[var(--muted)]">
+                        Sort:
+                        <select
+                            className="rounded border border-[var(--border)] bg-[var(--surface-strong)] px-2 py-1 text-sm text-[var(--text)]"
+                            value={sortOrder}
+                            onChange={(event) => setSortOrder(event.target.value)}
+                        >
+                            <option value="desc">Highest rated</option>
+                            <option value="asc">Lowest rated</option>
+                        </select>
                     </label>
-                    <select
-                        id="reading-sort-order"
-                        className="rounded bg-gray-200 px-3 py-1 dark:bg-gray-700"
-                        value={sortOrder}
-                        onChange={(event) => setSortOrder(event.target.value)}
-                    >
-                        <option value="desc">Highest rated</option>
-                        <option value="asc">Lowest rated</option>
-                    </select>
                 </div>
             </header>
 
-            <main className="mt-8 grid gap-8">
+            <main className="grid gap-6">
                 {Object.entries(topicGroups).length === 0 ? (
-                    <p className="text-center text-gray-500">No books found in this category.</p>
+                    <p className="text-sm text-[var(--muted)]">No books found in this category.</p>
                 ) : (
                     Object.entries(topicGroups).map(([topic, booksInTopic]) => (
-                        <section key={topic} className="section-frame rounded-[1.75rem] p-6 sm:p-8">
-                            <h2 className="mb-4 border-b pb-2 text-2xl font-semibold dark:border-gray-700">
-                                {topic} ({booksInTopic.length})
+                        <section key={topic}>
+                            <h2 className="mb-3 text-sm font-medium text-[var(--text)]">
+                                {topic}
+                                <span className="ml-2 text-[var(--muted)]">({booksInTopic.length})</span>
                             </h2>
                             <Table columns={COLUMNS} data={booksInTopic} caption={`${topic} books`} />
                         </section>
@@ -97,10 +92,9 @@ function ReadingList() {
                 )}
             </main>
 
-            <footer className="mb-8 mt-12 text-center text-sm text-gray-500">
-                Showing {books[selectedCategory]?.length || 0} books in &quot;{selectedCategory}&quot;
-                {' '}across {Object.keys(topicGroups).length} topics.
-            </footer>
+            <p className="mt-8 text-xs text-[var(--muted)]">
+                {books[selectedCategory]?.length || 0} books · {Object.keys(topicGroups).length} topics
+            </p>
         </div>
     );
 }

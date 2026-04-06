@@ -5,25 +5,25 @@ function PortfolioItem({ title, imgUrl, stack, link, date }) {
          href={link}
          target="_blank"
          rel="noopener noreferrer"
-         className="group surface-card overflow-hidden rounded-[1.5rem] transition-transform duration-300 hover:-translate-y-1"
+         className="group overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] transition-colors hover:border-[var(--text)]"
       >
-         <div className="relative overflow-hidden">
+         <div className="overflow-hidden">
             <img
                src={imgUrl}
                alt={title}
-               className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+               className="h-44 w-full object-cover"
             />
-            <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
-               <span className="soft-chip rounded-full px-3 py-1 text-xs">{date}</span>
-               <span className="rounded-full bg-[rgba(20,16,14,0.72)] px-3 py-1 text-xs text-white">Open</span>
-            </div>
          </div>
 
-         <div className="p-5">
-            <h3 className="font-display text-3xl leading-tight text-[var(--text)]">{title}</h3>
-            <div className="mt-4 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
+         <div className="p-4">
+            <div className="mb-2 flex items-center justify-between">
+               <span className="eyebrow">{date}</span>
+               <span className="text-xs text-[var(--muted)]">↗</span>
+            </div>
+            <h3 className="text-base font-semibold text-[var(--text)]">{title}</h3>
+            <div className="mt-3 flex flex-wrap gap-1.5 text-xs text-[var(--muted)]">
                {stack.map((item, index) => (
-                  <span key={index} className="soft-chip rounded-full px-3 py-1">
+                  <span key={index} className="soft-chip rounded px-2 py-0.5">
                      {item}
                   </span>
                ))}

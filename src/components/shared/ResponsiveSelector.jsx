@@ -16,7 +16,7 @@ function ResponsiveSelector({
             <label className={`inline-flex items-center gap-2 ${className}`}>
                 {accessibleLabel ? <span className="sr-only">{accessibleLabel}</span> : null}
                 <select
-                    className="rounded bg-gray-200 px-4 py-2 text-black dark:bg-gray-700 dark:text-white"
+                    className="rounded border border-[var(--border)] bg-[var(--surface-strong)] px-3 py-1.5 text-sm text-[var(--text)]"
                     aria-label={accessibleLabel}
                     value={value}
                     onChange={(event) => onChange(event.target.value)}
@@ -35,7 +35,7 @@ function ResponsiveSelector({
         <div
             role="radiogroup"
             aria-label={label || accessibleLabel}
-            className={`flex flex-wrap justify-center gap-2 ${className}`}
+            className={`flex flex-wrap gap-1 ${className}`}
         >
             {options.map((option) => {
                 const isSelected = option.value === value;
@@ -47,10 +47,10 @@ function ResponsiveSelector({
                         role="radio"
                         aria-checked={isSelected}
                         aria-pressed={isSelected}
-                        className={`rounded px-4 py-2 transition-colors ${
+                        className={`rounded px-3 py-1.5 text-sm transition-colors ${
                             isSelected
-                                ? 'bg-blue-500 text-white'
-                                : 'bg-gray-200 text-black dark:bg-gray-700 dark:text-white'
+                                ? 'bg-[var(--text)] text-[var(--bg)]'
+                                : 'border border-[var(--border)] text-[var(--muted)] hover:text-[var(--text)]'
                         }`}
                         onClick={() => onChange(option.value)}
                     >
