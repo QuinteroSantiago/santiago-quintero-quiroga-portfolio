@@ -1,35 +1,35 @@
 function Contact() {
    return (
-      <section className="section-frame rounded-[2rem] px-6 py-8 sm:px-8 md:px-10 md:py-10">
-         <p className="eyebrow mb-3">Get in touch</p>
-         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-            <div>
-               <h2 className="font-display text-5xl leading-none tracking-tight text-[var(--text)] md:text-6xl">
-                  If you are building platforms, internal tooling, or automation-heavy systems, let’s talk.
+      <section className="my-12 border-t border-[var(--border)] pt-12">
+         <p className="eyebrow mb-2">Get in touch</p>
+         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-xl">
+               <h2 className="text-2xl font-semibold leading-snug text-[var(--text)]">
+                  Building platforms, internal tooling, or automation-heavy systems? Let's talk.
                </h2>
-               <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-                  I’m most useful where product thinking meets infrastructure, reliability, and developer experience.
+               <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                  I'm most useful where product thinking meets infrastructure, reliability, and developer experience.
                </p>
             </div>
 
-            <div className="space-y-3">
+            <div className="flex flex-col gap-2 lg:min-w-[220px]">
                <a
                   href="https://www.linkedin.com/in/santiago-quintero/"
                   target="_blank"
                   rel="noreferrer"
-                  className="surface-card block rounded-[1.25rem] px-5 py-4 text-[var(--text)] transition-transform hover:-translate-y-0.5"
+                  className="rounded border border-[var(--border)] px-4 py-3 text-sm text-[var(--text)] transition-colors hover:bg-[var(--surface-strong)]"
                >
-                  <div className="eyebrow mb-1">Primary</div>
-                  <div className="text-xl">Connect on LinkedIn</div>
+                  <span className="eyebrow block mb-0.5">Primary</span>
+                  LinkedIn →
                </a>
                <a
                   href="https://github.com/QuinteroSantiago"
                   target="_blank"
                   rel="noreferrer"
-                  className="surface-card block rounded-[1.25rem] px-5 py-4 text-[var(--text)] transition-transform hover:-translate-y-0.5"
+                  className="rounded border border-[var(--border)] px-4 py-3 text-sm text-[var(--text)] transition-colors hover:bg-[var(--surface-strong)]"
                >
-                  <div className="eyebrow mb-1">Work</div>
-                  <div className="text-xl">Browse GitHub projects</div>
+                  <span className="eyebrow block mb-0.5">Work</span>
+                  GitHub →
                </a>
             </div>
          </div>

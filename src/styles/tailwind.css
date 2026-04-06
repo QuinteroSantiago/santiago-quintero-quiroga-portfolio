@@ -3,28 +3,27 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg: #f5f1e8;
-  --surface: rgba(255, 252, 247, 0.7);
-  --surface-strong: #fffdf8;
-  --border: rgba(78, 58, 43, 0.18);
-  --text: #1f1a17;
-  --muted: #68584d;
-  --accent: #a56a43;
-  --accent-soft: rgba(165, 106, 67, 0.14);
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --surface-strong: #f5f5f4;
+  --border: rgba(0, 0, 0, 0.1);
+  --text: #111110;
+  --muted: #6b7280;
+  --accent: #171717;
+  --accent-soft: rgba(0, 0, 0, 0.04);
   --font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
-  --font-display: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", serif;
-  --font-mono: "Syne Mono", "SFMono-Regular", monospace;
+  --font-mono: "SFMono-Regular", "Consolas", monospace;
 }
 
 .dark {
-  --bg: #171412;
-  --surface: rgba(33, 28, 24, 0.82);
-  --surface-strong: #1f1a17;
-  --border: rgba(228, 214, 198, 0.14);
-  --text: #f7f1ea;
-  --muted: #c4b3a2;
-  --accent: #e5ae77;
-  --accent-soft: rgba(229, 174, 119, 0.12);
+  --bg: #111110;
+  --surface: #1a1a19;
+  --surface-strong: #222221;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f5f5f4;
+  --muted: #a8a29e;
+  --accent: #f5f5f4;
+  --accent-soft: rgba(255, 255, 255, 0.04);
 }
 
 html {
@@ -33,19 +32,15 @@ html {
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(202, 144, 101, 0.16), transparent 24rem),
-    radial-gradient(circle at top right, rgba(101, 127, 162, 0.12), transparent 22rem),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 20%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
   letter-spacing: -0.01em;
 }
 
 ::selection {
-  background: var(--accent);
-  color: white;
+  background: var(--text);
+  color: var(--bg);
 }
 
 #root {
@@ -56,37 +51,25 @@ body {
   font-family: var(--font-sans);
 }
 
-.font-display {
-  font-family: var(--font-display);
-}
-
-.font-mono-ui {
-  font-family: var(--font-mono);
-}
-
 .surface-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  box-shadow: 0 20px 60px rgba(36, 24, 17, 0.08);
-  backdrop-filter: blur(18px);
 }
 
 .section-frame {
   border: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent), var(--surface);
-  box-shadow: 0 24px 80px rgba(26, 18, 13, 0.08);
+  background: var(--surface);
 }
 
 .eyebrow {
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .soft-chip {
   border: 1px solid var(--border);
-  background: var(--accent-soft);
   color: var(--muted);
 }

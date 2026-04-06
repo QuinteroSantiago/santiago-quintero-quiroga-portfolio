@@ -1,5 +1,4 @@
 import TimelineItem from './TimelineItem';
-import Title from '../Title';
 
 function calculateDurationString(startDate, endDateString) {
    const endDate = endDateString === "Today" ? new Date() : new Date(endDateString);
@@ -20,8 +19,8 @@ function calculateDurationString(startDate, endDateString) {
       durationString += `${years} year${years > 1 ? 's' : ''}`;
    }
    if (months > 0) {
-      if (durationString) durationString += ' and ';
-      durationString += `${months} month${months > 1 ? 's' : ''}`;
+      if (durationString) durationString += ' ';
+      durationString += `${months} mo`;
    }
 
    return durationString;
@@ -33,13 +32,11 @@ function Timeline({ title, timeline }) {
    }
 
    return (
-      <section className="section-frame my-16 rounded-[2rem] px-6 py-8 sm:px-8 md:px-10 md:py-10">
-         <div className="mb-3">
-            <p className="eyebrow mb-3">{title === 'Work' ? 'Selected roles' : 'Training and formal study'}</p>
-            <Title>{title}</Title>
-         </div>
+      <section className="my-12">
+         <p className="eyebrow mb-2">{title === 'Work' ? 'Selected roles' : 'Training & study'}</p>
+         <h2 className="mb-6 text-2xl font-semibold text-[var(--text)]">{title}</h2>
 
-         <div className="space-y-6">
+         <div className="space-y-4">
             {timeline.map((item, index) => (
                <TimelineItem
                   key={index}

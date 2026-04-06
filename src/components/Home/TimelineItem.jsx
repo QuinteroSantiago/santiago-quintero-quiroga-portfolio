@@ -14,12 +14,12 @@ function DetailList({ label, items }) {
   }
 
   return (
-    <div className="mt-6">
-      <p className="eyebrow mb-3">{label}</p>
-      <ul className="space-y-3 text-[15px] leading-7 text-[var(--muted)]">
+    <div className="mt-5">
+      <p className="eyebrow mb-2">{label}</p>
+      <ul className="space-y-2 text-sm leading-6 text-[var(--muted)]">
         {items.map((item, index) => (
           <li key={index} className="flex gap-3">
-            <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
+            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[var(--muted)]" />
             <span>{parseDetail(item)}</span>
           </li>
         ))}
@@ -30,15 +30,13 @@ function DetailList({ label, items }) {
 
 function TimelineItem({ year, imgUrl, title, duration, responsibilities, achievements, details, place }) {
   return (
-    <article className="surface-card rounded-[1.75rem] p-6 sm:p-8">
-      <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
-        <div className="flex items-start gap-4">
-          <img src={imgUrl} alt={title} className="h-16 w-16 rounded-2xl border border-[var(--border)] bg-white object-cover p-1" />
-          <div>
-            <div className="eyebrow mb-2">{year} • {duration}</div>
-            <h3 className="font-display text-3xl leading-tight text-[var(--text)]">{title}</h3>
-            {place ? <p className="mt-1 text-sm text-[var(--muted)]">{place}</p> : null}
-          </div>
+    <article className="rounded-xl border border-[var(--border)] bg-[var(--surface)] p-5 sm:p-6">
+      <div className="flex items-start gap-4">
+        <img src={imgUrl} alt={title} className="h-12 w-12 rounded border border-[var(--border)] bg-[var(--surface-strong)] object-cover p-0.5" />
+        <div>
+          <div className="eyebrow mb-1">{year} · {duration}</div>
+          <h3 className="text-lg font-semibold text-[var(--text)]">{title}</h3>
+          {place ? <p className="mt-0.5 text-sm text-[var(--muted)]">{place}</p> : null}
         </div>
       </div>
 
