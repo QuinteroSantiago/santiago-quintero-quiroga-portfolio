@@ -201,12 +201,6 @@ export function buildWorkoutPlan({ exercisePool, weeklyTargets, dayAssignments }
             .slice(0, 4)
             .join(' • ');
 
-        plansByDay[day].sort((left, right) => {
-            const leftOrder = left.muscleGroup ? MUSCLE_GROUPS.indexOf(left.muscleGroup) : MUSCLE_GROUPS.length;
-            const rightOrder = right.muscleGroup ? MUSCLE_GROUPS.indexOf(right.muscleGroup) : MUSCLE_GROUPS.length;
-            return leftOrder - rightOrder || left.name.localeCompare(right.name);
-        });
-
         return summaries;
     }, {});
 
