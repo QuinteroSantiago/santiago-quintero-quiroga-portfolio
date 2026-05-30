@@ -56,8 +56,8 @@ function MacrosSummary({ plan }) {
 
 function DietPlanSection({ day, plan, columns, showDayHeading }) {
   return (
-    <section key={day} className="section-frame rounded-[1.75rem] px-6 py-6 sm:px-8">
-      <h2 className="mb-4 text-xl font-normal">
+    <section key={day} className="section-frame px-5 py-5 sm:px-6">
+      <h2 className="mb-4 text-xl font-normal text-[var(--text)]">
         {showDayHeading ? <strong>{day}</strong> : null}
       </h2>
 

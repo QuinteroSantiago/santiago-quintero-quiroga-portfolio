@@ -27,10 +27,10 @@ function DayPlanPage({
     const visibleDays = showAllDays ? DAYS_OF_WEEK.filter((day) => plans[day]) : [selectedDay];
 
     return (
-        <div className="font-sans text-gray-800 dark:text-gray-200">
-            <div className="mx-auto w-full max-w-6xl px-4 py-12 text-center">
+        <div className="font-sans text-[var(--text)]">
+            <div className="mx-auto w-full max-w-5xl py-10 text-center">
                 <p className="eyebrow mb-3">{title === 'Workout' ? 'Weekly split' : 'Daily nutrition system'}</p>
-                <h1 className="mb-6 text-5xl font-light">{title}</h1>
+                <h1 className="mb-6 text-4xl font-normal">{title}</h1>
 
                 <ResponsiveSelector
                     label={`${title} day`}
@@ -42,7 +42,7 @@ function DayPlanPage({
 
                 <button
                     type="button"
-                    className="mt-4 rounded bg-blue-500 px-4 py-2 text-white"
+                    className="mt-4 rounded border border-[var(--border)] px-4 py-2 text-sm text-[var(--muted)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
                     aria-pressed={showAllDays}
                     onClick={() => setShowAllDays((currentValue) => !currentValue)}
                 >

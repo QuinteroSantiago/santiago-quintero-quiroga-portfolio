@@ -1,35 +1,33 @@
 function Contact() {
    return (
-      <section className="my-12 border-t border-[var(--border)] pt-12">
+      <section className="border-t border-[var(--border)] py-8">
          <p className="eyebrow mb-2">Get in touch</p>
-         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-xl">
-               <h2 className="text-2xl font-semibold leading-snug text-[var(--text)]">
-                  Building platforms, internal tooling, or automation-heavy systems? Let's talk.
+               <h2 className="text-2xl font-normal leading-snug text-[var(--text)]">
+                  Building platforms, internal tooling, or automation-heavy systems? Let&apos;s talk.
                </h2>
                <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-                  I'm most useful where product thinking meets infrastructure, reliability, and developer experience.
+                  I&apos;m most useful where product thinking meets infrastructure, reliability, and developer experience.
                </p>
             </div>
 
-            <div className="flex flex-col gap-2 lg:min-w-[220px]">
+            <div className="flex gap-4 text-sm">
                <a
                   href="https://www.linkedin.com/in/santiago-quintero/"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded border border-[var(--border)] px-4 py-3 text-sm text-[var(--text)] transition-colors hover:bg-[var(--surface-strong)]"
+                  className="text-link"
                >
-                  <span className="eyebrow block mb-0.5">Primary</span>
-                  LinkedIn →
+                  LinkedIn
                </a>
                <a
                   href="https://github.com/QuinteroSantiago"
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded border border-[var(--border)] px-4 py-3 text-sm text-[var(--text)] transition-colors hover:bg-[var(--surface-strong)]"
+                  className="text-link"
                >
-                  <span className="eyebrow block mb-0.5">Work</span>
-                  GitHub →
+                  GitHub
                </a>
             </div>
          </div>

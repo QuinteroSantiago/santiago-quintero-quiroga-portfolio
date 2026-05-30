@@ -6,8 +6,8 @@ const SOCIAL_LINKS = [
 
 function Footer() {
     return (
-        <footer className="px-4 pb-8 sm:px-6 lg:px-8">
-            <div className="mx-auto flex max-w-6xl items-center justify-between border-t border-[var(--border)] pt-6 text-sm text-[var(--muted)]">
+        <footer className="px-5 pb-8 sm:px-6 lg:px-8">
+            <div className="mx-auto flex max-w-4xl items-center justify-between border-t border-[var(--border)] pt-6 text-sm text-[var(--muted)]">
                 <span>Santiago Quintero</span>
                 <div className="flex gap-4">
                     {SOCIAL_LINKS.map((link) => (
@@ -16,7 +16,7 @@ function Footer() {
                             href={link.href}
                             target="_blank"
                             rel="noreferrer"
-                            className="transition-colors hover:text-[var(--text)]"
+                            className="transition-colors hover:text-[var(--accent)]"
                         >
                             {link.label}
                         </a>
