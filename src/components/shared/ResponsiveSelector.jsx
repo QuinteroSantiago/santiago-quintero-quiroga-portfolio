@@ -49,7 +49,7 @@ function ResponsiveSelector({
                         aria-pressed={isSelected}
                         className={`rounded px-3 py-1.5 text-sm transition-colors ${
                             isSelected
-                                ? 'bg-[var(--text)] text-[var(--bg)]'
+                                ? 'border border-[var(--accent)] text-[var(--accent)]'
                                 : 'border border-[var(--border)] text-[var(--muted)] hover:text-[var(--text)]'
                         }`}
                         onClick={() => onChange(option.value)}

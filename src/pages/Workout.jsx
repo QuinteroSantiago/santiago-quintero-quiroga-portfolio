@@ -278,7 +278,7 @@ function Workout() {
 
             <section className="mb-10">
                 <h2 className="mb-4 text-lg font-medium text-[var(--text)]">Weekly Volume Snapshot</h2>
-                <p className="mb-4 text-sm text-[var(--muted)]">Status is based on the fixed routine versus each muscle group's MEV and MAV range.</p>
+                <p className="mb-4 text-sm text-[var(--muted)]">Status is based on the fixed routine versus each muscle group&apos;s MEV and MAV range.</p>
                 <div className="space-y-6">
                     {MUSCLE_GROUP_SECTIONS.map((section) => (
                         <CoverageCard

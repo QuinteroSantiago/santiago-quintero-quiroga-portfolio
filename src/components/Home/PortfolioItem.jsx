@@ -1,34 +1,18 @@
-function PortfolioItem({ title, imgUrl, stack, link, date }) {
+function PortfolioItem({ title, stack, link, date }) {
    return (
       <a
          aria-label={`Check out ${title}`}
          href={link}
          target="_blank"
          rel="noopener noreferrer"
-         className="group overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--surface)] transition-colors hover:border-[var(--text)]"
+         className="group block py-5 transition-colors"
       >
-         <div className="overflow-hidden">
-            <img
-               src={imgUrl}
-               alt={title}
-               className="h-44 w-full object-cover"
-            />
+         <div className="mb-1 flex items-center justify-between gap-4">
+            <span className="eyebrow">{date}</span>
+            <span className="text-xs text-[var(--muted)] transition-colors group-hover:text-[var(--text)]">Open</span>
          </div>
-
-         <div className="p-4">
-            <div className="mb-2 flex items-center justify-between">
-               <span className="eyebrow">{date}</span>
-               <span className="text-xs text-[var(--muted)]">↗</span>
-            </div>
-            <h3 className="text-base font-semibold text-[var(--text)]">{title}</h3>
-            <div className="mt-3 flex flex-wrap gap-1.5 text-xs text-[var(--muted)]">
-               {stack.map((item, index) => (
-                  <span key={index} className="soft-chip rounded px-2 py-0.5">
-                     {item}
-                  </span>
-               ))}
-            </div>
-         </div>
+         <h3 className="text-base font-normal text-[var(--text)] transition-colors group-hover:text-[var(--text)]">{title}</h3>
+         <p className="mt-2 text-sm text-[var(--muted)]">{stack.join(' / ')}</p>
       </a>
    );
 }

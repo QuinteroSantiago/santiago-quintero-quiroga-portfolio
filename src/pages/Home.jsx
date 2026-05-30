@@ -10,14 +10,12 @@ function Home() {
 	useDocumentTitle("Home - Santiago Quintero");
 
 	return (
-		<div className="mx-auto max-w-6xl">
+		<div className="mx-auto max-w-4xl">
 			<Intro />
 			<Timeline title="Work" timeline={work} />
 			<Timeline title="Education" timeline={education} />
 			<Portfolio />
-			<div className="mt-16">
-				<Contact />
-			</div>
+			<Contact />
 		</div>
 	);
 }
