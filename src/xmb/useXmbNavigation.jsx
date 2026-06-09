@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { useLocation, useNavigate, useNavigationType, useParams } from 'react-router-dom';
 import { CATEGORIES, getCategoryIndexBySlug, findItemIndexBySlug } from './xmbConfig';
 import { navReducer } from './navReducer';
