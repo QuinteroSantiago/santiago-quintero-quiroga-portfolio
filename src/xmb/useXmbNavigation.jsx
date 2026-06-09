@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react';
+import { useCallback, useEffect, useReducer, useRef } from 'react';
 import { useLocation, useNavigate, useNavigationType, useParams } from 'react-router-dom';
 import { CATEGORIES, getCategoryIndexBySlug, findItemIndexBySlug } from './xmbConfig';
 import { navReducer } from './navReducer';
@@ -30,21 +30,32 @@ function useXmbNavigation() {
   const navigationType = useNavigationType();
   const location = useLocation();
 
-  const [state, dispatch] = useReducer(boundReducer, params, stateFromParams);
+  const [state, rawDispatch] = useReducer(boundReducer, params, stateFromParams);
 
-  // Live navigation (PUSH): reflect local state into the URL.
+  // User-initiated moves create a history entry (PUSH); URL corrections derived
+  // from the address bar (initial load, back/forward, bad slugs) replace in place.
+  const pushNext = useRef(false);
+
+  const dispatch = useCallback((action) => {
+    pushNext.current = true;
+    rawDispatch(action);
+  }, []);
+
+  // Reflect local state into the URL.
   useEffect(() => {
     const url = urlForState(state);
     if (url !== location.pathname) {
-      navigate(url);
+      navigate(url, { replace: !pushNext.current });
     }
+    pushNext.current = false;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
-  // Browser back/forward (POP): pull state from the URL.
+  // Browser back/forward (POP): pull state from the URL (a correction, not a push).
   useEffect(() => {
     if (navigationType === 'POP') {
-      dispatch({ type: 'SET', ...stateFromParams(params) });
+      pushNext.current = false;
+      rawDispatch({ type: 'SET', ...stateFromParams(params) });
     }
   }, [params, navigationType]);
 

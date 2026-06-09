@@ -39,7 +39,7 @@ function DetailBlade({ item, isOpen, onClose }) {
       role="dialog"
       aria-modal="false"
       aria-label={item ? item.title : 'Detail'}
-      aria-hidden={!isOpen}
+      inert={!isOpen}
       className={`xmb-blade fixed right-0 top-0 z-20 h-full overflow-y-auto border-l border-[var(--border)] bg-[var(--surface)] p-6 sm:p-10 ${
         wide ? 'w-full lg:w-[70%]' : 'w-full sm:w-[60%] lg:w-[50%]'
       } ${isOpen ? 'is-open' : ''}`}

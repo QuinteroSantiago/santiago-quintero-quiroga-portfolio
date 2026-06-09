@@ -7,6 +7,7 @@ function App() {
       <Route path="/" element={<XmbShell />} />
       <Route path="/:categorySlug" element={<XmbShell />} />
       <Route path="/:categorySlug/:itemSlug" element={<XmbShell />} />
+      <Route path="*" element={<XmbShell />} />
     </Routes>
   );
 }
