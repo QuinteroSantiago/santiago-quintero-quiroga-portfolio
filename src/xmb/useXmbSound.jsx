@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 export const MUTE_STORAGE_KEY = 'xmb-sound-muted';
 
@@ -17,8 +17,12 @@ const TONES = {
 function useXmbSound() {
   const [muted, setMuted] = useState(readInitialMuted);
   const mutedRef = useRef(muted);
-  mutedRef.current = muted;
   const contextRef = useRef(null);
+
+  // Keep the ref in sync so the memoized play() closure reads the latest mute state.
+  useEffect(() => {
+    mutedRef.current = muted;
+  }, [muted]);
 
   const getContext = useCallback(() => {
     if (!contextRef.current) {

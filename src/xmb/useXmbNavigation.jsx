@@ -46,7 +46,6 @@ function useXmbNavigation() {
     if (navigationType === 'POP') {
       dispatch({ type: 'SET', ...stateFromParams(params) });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params, navigationType]);
 
   const category = CATEGORIES[state.categoryIndex];
