@@ -1,0 +1,54 @@
+.xmb-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.xmb-wave {
+  position: absolute;
+  inset: -20%;
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0 38px,
+    var(--accent-soft) 38px 39px
+  );
+  opacity: 0.6;
+  animation: xmb-drift 18s linear infinite;
+}
+
+@keyframes xmb-drift {
+  from { transform: translateX(0); }
+  to { transform: translateX(39px); }
+}
+
+.xmb-clock {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+}
+.xmb-clock-time { font-size: 1.1rem; color: var(--text); }
+.xmb-clock-day { font-size: 0.7rem; letter-spacing: 0.1em; }
+
+/* DetailBlade slide-in */
+.xmb-blade {
+  transition: transform 220ms ease, opacity 220ms ease;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.xmb-blade.is-open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xmb-wave { animation: none; }
+  .xmb-blade { transition: none; }
+}
