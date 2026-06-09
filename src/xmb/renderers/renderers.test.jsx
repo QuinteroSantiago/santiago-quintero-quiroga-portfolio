@@ -21,6 +21,13 @@ describe('renderers', () => {
     expect(screen.getByText('Did things')).toBeInTheDocument();
   });
 
+  it('ExperienceDetail renders **markdown bold** as <strong>, not literal asterisks', () => {
+    const item = { data: { place: 'Corellium', title: 'SWE', year: '2023', responsibilities: ['**CI/CD Ownership**: ran pipelines'], achievements: [] } };
+    const { container } = wrap(<ExperienceDetail item={item} />);
+    expect(container.querySelector('strong')).toHaveTextContent('CI/CD Ownership');
+    expect(container.textContent).not.toContain('**');
+  });
+
   it('ProjectDetail shows project title and a link', () => {
     const item = { data: { title: 'Chargeback Heaven', stack: ['React'], link: 'https://example.com', date: '2024' } };
     wrap(<ProjectDetail item={item} />);

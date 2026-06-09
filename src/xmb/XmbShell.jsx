@@ -83,7 +83,7 @@ function XmbShell() {
     >
       <XmbBackground />
 
-      <div className="absolute right-6 top-6 z-30 flex gap-3">
+      <div className="absolute left-6 top-6 z-30 flex gap-3">
         <button
           type="button"
           onClick={toggleTheme}

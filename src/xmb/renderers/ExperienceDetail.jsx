@@ -1,3 +1,14 @@
+// Render inline **bold** markers (used throughout the work/education data) as <strong>.
+function renderRichText(text) {
+  return text.split(/\*\*(.*?)\*\*/g).map((part, index) =>
+    index % 2 === 1 ? (
+      <strong key={index} className="font-medium text-[var(--text)]">{part}</strong>
+    ) : (
+      part
+    ),
+  );
+}
+
 function ExperienceDetail({ item }) {
   const { place, title, year, responsibilities = [], achievements = [], details = [] } = item.data;
   return (
@@ -9,7 +20,7 @@ function ExperienceDetail({ item }) {
       {responsibilities.length > 0 && (
         <ul className="mt-6 flex flex-col gap-2">
           {responsibilities.map((line, index) => (
-            <li key={index} className="text-sm leading-7 text-[var(--muted)]">{line}</li>
+            <li key={index} className="text-sm leading-7 text-[var(--muted)]">{renderRichText(line)}</li>
           ))}
         </ul>
       )}
@@ -18,7 +29,7 @@ function ExperienceDetail({ item }) {
           <p className="eyebrow mt-6 mb-2">Achievements</p>
           <ul className="flex flex-col gap-2">
             {achievements.map((line, index) => (
-              <li key={index} className="text-sm leading-7 text-[var(--muted)]">{line}</li>
+              <li key={index} className="text-sm leading-7 text-[var(--muted)]">{renderRichText(line)}</li>
             ))}
           </ul>
         </>
@@ -26,7 +37,7 @@ function ExperienceDetail({ item }) {
       {details.length > 0 && (
         <ul className="mt-6 flex flex-col gap-2">
           {details.map((line, index) => (
-            <li key={index} className="text-sm leading-7 text-[var(--muted)]">{line}</li>
+            <li key={index} className="text-sm leading-7 text-[var(--muted)]">{renderRichText(line)}</li>
           ))}
         </ul>
       )}
