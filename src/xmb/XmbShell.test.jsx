@@ -55,4 +55,9 @@ describe('XmbShell', () => {
     renderAt('/');
     expect(screen.getByRole('button', { name: /sound|mute/i })).toBeInTheDocument();
   });
+
+  it('unknown category falls back to Profile without crashing', () => {
+    renderAt('/totally-unknown');
+    expect(screen.getByText('Profile')).toBeInTheDocument();
+  });
 });

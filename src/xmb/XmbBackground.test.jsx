@@ -19,4 +19,9 @@ describe('XmbBackground', () => {
     render(<XmbBackground />);
     expect(screen.getByTestId('xmb-clock')).toBeInTheDocument();
   });
+
+  it('wave element is aria-hidden', () => {
+    render(<XmbBackground />);
+    expect(document.querySelector('.xmb-bg')).toHaveAttribute('aria-hidden', 'true');
+  });
 });
