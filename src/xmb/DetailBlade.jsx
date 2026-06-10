@@ -20,12 +20,19 @@ const RENDERERS = {
 const WIDE_TYPES = new Set(['reading', 'fitness-workout', 'fitness-diet']);
 
 function DetailBlade({ item, isOpen, onClose }) {
-  const ref = useRef(null);
+  const closeButtonRef = useRef(null);
 
+  // On open, move focus to the Back button so it's immediately actionable
+  // (and announced) without the user having to Tab into the blade. Defer to the
+  // next frame: the blade's `inert` attribute is cleared in this same commit, and
+  // browsers don't recompute focusability until after it, so an immediate focus()
+  // gets dropped.
   useEffect(() => {
-    if (isOpen && ref.current) {
-      ref.current.focus();
-    }
+    if (!isOpen) return undefined;
+    const id = requestAnimationFrame(() => {
+      closeButtonRef.current?.focus();
+    });
+    return () => cancelAnimationFrame(id);
   }, [isOpen, item]);
 
   const Renderer = item ? RENDERERS[item.type] : null;
@@ -33,8 +40,6 @@ function DetailBlade({ item, isOpen, onClose }) {
 
   return (
     <section
-      ref={ref}
-      tabIndex={-1}
       data-testid="xmb-blade"
       role="dialog"
       aria-modal="false"
@@ -46,6 +51,7 @@ function DetailBlade({ item, isOpen, onClose }) {
     >
       <button
         type="button"
+        ref={closeButtonRef}
         onClick={onClose}
         className="eyebrow mb-6 flex items-center gap-2 text-[var(--muted)] hover:text-[var(--text)]"
       >

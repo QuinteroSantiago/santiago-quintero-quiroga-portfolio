@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import DetailBlade from './DetailBlade';
 
@@ -30,5 +30,11 @@ describe('DetailBlade', () => {
     wrap(<DetailBlade item={experienceItem} isOpen onClose={onClose} />);
     await userEvent.click(screen.getByRole('button', { name: /back/i }));
     expect(onClose).toHaveBeenCalled();
+  });
+
+  it('moves focus to the Back button when opened', async () => {
+    const { rerender } = wrap(<DetailBlade item={experienceItem} isOpen={false} onClose={() => {}} />);
+    rerender(<MemoryRouter><DetailBlade item={experienceItem} isOpen onClose={() => {}} /></MemoryRouter>);
+    await waitFor(() => expect(screen.getByRole('button', { name: /back/i })).toHaveFocus());
   });
 });
