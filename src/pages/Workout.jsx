@@ -10,6 +10,14 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const DAY_OPTIONS = WORKOUT_DAYS.map(({ day }) => ({ value: day, label: day }));
 
+function getCurrentWeekday() {
+    return new Date().toLocaleDateString('en-US', { weekday: 'long' });
+}
+
+function isScheduledWorkoutDay(day) {
+    return WORKOUT_DAYS.some((entry) => entry.day === day);
+}
+
 const MUSCLE_GROUP_SECTIONS = [
     { title: 'Upper Body', muscles: ['Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps'] },
     { title: 'Lower Body', muscles: ['Quads', 'Hamstrings', 'Glutes', 'Calves'] },
@@ -186,8 +194,14 @@ function ExerciseRow({ exercise }) {
 function Workout() {
     useDocumentTitle('Workout - Santiago Quintero');
 
-    const [selectedDay, setSelectedDay] = useState('Monday');
-    const [viewMode, setViewMode] = useState('day');
+    // Default to today's session; on a rest day (today not in the split), open the weekly view.
+    const [selectedDay, setSelectedDay] = useState(() => {
+        const today = getCurrentWeekday();
+        return isScheduledWorkoutDay(today) ? today : WORKOUT_DAYS[0].day;
+    });
+    const [viewMode, setViewMode] = useState(() =>
+        isScheduledWorkoutDay(getCurrentWeekday()) ? 'day' : 'week'
+    );
 
     const workoutPlan = useMemo(() => buildFixedWorkoutPlan(EXERCISE_POOL), []);
 
