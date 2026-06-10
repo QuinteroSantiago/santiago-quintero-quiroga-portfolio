@@ -27,4 +27,13 @@ describe('ItemColumn', () => {
     await userEvent.click(screen.getByRole('menuitem', { name: /Silicon Valley Bank/ }));
     expect(onOpen).toHaveBeenCalledWith(1);
   });
+
+  it('renders a logo image only for items that have one', () => {
+    const withLogo = [{ slug: 'a', title: 'A', image: '/assets/a.png' }];
+    const { container } = render(<ItemColumn items={withLogo} activeIndex={0} />);
+    expect(container.querySelector('img')).toHaveAttribute('src', '/assets/a.png');
+
+    const { container: noLogo } = render(<ItemColumn items={[{ slug: 'b', title: 'B' }]} activeIndex={0} />);
+    expect(noLogo.querySelector('img')).toBeNull();
+  });
 });

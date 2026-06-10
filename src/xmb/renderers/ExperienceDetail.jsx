@@ -13,6 +13,11 @@ function ExperienceDetail({ item }) {
   const { place, title, year, responsibilities = [], achievements = [], details = [] } = item.data;
   return (
     <article className="max-w-2xl">
+      {item.image ? (
+        <span className="mb-5 flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-[var(--border)] bg-white">
+          <img src={item.image} alt={`${place} logo`} className="h-full w-full object-contain p-2" />
+        </span>
+      ) : null}
       <p className="eyebrow mb-2">{year}</p>
       <h2 className="text-2xl font-normal text-[var(--text)]">{place}</h2>
       <p className="mt-1 text-sm text-[var(--muted)]">{title}</p>

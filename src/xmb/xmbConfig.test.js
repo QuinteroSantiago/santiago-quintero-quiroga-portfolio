@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   CATEGORIES,
   slugify,
+  normalizeAssetPath,
   getCategoryIndexBySlug,
   findItemIndexBySlug,
 } from './xmbConfig';
@@ -44,6 +45,23 @@ describe('CATEGORIES', () => {
   it('projects includes every active portfolio entry', () => {
     const projects = CATEGORIES.find((c) => c.slug === 'projects');
     expect(projects.items.length).toBe(portfolio.length);
+  });
+
+  it('experience and project items carry an absolute image path', () => {
+    for (const slug of ['experience', 'projects']) {
+      const category = CATEGORIES.find((c) => c.slug === slug);
+      for (const item of category.items) {
+        if (item.image) expect(item.image.startsWith('/')).toBe(true);
+      }
+    }
+  });
+});
+
+describe('normalizeAssetPath', () => {
+  it('adds a leading slash only when missing', () => {
+    expect(normalizeAssetPath('assets/x.png')).toBe('/assets/x.png');
+    expect(normalizeAssetPath('/assets/x.png')).toBe('/assets/x.png');
+    expect(normalizeAssetPath(null)).toBe(null);
   });
 });
 

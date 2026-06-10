@@ -27,4 +27,17 @@ describe('CategoryBar', () => {
     await userEvent.click(screen.getByRole('menuitem', { name: 'Experience' }));
     expect(onSelect).toHaveBeenCalledWith(1);
   });
+
+  it('renders named icons as SVG and glyph icons as text', () => {
+    const mixed = [
+      { slug: 'profile', label: 'Profile', icon: '◉' },
+      { slug: 'fitness', label: 'Fitness', icon: 'barbell' },
+    ];
+    render(<CategoryBar categories={mixed} activeIndex={0} />);
+    const fitness = screen.getByRole('menuitem', { name: 'Fitness' });
+    expect(fitness.querySelector('svg')).toBeTruthy();
+    const profile = screen.getByRole('menuitem', { name: 'Profile' });
+    expect(profile.querySelector('svg')).toBeNull();
+    expect(profile).toHaveTextContent('◉');
+  });
 });
