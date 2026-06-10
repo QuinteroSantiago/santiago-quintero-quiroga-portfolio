@@ -6,6 +6,14 @@
   z-index: 0;
 }
 
+/* Category bar scrolls horizontally on narrow screens; hide the scrollbar. */
+.xmb-cat-bar {
+  scrollbar-width: none;
+}
+.xmb-cat-bar::-webkit-scrollbar {
+  display: none;
+}
+
 .xmb-wave {
   position: absolute;
   inset: -20%;
