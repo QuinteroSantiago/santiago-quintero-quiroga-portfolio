@@ -5,6 +5,9 @@ import {
   getCategoryIndexBySlug,
   findItemIndexBySlug,
 } from './xmbConfig';
+import work from '../data/work';
+import education from '../data/education';
+import portfolio from '../data/portfolio';
 
 describe('slugify', () => {
   it('kebab-cases and strips punctuation', () => {
@@ -33,14 +36,14 @@ describe('CATEGORIES', () => {
     }
   });
 
-  it('experience merges work and education (5 jobs + 2 schools = 7)', () => {
+  it('experience merges every work and education entry', () => {
     const experience = CATEGORIES.find((c) => c.slug === 'experience');
-    expect(experience.items.length).toBe(7);
+    expect(experience.items.length).toBe(work.length + education.length);
   });
 
-  it('projects has 9 items', () => {
+  it('projects includes every active portfolio entry', () => {
     const projects = CATEGORIES.find((c) => c.slug === 'projects');
-    expect(projects.items.length).toBe(9);
+    expect(projects.items.length).toBe(portfolio.length);
   });
 });
 
