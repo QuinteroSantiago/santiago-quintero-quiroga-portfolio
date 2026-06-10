@@ -4,6 +4,7 @@ export default [
       imgUrl: 'assets/portfolio_images/cbh-logo.png',
       stack: ['ReactJS', 'MongoDB', 'AWS', 'NodeJS', 'terraform'],
       link: 'https://chargebackheaven.com/',
+      details: 'Chargeback Heaven is a SaaS platform that helps online merchants track, manage, and dispute payment chargebacks. The React front-end is backed by a Node.js and MongoDB service, deployed on AWS with infrastructure provisioned through Terraform.',
       date: '2024'
    },
    {
@@ -11,6 +12,7 @@ export default [
       imgUrl: 'assets/portfolio_images/bamboo-logo.jpg',
       stack: ['Python', 'MariaDB', 'VBS'],
       link: 'https://youtu.be/1ZGrxvZ-2fk',
+      details: 'Gomu Planner is a planning and scheduling tool built in Python on a MariaDB database, with VBScript automating repetitive steps in the workflow. The linked video walks through the application in action.',
       date: '2024'
    },
    {
@@ -18,6 +20,7 @@ export default [
       imgUrl: '/assets/portfolio_images/idea-gn.webp',
       stack: ['ReactJS', 'Tailwind', 'AWS', 'Python'],
       link: 'http://noticiasinteligentes.com/',
+      details: 'Good News (noticiasinteligentes.com) is a machine-learning news aggregator that collects articles and uses a Python model to surface positive, constructive stories. It is served through a React and Tailwind front-end hosted on AWS.',
       date: '2023'
    },
    {
@@ -33,6 +36,7 @@ export default [
       imgUrl: 'assets/portfolio_images/gomu-guides.webp',
       stack: ['SquareSpace'],
       link: 'http://www.gomuguides.com/',
+      details: 'Gomu Guides (gomuguides.com) is a guides and resources site built on Squarespace as part of the Gomu suite of products.',
       date: '2024'
    },
    {
@@ -40,6 +44,7 @@ export default [
       imgUrl: 'assets/portfolio_images/gomu_cloud_logo.webp',
       stack: ['NextJS', 'Vercel'],
       link: 'http://www.gomu.cloud/',
+      details: 'Gomu Cloud (gomu.cloud) is the home for Gomu’s software projects and cloud services, built with Next.js and deployed on Vercel.',
       date: '2023'
    },
    {
@@ -56,14 +61,6 @@ export default [
       stack: ['ReactJS', 'Metabase', 'Oracle SQL'],
       link: 'https://github.com/QuinteroSantiago/SF-CRIME-DASHBOARD',
       details: 'The SF Crime Dashboard is a web application developed with ReactJS, Metabase, and Oracle SQL that provides crime statistics and mapping in San Francisco from 2001 through 2018. We accumulated comprehensive datasets containing more than 500000 tuples detailing crimes reported in San Francisco, California, United States.',
-      date: '2020',
-   },
-   {
-      title: 'Linked List',
-      imgUrl: '/assets/portfolio_images/cpp.webp',
-      stack: ['C++'],
-      link: 'https://github.com/QuinteroSantiago/CodeCapsules/blob/master/linked-list/LinkedList.h',
-      details: 'This is a Data Structure that stores a collection of nodes that point to each other. The program is written in C++.',
       date: '2020',
    },
    // {
