@@ -5,6 +5,8 @@ import ProfileDetail from './ProfileDetail';
 import ExperienceDetail from './ExperienceDetail';
 import ProjectDetail from './ProjectDetail';
 import ContactDetail from './ContactDetail';
+import ReadingDetail from './ReadingDetail';
+import books from '../../data/books';
 
 const wrap = (ui) => render(<MemoryRouter>{ui}</MemoryRouter>);
 
@@ -39,5 +41,16 @@ describe('renderers', () => {
     wrap(<ContactDetail />);
     expect(screen.getByRole('link', { name: /linkedin/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /github/i })).toBeInTheDocument();
+  });
+
+  it('ReadingDetail shows the opened category and hides the in-page category switcher', () => {
+    const archiveTitle = books.Archive[0].title;
+    wrap(<ReadingDetail item={{ type: 'reading', data: 'Archive' }} />);
+    // Heading reflects the category opened from the XMB menu.
+    expect(screen.getByRole('heading', { name: 'Archive' })).toBeInTheDocument();
+    // An actual Archive book is rendered (not the empty Current default).
+    expect(screen.getByText(archiveTitle)).toBeInTheDocument();
+    // The duplicate in-page category switcher is gone.
+    expect(screen.queryByLabelText('Select a reading category')).not.toBeInTheDocument();
   });
 });

@@ -10,15 +10,19 @@ const COLUMNS = [
     { key: 'notes', header: 'Notes' },
 ];
 
-function ReadingList() {
+function ReadingList({ category }) {
     useDocumentTitle('Reading List - Santiago Quintero');
 
-    const [selectedCategory, setSelectedCategory] = useState('Current');
+    // When `category` is provided (e.g. driven by the XMB reading menu), the category
+    // is fixed and the in-page category switcher is hidden — selection happens outside.
+    const isControlled = typeof category === 'string';
+    const [internalCategory, setSelectedCategory] = useState('Current');
+    const selectedCategory = isControlled ? category : internalCategory;
     const [sortOrder, setSortOrder] = useState('desc');
 
     const categories = useMemo(() => Object.keys(books), []);
     const categoryOptions = useMemo(
-        () => categories.map((category) => ({ value: category, label: category })),
+        () => categories.map((option) => ({ value: option, label: option })),
         [categories]
     );
 
@@ -51,16 +55,20 @@ function ReadingList() {
         <div className="mx-auto max-w-6xl">
             <header className="py-10">
                 <p className="eyebrow mb-2">Books, papers, and mental models</p>
-                <h1 className="mb-6 text-3xl font-semibold text-[var(--text)]">Reading List</h1>
+                <h1 className="mb-6 text-3xl font-semibold text-[var(--text)]">
+                    {isControlled ? selectedCategory : 'Reading List'}
+                </h1>
 
                 <div className="flex flex-wrap items-center gap-4">
-                    <ResponsiveSelector
-                        label="Reading category"
-                        options={categoryOptions}
-                        value={selectedCategory}
-                        onChange={setSelectedCategory}
-                        mobileLabel="Select a reading category"
-                    />
+                    {!isControlled && (
+                        <ResponsiveSelector
+                            label="Reading category"
+                            options={categoryOptions}
+                            value={selectedCategory}
+                            onChange={setSelectedCategory}
+                            mobileLabel="Select a reading category"
+                        />
+                    )}
 
                     <label className="flex items-center gap-2 text-sm text-[var(--muted)]">
                         Sort:
