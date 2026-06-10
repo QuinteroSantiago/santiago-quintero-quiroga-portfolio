@@ -32,6 +32,17 @@ function XmbShell() {
     else playCursor();
   };
 
+  // Pointer/tap handlers (primary input on touch devices, also work on desktop).
+  const selectCategory = (index) => {
+    playCursor();
+    dispatch({ type: 'SET', categoryIndex: index, itemIndex: 0, isOpen: false });
+  };
+
+  const openItem = (index) => {
+    playEnter();
+    dispatch({ type: 'SET', categoryIndex: state.categoryIndex, itemIndex: index, isOpen: true });
+  };
+
   useEffect(() => {
     const onKeyDown = (event) => {
       let action = KEY_ACTIONS[event.key];
@@ -102,8 +113,8 @@ function XmbShell() {
       </div>
 
       <main className="relative z-10 flex min-h-screen flex-col justify-center gap-12 px-6 sm:px-12">
-        <CategoryBar categories={categories} activeIndex={state.categoryIndex} />
-        <ItemColumn items={category.items} activeIndex={state.itemIndex} />
+        <CategoryBar categories={categories} activeIndex={state.categoryIndex} onSelect={selectCategory} />
+        <ItemColumn items={category.items} activeIndex={state.itemIndex} onOpen={openItem} />
       </main>
 
       <DetailBlade

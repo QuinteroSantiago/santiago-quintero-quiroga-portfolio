@@ -60,4 +60,12 @@ describe('XmbShell', () => {
     renderAt('/totally-unknown');
     expect(screen.getByText('Profile')).toBeInTheDocument();
   });
+
+  it('tapping a category then an item opens the blade (touch/click flow)', async () => {
+    renderAt('/');
+    await userEvent.click(screen.getByRole('menuitem', { name: 'Experience' }));
+    const firstJob = await screen.findByRole('menuitem', { name: /Corellium/ });
+    await userEvent.click(firstJob);
+    expect(screen.getByTestId('xmb-blade')).toHaveClass('is-open');
+  });
 });
