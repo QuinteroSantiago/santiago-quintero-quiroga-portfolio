@@ -1,5 +1,28 @@
 import { useEffect, useRef } from 'react';
 
+// Named icons render as monochrome SVGs (currentColor) so they stay congruent
+// with the glyph icons across light/dark and active/inactive states.
+const SVG_ICONS = {
+  barbell: (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="3.5" y1="12" x2="20.5" y2="12" />
+      <line x1="6.5" y1="6.5" x2="6.5" y2="17.5" />
+      <line x1="17.5" y1="6.5" x2="17.5" y2="17.5" />
+      <line x1="3.5" y1="9" x2="3.5" y2="15" />
+      <line x1="20.5" y1="9" x2="20.5" y2="15" />
+    </svg>
+  ),
+};
+
 function CategoryBar({ categories, activeIndex, onSelect }) {
   const buttonRefs = useRef([]);
 
@@ -42,7 +65,7 @@ function CategoryBar({ categories, activeIndex, onSelect }) {
                   : 'border-[var(--border)]'
               }`}
             >
-              {category.icon}
+              {SVG_ICONS[category.icon] ?? category.icon}
             </span>
             <span className="eyebrow">{category.label}</span>
           </button>

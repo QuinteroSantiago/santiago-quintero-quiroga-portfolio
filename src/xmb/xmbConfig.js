@@ -11,10 +11,18 @@ export function slugify(value) {
     .replace(/^-+|-+$/g, '');
 }
 
+// Data paths are inconsistent (some omit the leading slash); normalize to an
+// absolute path so logos resolve from any deep route (e.g. /projects/x).
+export function normalizeAssetPath(url) {
+  if (!url) return null;
+  return url.startsWith('/') ? url : `/${url}`;
+}
+
 const experienceItems = [...work, ...education].map((entry) => ({
   slug: slugify(entry.place),
   title: entry.place,
   subtitle: `${entry.title} · ${entry.year}`,
+  image: normalizeAssetPath(entry.imgUrl),
   type: 'experience',
   data: entry,
 }));
@@ -23,6 +31,7 @@ const projectItems = portfolio.map((project) => ({
   slug: slugify(project.title),
   title: project.title,
   subtitle: project.stack?.join(' · ') ?? '',
+  image: normalizeAssetPath(project.imgUrl),
   type: 'project',
   data: project,
 }));
@@ -65,7 +74,7 @@ export const CATEGORIES = [
   {
     slug: 'fitness',
     label: 'Fitness',
-    icon: '⚡',
+    icon: 'barbell',
     items: [
       { slug: 'workout', title: 'Workout', subtitle: 'Weekly training plan', type: 'fitness-workout', data: null },
       { slug: 'diet', title: 'Diet', subtitle: 'Nutrition plan', type: 'fitness-diet', data: null },
