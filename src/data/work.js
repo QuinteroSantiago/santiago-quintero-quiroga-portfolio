@@ -4,7 +4,7 @@
         startDate: "2023-05-05",
         endDate: "Today",
         imgUrl: "/assets/experiences_images/core.webp",
-        title: "Software Engineer - Platform",
+        title: "Senior Software Engineer - Platform",
         place: "Corellium",
         responsibilities: [
             "**CI/CD Ownership**: Manage CI/CD pipelines for a 50+ engineer team, solving complex challenges like GPU compatibility through Nvidia driver integration.",
