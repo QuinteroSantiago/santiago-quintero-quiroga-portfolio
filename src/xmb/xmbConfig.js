@@ -48,7 +48,7 @@ export const CATEGORIES = [
   {
     slug: 'profile',
     label: 'Profile',
-    icon: '◉',
+    icon: 'avatar',
     items: [
       { slug: 'about', title: 'About', subtitle: 'Who I am', type: 'profile', data: null },
     ],
@@ -56,19 +56,19 @@ export const CATEGORIES = [
   {
     slug: 'experience',
     label: 'Experience',
-    icon: '⌘',
+    icon: 'pearls',
     items: experienceItems,
   },
   {
     slug: 'projects',
     label: 'Projects',
-    icon: '◆',
+    icon: 'hardhat',
     items: projectItems,
   },
   {
     slug: 'reading',
     label: 'Reading',
-    icon: '▤',
+    icon: 'book',
     items: readingItems,
   },
   {
