@@ -210,14 +210,14 @@ export default {
             score: 6
         },
         {
-            title: "The Magician’s Nephew (Chronicles of Narnia, #6)", 
+            title: "The Magician’s Nephew (Chronicles of Narnia, #1)", 
             topic: "Fiction",
-            score: 10
+            score: 8
         },
         {
-            title: "The Silver Chair (Chronicles of Narnia, #4)", 
+            title: "The Silver Chair (Chronicles of Narnia, #6)", 
             topic: "Fiction",
-            score: 10
+            score: 8
         },
         {
             title: "Tuesdays with Morrie", 
@@ -227,12 +227,12 @@ export default {
         {
             title: "The Name of the Rose", 
             topic: "Fiction",
-            score: 10
+            score: 9
         },
         {
-            title: "The Voyage of the Dawn Treader (Chronicles of Narnia, #3)", 
+            title: "The Voyage of the Dawn Treader (Chronicles of Narnia, #5)", 
             topic: "Fiction",
-            score: 10
+            score: 9
         },
         {
             title: "The 22 Immutable Laws of Marketing: Violate Them at Your Own Risk", 
@@ -345,17 +345,17 @@ export default {
             score: 6
         },
         {
-            title: "The Horse and His Boy (Chronicles of Narnia, #5)", 
+            title: "The Horse and His Boy (Chronicles of Narnia, #3)", 
             topic: "Fiction",
             score: 6
         },
         {
-            title: "Prince Caspian (Chronicles of Narnia, #2)", 
+            title: "Prince Caspian (Chronicles of Narnia, #4)", 
             topic: "Fiction",
-            score: 6
+            score: 7
         },
         {
-            title: "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, #1)", 
+            title: "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, #2)", 
             topic: "Fiction",
             score: 6
         },
