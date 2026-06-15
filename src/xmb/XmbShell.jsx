@@ -43,6 +43,11 @@ function XmbShell() {
     dispatch({ type: 'SET', categoryIndex: state.categoryIndex, itemIndex: index, isOpen: true });
   };
 
+  // Live drag scrolling commits a single navigation when the finger lifts.
+  const changeItem = (index) => {
+    dispatch({ type: 'SET', categoryIndex: state.categoryIndex, itemIndex: index, isOpen: false });
+  };
+
   useEffect(() => {
     const onKeyDown = (event) => {
       let action = KEY_ACTIONS[event.key];
@@ -71,16 +76,12 @@ function XmbShell() {
     const dy = touch.clientY - touchStart.current.y;
     touchStart.current = null;
 
-    let action = null;
-    if (Math.abs(dx) > Math.abs(dy)) {
-      if (Math.abs(dx) < SWIPE_THRESHOLD) return;
-      action = dx < 0 ? 'RIGHT' : 'LEFT';
-      if (state.isOpen) action = dx > 0 ? 'CLOSE' : null;
-    } else {
-      if (Math.abs(dy) < SWIPE_THRESHOLD) return;
-      action = dy < 0 ? 'DOWN' : 'UP';
-      if (state.isOpen) return;
-    }
+    // Vertical drags are handled by the item column itself (finger-tracked
+    // scrolling); the shell only owns horizontal swipes between categories.
+    if (Math.abs(dx) <= Math.abs(dy)) return;
+    if (Math.abs(dx) < SWIPE_THRESHOLD) return;
+    let action = dx < 0 ? 'RIGHT' : 'LEFT';
+    if (state.isOpen) action = dx > 0 ? 'CLOSE' : null;
     if (!action) return;
     soundForAction(action);
     dispatch({ type: action });
@@ -114,7 +115,14 @@ function XmbShell() {
 
       <main className="relative z-10 flex min-h-screen flex-col justify-center gap-12 px-6 sm:px-12">
         <CategoryBar categories={categories} activeIndex={state.categoryIndex} onSelect={selectCategory} />
-        <ItemColumn items={category.items} activeIndex={state.itemIndex} onOpen={openItem} />
+        <ItemColumn
+          items={category.items}
+          activeIndex={state.itemIndex}
+          onChangeIndex={changeItem}
+          onTick={playCursor}
+          onOpen={openItem}
+          disabled={state.isOpen}
+        />
       </main>
 
       <DetailBlade
