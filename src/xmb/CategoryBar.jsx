@@ -52,7 +52,7 @@ function GlyphIcon({ name }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="h-6 w-6"
+      className="h-8 w-8 sm:h-6 sm:w-6"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
@@ -79,7 +79,7 @@ function CategoryBar({ categories, activeIndex, onSelect }) {
 
   return (
     <div
-      className="xmb-cat-bar flex items-center gap-6 overflow-x-auto px-1 py-1 sm:gap-12"
+      className="xmb-cat-bar flex items-center gap-6 overflow-x-auto px-[37vw] py-1 snap-x snap-mandatory sm:gap-12 sm:px-1 sm:snap-none"
       role="menubar"
       aria-label="Categories"
     >
@@ -96,12 +96,12 @@ function CategoryBar({ categories, activeIndex, onSelect }) {
             aria-label={category.label}
             aria-current={isActive ? 'true' : undefined}
             onClick={() => onSelect?.(index)}
-            className={`flex shrink-0 flex-col items-center gap-2 transition-all duration-200 ${
+            className={`flex w-[26vw] shrink-0 snap-center flex-col items-center gap-2 transition-all duration-200 sm:w-auto ${
               isActive ? 'scale-110 opacity-100' : 'opacity-45 hover:opacity-80'
             }`}
           >
             <span
-              className={`flex h-12 w-12 items-center justify-center rounded-lg border text-xl ${
+              className={`flex h-16 w-16 items-center justify-center rounded-lg border text-2xl sm:h-12 sm:w-12 sm:text-xl ${
                 isActive
                   ? 'border-[var(--text)] bg-[var(--accent-soft)]'
                   : 'border-[var(--border)]'
@@ -109,7 +109,7 @@ function CategoryBar({ categories, activeIndex, onSelect }) {
             >
               {ICON_SHAPES[category.icon] ? <GlyphIcon name={category.icon} /> : category.icon}
             </span>
-            <span className="eyebrow">{category.label}</span>
+            <span className="eyebrow whitespace-nowrap">{category.label}</span>
           </button>
         );
       })}
