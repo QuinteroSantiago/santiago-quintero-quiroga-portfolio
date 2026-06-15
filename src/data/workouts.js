@@ -38,49 +38,56 @@ export const MUSCLE_VOLUME_GUIDELINES = {
 };
 
 export const WORKOUT_DAYS = [
-    { day: 'Monday', title: 'Upper (Pull Emphasis)', time: '75-85 mins', notes: 'Back, biceps, rear delts, plus incline press.' },
-    { day: 'Tuesday', title: 'Lower (Posterior Focus)', time: '85-95 mins', notes: 'Posterior chain, calves, and core.' },
-    { day: 'Thursday', title: 'Upper (Push Emphasis)', time: '75-85 mins', notes: 'Chest, shoulders, triceps, with back maintenance.' },
-    { day: 'Friday', title: 'Lower (Quad Focus)', time: '70-80 mins', notes: 'Quads, calves, hamstrings, and core.' },
+    { day: 'Monday', title: 'Soccer (High-Intensity)', time: '~60 mins', notes: 'Match play. High-intensity interval / anaerobic stimulus; legs stay off the bar today.' },
+    { day: 'Tuesday', title: 'Upper (Bench Emphasis)', time: '70-80 mins', notes: 'Heavy bench anchor, then back, shoulders, and arms. Legs rest after soccer.' },
+    { day: 'Wednesday', title: 'VO2 Max (Norwegian 4x4)', time: '40-45 mins', notes: 'Structured cardio for VO2 max. Off-day from lifting; keep separate from soccer.' },
+    { day: 'Thursday', title: 'Lower (Squat Focus)', time: '70-80 mins', notes: 'Heavy back squat anchor, then quad and posterior accessories.' },
+    { day: 'Friday', title: 'Upper (Push + Pull)', time: '65-75 mins', notes: 'Incline pressing and hypertrophy work; leg-rest buffer before Saturday deadlifts.' },
+    { day: 'Saturday', title: 'Lower (Deadlift Focus)', time: '70-80 mins', notes: 'Heavy deadlift anchor, then hamstrings, glutes, and quad volume.' },
 ];
 
 export const EXERCISE_POOL = [
-    // MONDAY - UPPER (PULL EMPHASIS)
-    { id: 'close-grip-pulldown', name: 'Close Grip Pulldown', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }], defaultSets: 3, reps: '8-12', defaultDay: 'Monday' },
-    { id: 'iso-lateral-high-row', name: 'Iso Lateral High Row', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }, { muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Monday' },
-    { id: 'machine-row', name: 'Machine Row', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }, { muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '8-12', defaultDay: 'Monday' },
-    { id: 'rear-delt-fly', name: 'Rear Delt Fly', muscleGroup: 'Shoulders', defaultSets: 4, reps: '12-15', defaultDay: 'Monday' },
-    { id: 'machine-curl', name: 'Machine Curl', muscleGroup: 'Biceps', defaultSets: 3, reps: '10-12', defaultDay: 'Monday' },
-    { id: 'hammer-curl', name: 'Hammer Curl', muscleGroup: 'Biceps', secondaryMuscles: [{ muscleGroup: 'Back', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Monday' },
-    { id: 'incline-db-press', name: 'Incline DB Press', muscleGroup: 'Chest', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }, { muscleGroup: 'Triceps', multiplier: 0.5 }], defaultSets: 4, reps: '8-12', defaultDay: 'Monday' },
+    // MONDAY - SOCCER (CONDITIONING)
+    { id: 'soccer', name: 'Soccer (high-intensity)', category: 'Conditioning', fixedSetsLabel: '~60 min match play', reps: 'High-intensity intervals — anaerobic + VO2 stimulus', defaultDay: 'Monday' },
 
-    // TUESDAY - LOWER (POSTERIOR FOCUS)
-    { id: 'machine-squat', name: 'Machine Squat', muscleGroup: 'Quads', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.5 }], defaultSets: 3, reps: '10-12', defaultDay: 'Tuesday' },
-    { id: 'rdl', name: 'RDL', muscleGroup: 'Hamstrings', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.5 }], defaultSets: 4, reps: '6-10', defaultDay: 'Tuesday' },
-    { id: 'hip-thrust', name: 'Hip Thrust', muscleGroup: 'Glutes', secondaryMuscles: [{ muscleGroup: 'Hamstrings', multiplier: 0.5 }], defaultSets: 3, reps: '8-12', defaultDay: 'Tuesday' },
-    { id: 'seated-leg-curl', name: 'Seated Leg Curl', muscleGroup: 'Hamstrings', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Tuesday' },
-    { id: 'leg-extension-posterior', name: 'Leg Extension', muscleGroup: 'Quads', defaultSets: 3, reps: '10-12', defaultDay: 'Tuesday' },
-    { id: 'calf-press', name: 'Calf Press', muscleGroup: 'Calves', defaultSets: 4, reps: '10-15', defaultDay: 'Tuesday' },
-    { id: 'machine-crunch-tuesday', name: 'Machine Crunch', muscleGroup: 'Abs', defaultSets: 3, reps: '10', defaultDay: 'Tuesday' },
-    { id: 'leg-raises-tuesday', name: 'Leg Raises', muscleGroup: 'Abs', defaultSets: 3, reps: '10', defaultDay: 'Tuesday' },
+    // TUESDAY - UPPER (BENCH EMPHASIS)
+    { id: 'bench-press', name: 'Bench Press', muscleGroup: 'Chest', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }, { muscleGroup: 'Triceps', multiplier: 0.5 }], defaultSets: 5, reps: '3-6', defaultDay: 'Tuesday' },
+    { id: 'close-grip-pulldown', name: 'Close Grip Pulldown', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }], defaultSets: 3, reps: '8-12', defaultDay: 'Tuesday' },
+    { id: 'machine-row', name: 'Machine Row', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }, { muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '8-12', defaultDay: 'Tuesday' },
+    { id: 'rear-delt-fly', name: 'Rear Delt Fly', muscleGroup: 'Shoulders', defaultSets: 3, reps: '12-15', defaultDay: 'Tuesday' },
+    { id: 'machine-curl', name: 'Machine Curl', muscleGroup: 'Biceps', defaultSets: 3, reps: '10-12', defaultDay: 'Tuesday' },
+    { id: 'hammer-curl', name: 'Hammer Curl', muscleGroup: 'Biceps', secondaryMuscles: [{ muscleGroup: 'Back', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Tuesday' },
+    { id: 'overhead-triceps-tue', name: 'Overhead Triceps', muscleGroup: 'Triceps', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Tuesday' },
 
-    // THURSDAY - UPPER (PUSH EMPHASIS)
-    { id: 'bench-press', name: 'Bench Press', muscleGroup: 'Chest', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }, { muscleGroup: 'Triceps', multiplier: 0.5 }], defaultSets: 4, reps: '6-10', defaultDay: 'Thursday' },
-    { id: 'cable-fly', name: 'Cable Fly', muscleGroup: 'Chest', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 4, reps: '10-15', defaultDay: 'Thursday' },
-    { id: 'lateral-cable-raise', name: 'Lateral Cable Raise', muscleGroup: 'Shoulders', defaultSets: 3, reps: '10', defaultDay: 'Thursday' },
-    { id: 'db-lateral-raise', name: 'Dumbbell Lateral Raise', muscleGroup: 'Shoulders', defaultSets: 3, reps: '10', defaultDay: 'Thursday' },
-    { id: 'overhead-triceps', name: 'Overhead Triceps', muscleGroup: 'Triceps', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Thursday' },
-    { id: 'dips', name: 'Dips', muscleGroup: 'Triceps', secondaryMuscles: [{ muscleGroup: 'Chest', multiplier: 0.5 }, { muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '8-12', defaultDay: 'Thursday' },
-    { id: 'upper-row', name: 'Row', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }, { muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 2, reps: '10-12', defaultDay: 'Thursday' },
-    { id: 'upper-pulldown', name: 'Pulldown', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }], defaultSets: 2, reps: '10-12', defaultDay: 'Thursday' },
+    // WEDNESDAY - VO2 MAX (CONDITIONING)
+    { id: 'norwegian-4x4', name: 'Norwegian 4x4 Intervals', category: 'Conditioning', fixedSetsLabel: '4 x 4 min @ 90-95% HRmax', reps: '3 min easy recovery between rounds', defaultDay: 'Wednesday' },
 
-    // FRIDAY - LOWER (QUAD FOCUS)
-    { id: 'front-squat', name: 'Front Squat', muscleGroup: 'Quads', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.25 }], defaultSets: 4, reps: '6-10', defaultDay: 'Friday' },
-    { id: 'leg-extension-quad', name: 'Leg Extension', muscleGroup: 'Quads', defaultSets: 3, reps: '10-15', defaultDay: 'Friday' },
-    { id: 'leg-curl', name: 'Leg Curl', muscleGroup: 'Hamstrings', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Friday' },
-    { id: 'calf-raise', name: 'Calf Raise', muscleGroup: 'Calves', defaultSets: 4, reps: '10-15', defaultDay: 'Friday' },
-    { id: 'leg-raises-friday', name: 'Leg Raises', muscleGroup: 'Abs', defaultSets: 3, reps: '10', defaultDay: 'Friday' },
-    { id: 'machine-crunch-friday', name: 'Machine Crunch', muscleGroup: 'Abs', defaultSets: 3, reps: '10', defaultDay: 'Friday' },
+    // THURSDAY - LOWER (SQUAT FOCUS)
+    { id: 'back-squat', name: 'Back Squat', muscleGroup: 'Quads', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.5 }, { muscleGroup: 'Hamstrings', multiplier: 0.25 }], defaultSets: 5, reps: '3-6', defaultDay: 'Thursday' },
+    { id: 'leg-extension-quad', name: 'Leg Extension', muscleGroup: 'Quads', defaultSets: 3, reps: '10-15', defaultDay: 'Thursday' },
+    { id: 'seated-leg-curl', name: 'Seated Leg Curl', muscleGroup: 'Hamstrings', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Thursday' },
+    { id: 'hip-thrust-thu', name: 'Hip Thrust', muscleGroup: 'Glutes', secondaryMuscles: [{ muscleGroup: 'Hamstrings', multiplier: 0.5 }], defaultSets: 3, reps: '8-12', defaultDay: 'Thursday' },
+    { id: 'calf-press', name: 'Calf Press', muscleGroup: 'Calves', defaultSets: 4, reps: '10-15', defaultDay: 'Thursday' },
+    { id: 'machine-crunch-thu', name: 'Machine Crunch', muscleGroup: 'Abs', defaultSets: 3, reps: '10', defaultDay: 'Thursday' },
+    { id: 'leg-raises-thu', name: 'Leg Raises', muscleGroup: 'Abs', defaultSets: 3, reps: '10', defaultDay: 'Thursday' },
+
+    // FRIDAY - UPPER (PUSH + PULL)
+    { id: 'incline-db-press', name: 'Incline DB Press', muscleGroup: 'Chest', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }, { muscleGroup: 'Triceps', multiplier: 0.5 }], defaultSets: 4, reps: '8-12', defaultDay: 'Friday' },
+    { id: 'cable-fly', name: 'Cable Fly', muscleGroup: 'Chest', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '12-15', defaultDay: 'Friday' },
+    { id: 'lateral-cable-raise', name: 'Lateral Cable Raise', muscleGroup: 'Shoulders', defaultSets: 3, reps: '12-15', defaultDay: 'Friday' },
+    { id: 'db-lateral-raise', name: 'Dumbbell Lateral Raise', muscleGroup: 'Shoulders', defaultSets: 3, reps: '12-15', defaultDay: 'Friday' },
+    { id: 'overhead-triceps-fri', name: 'Overhead Triceps', muscleGroup: 'Triceps', secondaryMuscles: [{ muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Friday' },
+    { id: 'dips', name: 'Dips', muscleGroup: 'Triceps', secondaryMuscles: [{ muscleGroup: 'Chest', multiplier: 0.5 }, { muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '8-12', defaultDay: 'Friday' },
+    { id: 'upper-pulldown', name: 'Pulldown', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }], defaultSets: 3, reps: '10-12', defaultDay: 'Friday' },
+    { id: 'upper-row', name: 'Row', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Biceps', multiplier: 0.5 }, { muscleGroup: 'Shoulders', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Friday' },
+
+    // SATURDAY - LOWER (DEADLIFT FOCUS)
+    { id: 'deadlift', name: 'Deadlift', muscleGroup: 'Back', secondaryMuscles: [{ muscleGroup: 'Hamstrings', multiplier: 0.5 }, { muscleGroup: 'Glutes', multiplier: 0.5 }, { muscleGroup: 'Quads', multiplier: 0.25 }], defaultSets: 4, reps: '3-5', defaultDay: 'Saturday' },
+    { id: 'leg-curl-sat', name: 'Leg Curl', muscleGroup: 'Hamstrings', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.25 }], defaultSets: 3, reps: '10-12', defaultDay: 'Saturday' },
+    { id: 'leg-press-sat', name: 'Leg Press', muscleGroup: 'Quads', secondaryMuscles: [{ muscleGroup: 'Glutes', multiplier: 0.5 }], defaultSets: 3, reps: '10-12', defaultDay: 'Saturday' },
+    { id: 'hip-thrust-sat', name: 'Hip Thrust', muscleGroup: 'Glutes', secondaryMuscles: [{ muscleGroup: 'Hamstrings', multiplier: 0.5 }], defaultSets: 3, reps: '8-12', defaultDay: 'Saturday' },
+    { id: 'calf-raise', name: 'Calf Raise', muscleGroup: 'Calves', defaultSets: 4, reps: '10-15', defaultDay: 'Saturday' },
+    { id: 'leg-raises-sat', name: 'Leg Raises', muscleGroup: 'Abs', defaultSets: 3, reps: '10', defaultDay: 'Saturday' },
 ];
 
 export default {

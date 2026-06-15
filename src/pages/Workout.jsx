@@ -25,6 +25,10 @@ const MUSCLE_GROUP_SECTIONS = [
 ];
 
 function getExerciseFocusLabel(exercise) {
+    if (!exercise.muscleGroup) {
+        return exercise.category || 'Conditioning';
+    }
+
     if (!exercise.secondaryMuscles?.length) {
         return exercise.muscleGroup;
     }
@@ -83,7 +87,7 @@ function buildFixedWorkoutPlan(exercisePool) {
 
         plansByDay[day].push({
             ...exercise,
-            sets: String(exercise.defaultSets),
+            sets: exercise.muscleGroup ? String(exercise.defaultSets) : exercise.fixedSetsLabel,
             muscleLabel: getExerciseFocusLabel(exercise),
         });
     });
@@ -95,6 +99,10 @@ function buildFixedWorkoutPlan(exercisePool) {
 
     WORKOUT_DAYS.forEach(({ day }) => {
         plansByDay[day].forEach((exercise) => {
+            if (!exercise.muscleGroup) {
+                return;
+            }
+
             const primarySets = Number(exercise.defaultSets);
             actualWeeklySets[exercise.muscleGroup] += primarySets;
 
@@ -108,6 +116,10 @@ function buildFixedWorkoutPlan(exercisePool) {
 
     const daySummaries = WORKOUT_DAYS.reduce((summaries, { day }) => {
         const musclesForDay = plansByDay[day].reduce((groups, exercise) => {
+            if (!exercise.muscleGroup) {
+                return groups;
+            }
+
             const primarySets = Number(exercise.defaultSets);
             groups[exercise.muscleGroup] = (groups[exercise.muscleGroup] || 0) + primarySets;
 
@@ -118,11 +130,14 @@ function buildFixedWorkoutPlan(exercisePool) {
             return groups;
         }, {});
 
-        summaries[day] = Object.entries(musclesForDay)
+        const muscleSummary = Object.entries(musclesForDay)
             .sort((left, right) => right[1] - left[1])
             .map(([muscleGroup, sets]) => `${muscleGroup} ${formatSetCount(sets)}`)
             .slice(0, 4)
             .join(' • ');
+
+        summaries[day] = muscleSummary
+            || plansByDay[day].map((exercise) => exercise.muscleLabel).join(' • ');
 
         return summaries;
     }, {});
@@ -177,6 +192,8 @@ function CoverageCard({ title, rows }) {
 }
 
 function ExerciseRow({ exercise }) {
+    const isConditioning = !exercise.muscleGroup;
+
     return (
         <div className="flex items-center justify-between gap-3 rounded border border-[var(--border)] px-4 py-3">
             <div className="min-w-0 flex-1">
@@ -184,8 +201,8 @@ function ExerciseRow({ exercise }) {
                 <div className="text-xs text-[var(--muted)]">{exercise.muscleLabel}</div>
             </div>
             <div className="shrink-0 text-right">
-                <div className="text-sm text-[var(--text)]">{exercise.sets} sets</div>
-                <div className="text-xs text-[var(--muted)]">{exercise.reps} reps</div>
+                <div className="text-sm text-[var(--text)]">{isConditioning ? exercise.sets : `${exercise.sets} sets`}</div>
+                <div className="text-xs text-[var(--muted)]">{isConditioning ? exercise.reps : `${exercise.reps} reps`}</div>
             </div>
         </div>
     );
@@ -220,7 +237,7 @@ function Workout() {
     return (
         <div className="mx-auto max-w-6xl">
             <header className="py-10">
-                <p className="eyebrow mb-2">Fixed 4-day lifting routine</p>
+                <p className="eyebrow mb-2">4 lifting days + VO2 conditioning</p>
                 <h1 className="text-3xl font-semibold text-[var(--text)]">Workout Plan</h1>
                 <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
                     This page now renders the routine exactly as written, with fixed exercise order, set counts, and rep ranges for each lifting day.
