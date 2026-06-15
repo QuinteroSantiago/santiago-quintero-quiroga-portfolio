@@ -45,6 +45,37 @@
 .xmb-clock-time { font-size: 1.1rem; color: var(--text); }
 .xmb-clock-day { font-size: 0.7rem; letter-spacing: 0.1em; }
 
+/* Item column: the active row stays pinned to the centre line while the list
+   scrolls behind it (XMB cursor behaviour). */
+.xmb-item-viewport {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 18%,
+    #000 82%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 18%,
+    #000 82%,
+    transparent 100%
+  );
+}
+
+.xmb-item-list {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  will-change: transform;
+  transition: transform 220ms ease;
+}
+
 /* DetailBlade slide-in */
 .xmb-blade {
   transition: transform 220ms ease, opacity 220ms ease;
@@ -59,4 +90,5 @@
 @media (prefers-reduced-motion: reduce) {
   .xmb-wave { animation: none; }
   .xmb-blade { transition: none; }
+  .xmb-item-list { transition: none; }
 }
