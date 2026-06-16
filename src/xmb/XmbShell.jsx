@@ -95,7 +95,13 @@ function XmbShell() {
     >
       <XmbBackground />
 
-      <div className="absolute left-6 top-6 z-30 flex gap-3">
+      {/* The full-width detail blade covers these on mobile; hide them while
+          open so they don't collide with the blade's Back button. */}
+      <div
+        className={`absolute left-6 top-6 z-30 gap-3 ${
+          state.isOpen ? 'hidden sm:flex' : 'flex'
+        }`}
+      >
         <button
           type="button"
           onClick={toggleTheme}
