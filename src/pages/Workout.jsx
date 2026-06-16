@@ -194,6 +194,21 @@ function CoverageCard({ title, rows }) {
 function ExerciseRow({ exercise }) {
     const isConditioning = !exercise.muscleGroup;
 
+    // Conditioning entries carry a long descriptive "reps" sentence that can't
+    // share a row with the name on narrow screens, so stack it full width.
+    if (isConditioning) {
+        return (
+            <div className="rounded border border-[var(--border)] px-4 py-3">
+                <div className="flex items-baseline justify-between gap-3">
+                    <div className="min-w-0 text-sm text-[var(--text)]">{exercise.name}</div>
+                    <div className="shrink-0 text-right text-sm text-[var(--text)]">{exercise.sets}</div>
+                </div>
+                <div className="mt-1 text-xs text-[var(--muted)]">{exercise.muscleLabel}</div>
+                <div className="mt-1 text-xs text-[var(--muted)]">{exercise.reps}</div>
+            </div>
+        );
+    }
+
     return (
         <div className="flex items-center justify-between gap-3 rounded border border-[var(--border)] px-4 py-3">
             <div className="min-w-0 flex-1">
@@ -201,8 +216,8 @@ function ExerciseRow({ exercise }) {
                 <div className="text-xs text-[var(--muted)]">{exercise.muscleLabel}</div>
             </div>
             <div className="shrink-0 text-right">
-                <div className="text-sm text-[var(--text)]">{isConditioning ? exercise.sets : `${exercise.sets} sets`}</div>
-                <div className="text-xs text-[var(--muted)]">{isConditioning ? exercise.reps : `${exercise.reps} reps`}</div>
+                <div className="text-sm text-[var(--text)]">{`${exercise.sets} sets`}</div>
+                <div className="text-xs text-[var(--muted)]">{`${exercise.reps} reps`}</div>
             </div>
         </div>
     );
