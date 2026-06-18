@@ -119,7 +119,7 @@ function XmbShell() {
         </button>
       </div>
 
-      <main className="relative z-10 flex min-h-screen flex-col justify-center gap-4 px-6 sm:gap-12 sm:px-12">
+      <main className="relative z-10 flex min-h-screen flex-col justify-center gap-4 px-6 sm:gap-6 sm:px-12">
         <CategoryBar categories={categories} activeIndex={state.categoryIndex} onSelect={selectCategory} />
         <ItemColumn
           items={category.items}
