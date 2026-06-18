@@ -252,10 +252,10 @@ function Workout() {
     return (
         <div className="mx-auto max-w-6xl">
             <header className="py-10">
-                <p className="eyebrow mb-2">4 lifting days + VO2 conditioning</p>
+                <p className="eyebrow mb-2">3 lifting days + soccer + VO2 conditioning</p>
                 <h1 className="text-3xl font-semibold text-[var(--text)]">Workout Plan</h1>
                 <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
-                    This page now renders the routine exactly as written, with fixed exercise order, set counts, and rep ranges for each lifting day.
+                    This page renders the fixed Monday, Wednesday, Friday gym split, with Monday soccer and Tuesday VO2 conditioning kept in the weekly schedule.
                 </p>
             </header>
 
