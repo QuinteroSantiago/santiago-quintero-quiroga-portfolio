@@ -1,0 +1,12 @@
+# The defaults provision santiagoq.com using its existing Route 53 hosted zone.
+aws_region  = "us-east-1"
+domain_name = "santiagoq.com"
+
+create_hosted_zone = false
+hosted_zone_id     = "Z0018326BGLJ3PVWQ415"
+
+# If this AWS account already has the GitHub Actions OIDC provider:
+# create_github_oidc_provider = false
+# github_oidc_provider_arn     = "arn:aws:iam::123456789012:oidc-provider/token.actions.githubusercontent.com"
+
+# bucket_name = "a-different-globally-unique-bucket-name"
