@@ -18,7 +18,7 @@ else
   NEW_VERSION=$(echo $VERSION | awk -F. '{$3+=1; print $1"."$2"."$3}')
 fi
 
-echo "::set-output name=new_version::${NEW_VERSION}"
+echo "new_version=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
 echo ${NEW_VERSION} > VERSION.txt
 git config --local user.email "action@github.com"
 git config --local user.name "GitHub Action"
