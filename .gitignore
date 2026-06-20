@@ -27,3 +27,11 @@ dist-ssr
 output.sh
 output.txt
 .superpowers/
+
+# Terraform local state and private values
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
