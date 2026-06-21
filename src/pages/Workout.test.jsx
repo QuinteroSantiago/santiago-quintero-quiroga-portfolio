@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import Workout from './Workout';
 
 // Workout split: Monday/Wednesday/Friday lifting, with Monday soccer and
-// Tuesday VO2 conditioning kept in the weekly schedule.
+// Thursday VO2 conditioning kept in the weekly schedule.
 function renderOn(dateString) {
   vi.setSystemTime(new Date(dateString));
   return render(<Workout />);
@@ -22,8 +22,8 @@ describe('Workout default schedule', () => {
     expect(screen.getByText('Soccer (high-intensity)')).toBeInTheDocument();
   });
 
-  it('treats Tuesday VO2 conditioning as a scheduled day', () => {
-    renderOn('2026-06-09T10:00:00'); // Tuesday
+  it('treats Thursday VO2 conditioning as a scheduled day', () => {
+    renderOn('2026-06-11T10:00:00'); // Thursday
     expect(screen.getByRole('button', { name: 'Day' })).toHaveAttribute('aria-pressed', 'true');
     expect(screen.getByRole('button', { name: 'Week' })).toHaveAttribute('aria-pressed', 'false');
     expect(screen.getByText('VO2 Conditioning')).toBeInTheDocument();

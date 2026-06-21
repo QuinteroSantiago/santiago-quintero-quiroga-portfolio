@@ -255,7 +255,7 @@ function Workout() {
                 <p className="eyebrow mb-2">3 lifting days + soccer + VO2 conditioning</p>
                 <h1 className="text-3xl font-semibold text-[var(--text)]">Workout Plan</h1>
                 <p className="mt-3 max-w-2xl text-sm text-[var(--muted)]">
-                    This page renders the fixed Monday, Wednesday, Friday gym split, with Monday soccer and Tuesday VO2 conditioning kept in the weekly schedule.
+                    This page renders the fixed Monday, Wednesday, Friday gym split, with Monday soccer and Thursday VO2 conditioning kept in the weekly schedule.
                 </p>
             </header>
 
