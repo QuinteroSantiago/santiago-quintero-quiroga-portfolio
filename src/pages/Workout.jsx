@@ -6,6 +6,7 @@ import {
     MUSCLE_VOLUME_GUIDELINES,
     WORKOUT_DAYS,
 } from '../data/workouts';
+import { EXERCISE_VISUALS } from '../data/exerciseVisuals';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const DAY_OPTIONS = WORKOUT_DAYS.map(({ day }) => ({ value: day, label: day }));
@@ -191,7 +192,49 @@ function CoverageCard({ title, rows }) {
     );
 }
 
-function ExerciseRow({ exercise }) {
+function ExerciseVisual({ exercise, visual }) {
+    if (!exercise.muscleGroup) {
+        return null;
+    }
+
+    if (!visual?.images?.length) {
+        return null;
+    }
+
+    const instructions = visual.instructions.slice(0, 2).join(' ');
+    const visualImages = visual.images.slice(0, 2);
+
+    return (
+        <div className="mt-3 grid gap-3 border-t border-[var(--border)] pt-3 sm:grid-cols-[112px_minmax(0,1fr)]">
+            <div className="exercise-frame-flip aspect-square overflow-hidden rounded border border-[var(--border)] bg-[var(--surface-strong)]">
+                {visualImages.map((image, index) => (
+                    <img
+                        key={image}
+                        src={image}
+                        alt={`${visual.name} ${index === 0 ? 'start' : 'finish'} position`}
+                        loading="lazy"
+                        className="exercise-frame-flip__image h-full w-full object-contain"
+                    />
+                ))}
+            </div>
+            <div className="min-w-0">
+                <div className="text-xs font-medium text-[var(--text)]">{visual.name}</div>
+                <div className="mt-1 flex flex-wrap gap-1.5">
+                    {[visual.equipment, ...visual.primaryMuscles].filter(Boolean).map((label) => (
+                        <span key={label} className="rounded border border-[var(--border)] px-2 py-0.5 text-[0.68rem] capitalize text-[var(--muted)]">
+                            {label}
+                        </span>
+                    ))}
+                </div>
+                {instructions ? (
+                    <p className="mt-2 text-xs leading-5 text-[var(--muted)]">{instructions}</p>
+                ) : null}
+            </div>
+        </div>
+    );
+}
+
+function ExerciseRow({ exercise, visual }) {
     const isConditioning = !exercise.muscleGroup;
 
     // Conditioning entries carry a long descriptive "reps" sentence that can't
@@ -210,15 +253,18 @@ function ExerciseRow({ exercise }) {
     }
 
     return (
-        <div className="flex items-center justify-between gap-3 rounded border border-[var(--border)] px-4 py-3">
-            <div className="min-w-0 flex-1">
-                <div className="text-sm text-[var(--text)]">{exercise.name}</div>
-                <div className="text-xs text-[var(--muted)]">{exercise.muscleLabel}</div>
+        <div className="rounded border border-[var(--border)] px-4 py-3">
+            <div className="flex items-center justify-between gap-3">
+                <div className="min-w-0 flex-1">
+                    <div className="text-sm text-[var(--text)]">{exercise.name}</div>
+                    <div className="text-xs text-[var(--muted)]">{exercise.muscleLabel}</div>
+                </div>
+                <div className="shrink-0 text-right">
+                    <div className="text-sm text-[var(--text)]">{`${exercise.sets} sets`}</div>
+                    <div className="text-xs text-[var(--muted)]">{`${exercise.reps} reps`}</div>
+                </div>
             </div>
-            <div className="shrink-0 text-right">
-                <div className="text-sm text-[var(--text)]">{`${exercise.sets} sets`}</div>
-                <div className="text-xs text-[var(--muted)]">{`${exercise.reps} reps`}</div>
-            </div>
+            <ExerciseVisual exercise={exercise} visual={visual} />
         </div>
     );
 }
@@ -292,7 +338,11 @@ function Workout() {
 
                             <div className="space-y-2">
                                 {selectedDayExercises.map((exercise) => (
-                                    <ExerciseRow key={exercise.id} exercise={exercise} />
+                                    <ExerciseRow
+                                        key={exercise.id}
+                                        exercise={exercise}
+                                        visual={EXERCISE_VISUALS[exercise.id]}
+                                    />
                                 ))}
                             </div>
                         </div>

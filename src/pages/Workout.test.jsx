@@ -10,8 +10,12 @@ function renderOn(dateString) {
 }
 
 describe('Workout default schedule', () => {
-  beforeEach(() => vi.useFakeTimers({ toFake: ['Date'] }));
-  afterEach(() => vi.useRealTimers());
+  beforeEach(() => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+  });
+  afterEach(() => {
+    vi.useRealTimers();
+  });
 
   it('defaults to the day view on today when today is a workout day (Monday)', () => {
     renderOn('2026-06-08T10:00:00'); // Monday
