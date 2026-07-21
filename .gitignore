@@ -35,3 +35,6 @@ output.txt
 *.tfvars
 !*.tfvars.example
 crash.log
+
+# Internal planning docs (specs/plans) - not tracked
+docs/
