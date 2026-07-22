@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "../xmb/xmb.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
