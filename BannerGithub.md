@@ -12,9 +12,9 @@
 <img src="https://gifdb.com/images/high/linux-security-threats-pbg4lo5xdtkidmg5.gif" height="300" width="300" align="left" style="margin-right:10px; margin-bottom: 20px;"/>
 
 ### Santiago Quintero
-**Software Engineer @ Corellium**
+**R&D Team Leader, Platform Engineering @ Cellebrite**
 
-Platform-oriented software engineer with 5+ years of experience building and operating production systems that improve developer velocity and system reliability. Specializes in automation, CI/CD, and cloud-native full-stack and backend systems using Go, Node.js, and React. Experienced in designing internal platforms, reducing operational overhead, and scaling workflows across hybrid and cloud environments.
+Platform-oriented software engineer with 5+ years of experience building and operating production systems that improve developer velocity and system reliability. Specializes in automation, CI/CD, and cloud-native full-stack and backend systems using Go, Node.js, and React. Experienced in designing internal platforms, reducing operational overhead, and scaling workflows across hybrid and cloud environments. Provides technical direction for platform architecture, CI/CD, and infrastructure automation, with organization-wide influence across engineering teams.
 
 <br clear="left"/>
 
@@ -23,14 +23,14 @@ Platform-oriented software engineer with 5+ years of experience building and ope
 <table>
   <tr>
     <td><b>Gomu Cloud</b></td>
-    <td><b>Corellium</b></td>
+    <td><b>Cellebrite</b></td>
     <td><b>Silicon Valley Bank</b></td>
     <td><b>PKT Borum Lab</b></td>
     <td><b>JPMorgan Chase</b></td>
   </tr>
   <tr>
     <td><b>Software Engineer</b><br>2021 - Present<br>3 years and 2 months</td>
-    <td><b>Software Engineer - Platform</b><br>2023 - Present<br>1 year and 2 months</td>
+    <td><b>R&D Team Leader, Platform Engineering</b><br>2023 - Present<br>1 year and 2 months</td>
     <td><b>Software Engineer</b><br>2022 - 2023<br>11 months</td>
     <td><b>Software Developer</b><br>2021 - 2022<br>9 months</td>
     <td><b>SWE Intern</b><br>2021<br>3 months</td>
