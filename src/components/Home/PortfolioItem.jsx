@@ -9,9 +9,9 @@ function PortfolioItem({ title, stack, link, date }) {
       >
          <div className="mb-1 flex items-center justify-between gap-4">
             <span className="eyebrow">{date}</span>
-            <span className="text-xs text-[var(--muted)] transition-colors group-hover:text-[var(--text)]">Open</span>
+            <span className="text-xs text-[var(--muted)] transition-colors group-hover:text-[var(--accent)]">Open</span>
          </div>
-         <h3 className="text-base font-normal text-[var(--text)] transition-colors group-hover:text-[var(--text)]">{title}</h3>
+         <h3 className="text-base font-normal text-[var(--text)] transition-colors group-hover:text-[var(--accent)]">{title}</h3>
          <p className="mt-2 text-sm text-[var(--muted)]">{stack.join(' / ')}</p>
       </a>
    );

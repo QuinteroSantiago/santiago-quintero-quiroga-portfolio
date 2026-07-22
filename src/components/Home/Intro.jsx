@@ -17,6 +17,7 @@ function Intro() {
             <h1 className="text-4xl font-normal leading-tight text-[var(--text)] sm:text-5xl">
                Santiago Quintero
             </h1>
+            <div className="mt-3 h-[3px] w-12 rounded-full bg-[var(--accent-rare)]" />
             <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
                R&D Team Leader driving platform architecture, CI/CD, and infrastructure automation
                across cloud and on-premises environments — with organization-wide influence and a
