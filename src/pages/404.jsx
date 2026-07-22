@@ -3,13 +3,12 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 function NotFound() {
     useDocumentTitle("404 - Santiago Quintero");
     return (
-        <div className="text-zinc-900 dark:text-zinc-300 font-inter flex-grow">
-            <div className="max-w-5xl mx-auto">
-                <div className="text-center py-12">
-                    <h2 className="text-5xl font-bold mb-6">404 Not Found</h2>
-                    <p className="text-xl mb-6">Sorry, the page you are looking for does not exist.</p>
-                </div>
-            </div>
+        <div className="flex min-h-screen flex-col items-center justify-center px-6 text-center text-[var(--text)]">
+            <h2 className="text-4xl font-normal">404 Not Found</h2>
+            <p className="mt-4 max-w-md text-base text-[var(--muted)]">
+                Sorry, the page you are looking for does not exist.
+            </p>
+            <a href="/" className="text-link mt-6">Back home</a>
         </div>
     );
 }
