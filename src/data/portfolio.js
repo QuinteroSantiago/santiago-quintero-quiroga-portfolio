@@ -32,36 +32,12 @@ export default [
       date: '2021',
    },
    {
-      title: 'Gomu Guides',
-      imgUrl: 'assets/portfolio_images/gomu-guides.webp',
-      stack: ['SquareSpace'],
-      link: 'http://www.gomuguides.com/',
-      details: 'Gomu Guides (gomuguides.com) is a guides and resources site built on Squarespace as part of the Gomu suite of products.',
-      date: '2024'
-   },
-   {
       title: 'Gomu Cloud',
       imgUrl: 'assets/portfolio_images/gomu_cloud_logo.webp',
       stack: ['NextJS', 'Vercel'],
       link: 'http://www.gomu.cloud/',
       details: 'Gomu Cloud (gomu.cloud) is the home for Gomu’s software projects and cloud services, built with Next.js and deployed on Vercel.',
       date: '2023'
-   },
-   {
-      title: 'NBA MVP Predictor',
-      imgUrl: '/assets/portfolio_images/scikit-logo.webp',
-      stack: ['Python', 'Scikit'],
-      link: 'https://github.com/QuinteroSantiago/NBA_Project',
-      details: 'A project that shows a support vector classification model that predicts the end of the year awards in the NBA. We started making a web scraper to gather all player statistics using beautiful soup to extract the HTML code from basketball-reference.com. Once we gathered the data, we used the sklearn library to create a correlation metric to analyze the most statistics correlated to MVP. Once we determined the statistics most correlated to MVP, we used a Support Vector Classifier that predicted MVP with 99% accuracy.',
-      date: '2021',
-   },
-   {
-      title: 'San Francisco Crime Dashboard',
-      imgUrl: '/assets/portfolio_images/crime-dashboard.webp',
-      stack: ['ReactJS', 'Metabase', 'Oracle SQL'],
-      link: 'https://github.com/QuinteroSantiago/SF-CRIME-DASHBOARD',
-      details: 'The SF Crime Dashboard is a web application developed with ReactJS, Metabase, and Oracle SQL that provides crime statistics and mapping in San Francisco from 2001 through 2018. We accumulated comprehensive datasets containing more than 500000 tuples detailing crimes reported in San Francisco, California, United States.',
-      date: '2020',
    },
    // {
    //    title: 'Jiji Swivel',
