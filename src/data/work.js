@@ -4,21 +4,24 @@
         startDate: "2023-05-05",
         endDate: "Today",
         imgUrl: "/assets/experiences_images/core.webp",
-        title: "Senior Software Engineer - Platform",
-        place: "Corellium",
+        title: "R&D Team Leader, Platform Engineering",
+        place: "Cellebrite",
         responsibilities: [
-            "**CI/CD Ownership**: Manage CI/CD pipelines for a 50+ engineer team, solving complex challenges like GPU compatibility through Nvidia driver integration.",
-            "**Middleware Development**: Contribute to middleware services, implementing scalable and secure cloud solutions tailored to client and product needs.",
-            "**Docker Image Maintenance**: Design and maintain Docker images, streamlining deployment of applications across hybrid cloud environments.",
-            "**Node.js Optimization**: Manage and optimize Node.js application migrations on Ubuntu systems, ensuring system stability and performance.",
-            "**Release Engineering**: Oversee software release cycles, automating rollouts, resolving bugs, and ensuring smooth delivery of new features.",
-            "**Greenfield Development**: Lead new platform projects from conception to execution, including an admin tool that enables customers to self-manage their deployments and transfer VM space across environments.",
-            "**Client Liaison**: Partner with clients to translate requirements into platform features and integration stories for upcoming releases."
+            "**Platform Technical Direction**: Provide technical direction for the systems used to build, package, deploy, and operate the Corellium platform across cloud and on-premises environments.",
+            "**CI/CD & Release Engineering**: Lead CI/CD pipeline architecture and release engineering, including Debian packaging, build automation, and rollout processes.",
+            "**Infrastructure Automation & Observability**: Direct infrastructure automation and observability strategy that keeps the platform reliable and operable in production.",
+            "**Platform Architecture & Standards**: Define platform architecture and establish engineering standards, resolving systemic technical bottlenecks at their root.",
+            "**Compliance & Security Posture**: Contribute to SOC2 compliance for the platform, including integrating Vanta to automate compliance monitoring and evidence collection.",
+            "**Paved-Road Tooling**: Create reusable paved-road solutions and developer tooling that improve delivery speed and consistency across engineering teams.",
+            "**Cross-Functional Coordination**: Coordinate platform priorities with infrastructure and product leadership on initiatives that require alignment across multiple engineering functions.",
+            "**Mentorship & Hands-On Ownership**: Mentor engineers while staying hands-on with implementation, owning the platform's long-term evolution."
         ],
         achievements: [
-            "Reduced deployment times by 20% by pioneering the integration of GitLab CI/CD pipelines into existing workflows.",
-            "Engineered multi-node version builds supporting both cloud-based and on-site legacy systems, improving versatility and reliability.",
-            "Delivered customer-facing tooling that improved self-service capabdilities and reduced support overhead for enterprise clients."
+            "Led the platform's observability overhaul, replacing Prometheus and Grafana with Datadog and cutting tool sprawl and operational overhead.",
+            "Contributed to the platform's SOC2 compliance effort, including integrating Vanta to automate compliance monitoring and evidence collection.",
+            "Took technical ownership of the build, packaging, and deployment systems behind the Corellium platform across cloud and on-premises environments.",
+            "Replaced ad-hoc, team-by-team practices with paved-road CI/CD and tooling patterns adopted across multiple engineering teams.",
+            "Built organization-wide influence through cross-functional initiatives with infrastructure and product leadership, while continuing to mentor engineers and stay hands-on with implementation."
         ]
     },
     {

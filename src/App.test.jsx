@@ -18,6 +18,8 @@ describe('App routing', () => {
     expect(document.getElementById('work')).toBeInTheDocument();
     expect(document.getElementById('projects')).toBeInTheDocument();
     expect(document.getElementById('contact')).toBeInTheDocument();
+    expect(screen.getByText(/R&D Team Leader driving platform architecture/)).toBeInTheDocument();
+    expect(screen.getByText('Cellebrite')).toBeInTheDocument();
   });
 
   it('renders 404 for an unknown path', () => {

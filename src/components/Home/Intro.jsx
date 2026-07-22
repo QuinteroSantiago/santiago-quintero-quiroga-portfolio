@@ -1,3 +1,5 @@
+import ProfileImage from './ProfileImage';
+
 function Intro() {
    const startDate = new Date('2021-05-01');
    const currentDate = new Date();
@@ -8,18 +10,22 @@ function Intro() {
    const roundedYears = fractionalYear >= 0.5 ? diffYears + 1 : diffYears;
 
    return (
-      <section className="py-14 sm:py-16">
-         <p className="eyebrow mb-4">Platform Engineering / Automation / Systems</p>
-         <h1 className="text-4xl font-normal leading-tight text-[var(--text)] sm:text-5xl">
-            Santiago Quintero
-         </h1>
-         <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
-            Platform-oriented software engineer focused on developer velocity, workflow automation,
-            and resilient backend systems.
-         </p>
-         <p className="mt-6 text-sm text-[var(--muted)]">
-            Miami / {roundedYears}+ years / Go, Node.js, React
-         </p>
+      <section className="flex flex-col gap-6 py-14 sm:flex-row sm:items-start sm:gap-10 sm:py-16">
+         <ProfileImage />
+         <div>
+            <p className="eyebrow mb-4">Platform Engineering / Automation / Systems</p>
+            <h1 className="text-4xl font-normal leading-tight text-[var(--text)] sm:text-5xl">
+               Santiago Quintero
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
+               R&D Team Leader driving platform architecture, CI/CD, and infrastructure automation
+               across cloud and on-premises environments — with organization-wide influence and a
+               hands-on focus on developer velocity and reliability.
+            </p>
+            <p className="mt-6 text-sm text-[var(--muted)]">
+               Miami / {roundedYears}+ years / Go, Node.js, React
+            </p>
+         </div>
       </section>
    );
 }
