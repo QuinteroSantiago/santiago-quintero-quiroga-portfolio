@@ -1,6 +1,6 @@
-function Contact() {
+function Contact({ id }) {
    return (
-      <section className="border-t border-[var(--border)] py-8">
+      <section id={id} className="border-t border-[var(--border)] py-8">
          <p className="eyebrow mb-2">Get in touch</p>
          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-xl">

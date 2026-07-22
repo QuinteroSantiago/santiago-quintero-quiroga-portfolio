@@ -26,13 +26,13 @@ function calculateDurationString(startDate, endDateString) {
    return durationString;
 }
 
-function Timeline({ title, timeline }) {
+function Timeline({ id, title, timeline }) {
    if (!timeline) {
       return <div>Loading timeline...</div>;
    }
 
    return (
-      <section className="border-t border-[var(--border)] py-8">
+      <section id={id} className="border-t border-[var(--border)] py-8">
          <div className="mb-6 flex items-baseline justify-between gap-4">
             <h2 className="text-2xl font-normal text-[var(--text)]">{title}</h2>
             <p className="eyebrow">{title === 'Work' ? 'Selected roles' : 'Training & study'}</p>

@@ -1,9 +1,9 @@
 import portfolio from '../../data/portfolio';
 import PortfolioItem from './PortfolioItem';
 
-function Portfolio() {
+function Portfolio({ id }) {
    return (
-      <section className="border-t border-[var(--border)] py-8">
+      <section id={id} className="border-t border-[var(--border)] py-8">
          <div className="mb-6 flex items-baseline justify-between gap-4">
             <h2 className="text-2xl font-normal text-[var(--text)]">Portfolio</h2>
             <p className="eyebrow">Selected builds</p>

@@ -15,6 +15,9 @@ describe('App routing', () => {
     expect(screen.getByRole('heading', { name: 'Education' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Portfolio' })).toBeInTheDocument();
     expect(screen.getByText('Get in touch')).toBeInTheDocument();
+    expect(document.getElementById('work')).toBeInTheDocument();
+    expect(document.getElementById('projects')).toBeInTheDocument();
+    expect(document.getElementById('contact')).toBeInTheDocument();
   });
 
   it('renders 404 for an unknown path', () => {

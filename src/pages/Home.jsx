@@ -1,5 +1,6 @@
 import Contact from '../components/Home/Contact';
 import Intro from '../components/Home/Intro';
+import Nav from '../components/Home/Nav';
 import Portfolio from '../components/Home/Portfolio';
 import Timeline from '../components/Home/Timeline';
 import work from '../data/work';
@@ -11,11 +12,12 @@ function Home() {
 
 	return (
 		<div className="mx-auto max-w-4xl">
+			<Nav />
 			<Intro />
-			<Timeline title="Work" timeline={work} />
+			<Timeline id="work" title="Work" timeline={work} />
 			<Timeline title="Education" timeline={education} />
-			<Portfolio />
-			<Contact />
+			<Portfolio id="projects" />
+			<Contact id="contact" />
 		</div>
 	);
 }
